@@ -3,30 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reportes diarios de mercado</title>
+<title>Reportes</title>
 <style>
+  :root { color-scheme: light; }
   * { box-sizing: border-box; }
-  body { margin: 0; background: #0e1116; color: #e6edf3; font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 32px 18px 64px; }
-  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 8px; }
-  h1 { margin: 0 0 8px; font-size: 32px; }
-  p { color: #8b97a6; }
-  a.card { display: block; background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017; color: #e6edf3; text-decoration: none; padding: 16px 18px; margin: 12px 0; border-radius: 4px; }
-  .date { color: #d4a017; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
-  .title { display: block; margin-top: 4px; font-size: 18px; }
-  .meta { color: #8b97a6; font-size: 13px; }
+  body { margin: 0; background: #f3f1ec; color: #1c1b19; font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif; }
+  .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; max-width: 880px; margin: 0 auto; padding: 42px 22px 18px; }
+  .mark { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a847a; margin: 0 0 8px; }
+  h1 { margin: 0; font-size: 34px; font-weight: 560; letter-spacing: -0.03em; }
+  .count { color: #8a847a; font-size: 13px; font-variant-numeric: tabular-nums; }
+  .tools { max-width: 880px; margin: 0 auto; padding: 0 22px 8px; display: flex; }
+  input { flex: 1; border: 0; border-bottom: 1px solid #d9d3c8; background: transparent; padding: 10px 0; font: inherit; font-size: 15px; color: #1c1b19; outline: none; }
+  input:focus { border-bottom-color: #1c1b19; }
+  .list { max-width: 880px; margin: 0 auto; padding: 8px 22px 72px; }
+  a.row { display: grid; grid-template-columns: 92px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid #e4ddd2; color: inherit; text-decoration: none; }
+  a.row:last-child { border-bottom: 1px solid #e4ddd2; }
+  a.row:hover .ttl { text-decoration: underline; text-underline-offset: 3px; }
+  .day { color: #8a847a; font-size: 13px; font-variant-numeric: tabular-nums; padding-top: 3px; }
+  .ttl { display: block; font-size: 18px; letter-spacing: -0.02em; line-height: 1.3; }
+  .sub { display: block; margin-top: 4px; color: #8a847a; font-size: 13px; }
+  .empty, .err { color: #8a847a; padding: 28px 0; }
+  @media (max-width: 640px) { h1 { font-size: 28px; } a.row { grid-template-columns: 1fr; gap: 4px; } }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <p class="kicker">Archivo · cash EE.UU.</p>
-  <h1>Reportes diarios de mercado</h1>
-  <p>Cada nota es un HTML propio. La más nueva queda arriba. Si un día tuvo más de una corrida, queda la primera.</p>
-  <a class="card" href="reportes/2026-10-09.html"><span class="date">9 oct 2026</span><span class="title">El crudo cede tras el aplazamiento de Trump y el Nasdaq intenta recortar el −1,25% de ayer</span><span class="meta">NQ 31.090 · ES 7.847 · WTI 90,45</span></a>
-  <a class="card" href="reportes/2026-10-08.html"><span class="date">8 oct 2026</span><span class="title">El crudo sube cerca de 4-5% y empuja a la baja los futuros de EE.UU.</span><span class="meta">Primera corrida · NQ 31.129 · WTI 92,78</span></a>
-  <a class="card" href="reportes/2026-10-07.html"><span class="date">7 oct 2026</span><span class="title">El 10 años vuelve a 5,32% y el Brent supera USD 101</span><span class="meta">Primera corrida · NQ 31.325 · ES 7.858</span></a>
-  <a class="card" href="reportes/2026-10-06.html"><span class="date">6 oct 2026</span><span class="title">El Nasdaq defiende el récord mientras el WTI pierde los 88 dólares</span><span class="meta">Primera corrida · NQ 31.443 · WTI 87,60</span></a>
-  <a class="card" href="reportes/2026-10-05.html"><span class="date">5 oct 2026</span><span class="title">El NFP de +29 mil apaga la suba de octubre</span><span class="meta">Primera corrida, 10:30 ET · se descartó el segundo envío</span></a>
-</div>
+<header class="top"><div><p class="mark">Archivo</p><h1>Reportes</h1></div><p class="count" id="count">Leyendo carpeta…</p></header>
+<div class="tools"><input id="q" type="search" placeholder="Buscar por fecha o titular" autocomplete="off"></div>
+<main class="list" id="list"></main>
+<script>
+const REPO = "Drax-0/noticias-mercado";
+const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+const list = document.getElementById("list");
+const count = document.getElementById("count");
+const q = document.getElementById("q");
+let items = [];
+function fecha(name) { const m = name.match(/(\d{4})-(\d{2})-(\d{2})/); if (!m) return name; return Number(m[3]) + " " + MESES[Number(m[2]) - 1] + " " + m[1]; }
+function titular(html, name) { const h2 = html.match(/<h2[^>]*>([\s\S]*?)<\/h2>/i); const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i); const raw = (h2 && h2[1]) || (title && title[1]) || name; return raw.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim(); }
+function render(filter) { const f = (filter || "").toLowerCase(); const rows = items.filter(it => (it.date + " " + it.title).toLowerCase().includes(f)); count.textContent = rows.length + (rows.length === 1 ? " nota" : " notas"); if (!rows.length) { list.innerHTML = '<p class="empty">Nada con ese texto.</p>'; return; } list.innerHTML = rows.map(it => '<a class="row" href="reportes/' + it.file + '"><span class="day">' + it.date + '</span><span><span class="ttl">' + it.title + '</span><span class="sub">' + it.file + '</span></span></a>').join(""); }
+q.addEventListener("input", () => render(q.value));
+document.addEventListener("keydown", (e) => { if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); } });
+fetch("https://api.github.com/repos/" + REPO + "/contents/reportes?ref=main", { headers: { "Accept": "application/vnd.github+json" } }).then(r => { if (!r.ok) throw new Error("No pude leer la carpeta reportes (" + r.status + ")"); return r.json(); }).then(async files => { files = files.filter(f => /\.html$/i.test(f.name)).sort((a, b) => b.name.localeCompare(a.name)); items = []; for (const file of files) { let title = file.name; try { title = titular(await (await fetch(file.download_url)).text(), file.name); } catch (e) {} items.push({ file: file.name, date: fecha(file.name), title: title }); } render(""); }).catch(err => { count.textContent = "Sin lista"; list.innerHTML = '<p class="err">' + err.message + '. La carpeta tiene que estar en el repo público.</p>'; });
+</script>
 </body>
 </html>
