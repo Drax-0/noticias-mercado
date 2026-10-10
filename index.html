@@ -165,7 +165,7 @@ function parseReport(file, html) {
     const marked = bar.querySelector("[data-score]");
     const box = marked || Array.from(bar.querySelectorAll("span")).find(s => /\/10/.test(s.textContent));
     if (box) {
-      score = Number(box.getAttribute("data-score") || box.textContent);
+      score = Number(box.getAttribute("data-score") || String(box.textContent).match(/\d+/)[0]);
       const next = box.nextElementSibling;
       if (next) why = next.textContent.trim();
     }
