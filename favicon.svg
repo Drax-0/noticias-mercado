@@ -1,19 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" fill="#000000"/>
   <!-- línea recta vertical larga -->
-  <rect x="4" y="3" width="3.5" height="26" fill="#d4a017"/>
-  <!-- M: dos piernas + V del medio -->
-  <path fill="#d4a017" d="
-    M11 5
-    V27
-    H14.5
-    L17 14
-    L19.5 27
-    H23
-    V5
-    H20
-    L17 16
-    L14 5
-    Z
-  "/>
+  <rect x="4" y="3" width="3" height="26" fill="#d4a017"/>
+  <!-- M: pierna izq + pierna der + V central -->
+  <path fill="#d4a017" d="M11 5 V27 H14.5 L17 15 L19.5 27 H23 V5 H20 L17 15 L14 5 Z"/>
 </svg>
