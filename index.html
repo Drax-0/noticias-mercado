@@ -155,16 +155,28 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") { cursor = Math.max(0, cursor - 1); render(); }
   if (e.key === "Enter" && data[cursor]) location.href = "reportes/" + data[cursor].file;
 });
-const SEED = [
-  {"file":"2026-10-10.html","date":"2026-10-10","title":"El cierre de viernes confirma el alivio táctico de Irán; NQ y ES en verde con oro sobre 4.200","why":"Alivio de viernes se consolida. Crudo estable, oro y futuros en verde.","score":4},
-  {"file":"2026-10-09.html","date":"2026-10-09","title":"El crudo cede tras el aplazamiento de Trump y el Nasdaq intenta recortar el −1,25% de ayer","why":"Alivio táctico por el aplazamiento sobre Irán. El Nasdaq solo recorta el −1,25%.","score":6},
-  {"file":"2026-10-08.html","date":"2026-10-08","title":"El crudo sube cerca de 4–5% y empuja a la baja los futuros de EE.UU. antes de la apertura de cash","why":"Shock de oferta: crudo +4–5% y futuros de equity a la baja antes del cash.","score":9},
-  {"file":"2026-10-07.html","date":"2026-10-07","title":"El 10 años vuelve a 5,32% y el Brent supera USD 101: el récord de Wall Street abre con prima de descuento","why":"El 10 años vuelve a 5,32% y el Brent cruza 101, con el récord de cash abierto.","score":8},
-  {"file":"2026-10-06.html","date":"2026-10-06","title":"El Nasdaq defiende el récord mientras el WTI pierde los 88 dólares","why":"Alivio de crudo y récord defendido, sin cambio de régimen.","score":5},
-  {"file":"2026-10-05.html","date":"2026-10-05","title":"El NFP de +29 mil apaga la suba de octubre. El 5,28% del Treasury y el Brent sobre 100 siguen abiertos.","why":"El payroll débil recorta la suba de octubre, pero el 5,28% sigue abierto.","score":7}
-];
-items = SEED;
-render();
+function parseReport(file, html) {
+  const date = file.slice(0, 10);
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const title = ((doc.querySelector("h2") || doc.querySelector("h1") || {}).textContent || file).trim();
+  const scoreEl = doc.querySelector("[data-score]");
+  const score = scoreEl ? Number(scoreEl.getAttribute("data-score")) : null;
+  const whyEl = scoreEl && scoreEl.parentElement ? scoreEl.parentElement.querySelector("span:last-child") : null;
+  return { file, date, title, score, why: whyEl ? whyEl.textContent.trim() : "", text: doc.body ? doc.body.innerText.slice(0, 2000) : "" };
+}
+function loadFromFolder() {
+  count.textContent = "Leyendo carpeta…";
+  fetch("https://api.github.com/repos/Drax-0/noticias-mercado/contents/reportes?t=" + Date.now())
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(files => {
+      if (!Array.isArray(files)) throw new Error("sin lista");
+      const htmls = files.filter(f => /^20\d{2}-\d{2}-\d{2}\.html$/.test(f.name));
+      return Promise.all(htmls.map(f => fetch("reportes/" + f.name + "?t=" + Date.now()).then(r => r.text()).then(html => parseReport(f.name, html))));
+    })
+    .then(list => { items = list.sort((a, b) => b.date.localeCompare(a.date)); render(); })
+    .catch(() => { if (!items.length) { count.textContent = "Sin conexión"; listEl.innerHTML = '<p class="empty">No pude leer la carpeta reportes/.</p>'; } });
+}
+loadFromFolder();
 </script>
 </body>
 </html>
