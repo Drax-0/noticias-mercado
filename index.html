@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>Reportes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -175,12 +176,12 @@ function parseReport(file, html) {
 }
 function loadFromFolder() {
   count.textContent = "Leyendo carpeta…";
-  fetch("https://api.github.com/repos/Drax-0/noticias-mercado/contents/reportes?t=" + Date.now())
+  fetch("reportes/files.json?t=" + Date.now())
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(files => {
       if (!Array.isArray(files)) throw new Error("sin lista");
-      const htmls = files.filter(f => /^20\d{2}-\d{2}-\d{2}\.html$/.test(f.name));
-      return Promise.all(htmls.map(f => fetch("reportes/" + f.name + "?t=" + Date.now()).then(r => r.text()).then(html => parseReport(f.name, html))));
+      const htmls = files.filter(name => /^20\d{2}-\d{2}-\d{2}\.html$/.test(name));
+      return Promise.all(htmls.map(name => fetch("reportes/" + name + "?t=" + Date.now()).then(r => r.text()).then(html => parseReport(name, html))));
     })
     .then(list => { items = list.sort((a, b) => b.date.localeCompare(a.date)); render(); })
     .catch(() => { if (!items.length) { count.textContent = "Sin conexión"; listEl.innerHTML = '<p class="empty">No pude leer la carpeta reportes/.</p>'; } });

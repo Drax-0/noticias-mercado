@@ -24,10 +24,10 @@
     });
     return out;
   }
-  fetch("https://api.github.com/repos/Drax-0/noticias-mercado/contents/reportes?t=" + Date.now())
+  fetch("files.json?t=" + Date.now())
     .then(r => r.json())
     .then(files => {
-      const dates = files.map(f => f.name).filter(n => /^20\d{2}-\d{2}-\d{2}\.html$/.test(n)).map(n => n.slice(0, 10)).sort();
+      const dates = files.filter(n => /^20\d{2}-\d{2}-\d{2}\.html$/.test(n)).map(n => n.slice(0, 10)).sort();
       const i = dates.indexOf(date);
       const prev = i > 0 ? dates[i - 1] : null;
       const next = i >= 0 && i < dates.length - 1 ? dates[i + 1] : null;
