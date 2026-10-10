@@ -2,6 +2,8 @@
   <rect width="32" height="32" fill="#000000"/>
   <!-- línea recta vertical larga -->
   <rect x="4" y="3" width="3" height="26" fill="#d4a017"/>
-  <!-- M: pierna izq + pierna der + V central -->
-  <path fill="#d4a017" d="M11 5 V27 H14.5 L17 15 L19.5 27 H23 V5 H20 L17 15 L14 5 Z"/>
+  <!-- M -->
+  <rect x="11" y="5" width="3" height="22" fill="#d4a017"/>
+  <rect x="20" y="5" width="3" height="22" fill="#d4a017"/>
+  <polygon points="14,5 17,15 20,5" fill="#d4a017"/>
 </svg>
