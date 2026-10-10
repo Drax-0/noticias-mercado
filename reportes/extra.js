@@ -1,4 +1,5 @@
 (() => {
+  document.querySelectorAll("a[data-back]").forEach(a => a.remove());
   const m = location.pathname.match(/(20\d{2}-\d{2}-\d{2})/);
   if (!m) return;
   const date = m[1];
