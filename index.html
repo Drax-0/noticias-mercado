@@ -155,7 +155,31 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") { cursor = Math.max(0, cursor - 1); render(); }
   if (e.key === "Enter" && data[cursor]) location.href = "reportes/" + data[cursor].file;
 });
-fetch("reportes/manifest.json").then(r => r.json()).then(data => { items = data.sort((a,b) => b.date.localeCompare(a.date)); render(); });
+fetch("reportes/manifest.json?v=3").then(r => r.ok ? r.json() : Promise.reject()).then(data => {
+  if (!Array.isArray(data)) throw new Error("manifest");
+  items = data.sort((a, b) => b.date.localeCompare(a.date));
+  render();
+}).catch(() => loadFromFolder());
+function loadFromFolder() {
+  count.textContent = "Leyendo carpeta…";
+  fetch("https://api.github.com/repos/Drax-0/noticias-mercado/contents/reportes")
+    .then(r => r.json())
+    .then(files => {
+      const htmls = files.filter(f => /^20\d{2}-\d{2}-\d{2}\.html$/.test(f.name));
+      return Promise.all(htmls.map(f => fetch("reportes/" + f.name).then(r => r.text()).then(html => parseReport(f.name, html))));
+    })
+    .then(list => { items = list.sort((a, b) => b.date.localeCompare(a.date)); render(); })
+    .catch(err => { count.textContent = "No se pudo leer"; listEl.innerHTML = '<p class="empty">No pude listar reportes/. ' + err + '</p>'; });
+}
+function parseReport(file, html) {
+  const date = file.slice(0, 10);
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const title = (doc.querySelector("h2") || doc.querySelector("h1") || {}).textContent || file;
+  const scoreEl = doc.querySelector("[data-score]");
+  const score = scoreEl ? Number(scoreEl.getAttribute("data-score")) : null;
+  const whyEl = scoreEl && scoreEl.parentElement ? scoreEl.parentElement.querySelector("span:last-child") : null;
+  return { file, date, title: title.trim(), score, why: whyEl ? whyEl.textContent.trim() : "", text: doc.body ? doc.body.innerText.slice(0, 2000) : "" };
+}
 </script>
 </body>
 </html>
