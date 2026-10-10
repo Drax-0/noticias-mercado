@@ -159,10 +159,18 @@ function parseReport(file, html) {
   const date = file.slice(0, 10);
   const doc = new DOMParser().parseFromString(html, "text/html");
   const title = ((doc.querySelector("h2") || doc.querySelector("h1") || {}).textContent || file).trim();
-  const scoreEl = doc.querySelector("[data-score]");
-  const score = scoreEl ? Number(scoreEl.getAttribute("data-score")) : null;
-  const whyEl = scoreEl && scoreEl.parentElement ? scoreEl.parentElement.querySelector("span:last-child") : null;
-  return { file, date, title, score, why: whyEl ? whyEl.textContent.trim() : "", text: doc.body ? doc.body.innerText.slice(0, 2000) : "" };
+  const bar = doc.getElementById("scorebar");
+  let score = null, why = "";
+  if (bar) {
+    const marked = bar.querySelector("[data-score]");
+    const box = marked || Array.from(bar.querySelectorAll("span")).find(s => /\/10/.test(s.textContent));
+    if (box) {
+      score = Number(box.getAttribute("data-score") || box.textContent);
+      const next = box.nextElementSibling;
+      if (next) why = next.textContent.trim();
+    }
+  }
+  return { file, date, title, score, why, text: doc.body ? doc.body.innerText.slice(0, 2000) : "" };
 }
 function loadFromFolder() {
   count.textContent = "Leyendo carpeta…";
