@@ -4,45 +4,158 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reportes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  :root { color-scheme: light; }
+  :root { color-scheme: dark; }
   * { box-sizing: border-box; }
-  body { margin: 0; background: #f3f1ec; color: #1c1b19; font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif; }
-  .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; max-width: 880px; margin: 0 auto; padding: 42px 22px 18px; }
-  .mark { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a847a; margin: 0 0 8px; }
+  body { margin: 0; background: #121417; color: #eceae6; font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif; }
+  .top, .tools, .list, .week { max-width: 880px; margin: 0 auto; padding-left: 22px; padding-right: 22px; }
+  .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; padding-top: 42px; }
+  .mark { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d867c; margin: 0 0 8px; }
   h1 { margin: 0; font-size: 34px; font-weight: 560; letter-spacing: -0.03em; }
-  .count { color: #8a847a; font-size: 13px; font-variant-numeric: tabular-nums; }
-  .tools { max-width: 880px; margin: 0 auto; padding: 0 22px 8px; display: flex; }
-  input { flex: 1; border: 0; border-bottom: 1px solid #d9d3c8; background: transparent; padding: 10px 0; font: inherit; font-size: 15px; color: #1c1b19; outline: none; }
-  input:focus { border-bottom-color: #1c1b19; }
-  .list { max-width: 880px; margin: 0 auto; padding: 8px 22px 72px; }
-  a.row { display: grid; grid-template-columns: 92px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid #e4ddd2; color: inherit; text-decoration: none; }
-  a.row:last-child { border-bottom: 1px solid #e4ddd2; }
-  a.row:hover .ttl { text-decoration: underline; text-underline-offset: 3px; }
-  .day { color: #8a847a; font-size: 13px; font-variant-numeric: tabular-nums; padding-top: 3px; }
+  .count { color: #8d867c; font-size: 13px; }
+  .tools { display: flex; gap: 14px; align-items: center; padding-top: 18px; }
+  input { flex: 1; border: 0; border-bottom: 1px solid #34322e; background: transparent; padding: 10px 0; font: inherit; font-size: 15px; color: #eceae6; outline: none; }
+  input:focus { border-bottom-color: #eceae6; }
+  .seg { display: flex; gap: 6px; }
+  .seg button { background: transparent; color: #8d867c; border: 1px solid #34322e; border-radius: 2px; padding: 8px 14px; font: inherit; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+  .seg button.on { background: #eceae6; color: #121417; border-color: #eceae6; }
+  .list { padding-top: 8px; padding-bottom: 80px; }
+  a.row { display: grid; grid-template-columns: 72px 1fr 84px; gap: 18px; align-items: center; padding: 18px 0; border-top: 1px solid #2a2825; color: inherit; text-decoration: none; }
+  a.row:last-child { border-bottom: 1px solid #2a2825; }
+  a.row.on { background: #1b1e22; margin: 0 -10px; padding-left: 10px; padding-right: 10px; }
+  .score { display: flex; align-items: center; justify-content: center; gap: 2px; min-width: 72px; height: 40px; padding: 0 10px 1px; color: #121417; border-radius: 6px; font-family: Outfit, "Segoe UI", sans-serif; line-height: 1; }
+  .score b { font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -0.03em; }
+  .score small { font-size: 12px; font-weight: 500; opacity: .7; letter-spacing: 0; line-height: 1; transform: translateY(3px); }
   .ttl { display: block; font-size: 18px; letter-spacing: -0.02em; line-height: 1.3; }
-  .sub { display: block; margin-top: 4px; color: #8a847a; font-size: 13px; }
-  .empty, .err { color: #8a847a; padding: 28px 0; }
-  @media (max-width: 640px) { h1 { font-size: 28px; } a.row { grid-template-columns: 1fr; gap: 4px; } }
+  .sub { display: block; margin-top: 4px; }
+  .note-dot { color: #d4a017; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+  .week { display: grid; gap: 18px; padding-bottom: 80px; }
+  .wk { border-top: 1px solid #2a2825; padding-top: 14px; }
+  .wk h2 { margin: 0; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: #8d867c; font-weight: 560; }
+  .head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .cols { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .cell { display: block; min-height: 92px; padding: 10px; border: 1px solid #2a2825; border-radius: 6px; color: inherit; text-decoration: none; }
+  .cell:hover { border-color: #8d867c; }
+  .cell b { display: block; font-size: 12px; color: #8d867c; font-weight: 500; }
+  .cell span { display: block; margin-top: 6px; font-size: 13px; line-height: 1.35; }
+  .cell em { display: block; margin-top: 8px; font-style: normal; font-size: 11px; color: #d4a017; }
+  .muted { color: #5c574f; }
+  .hint { color: #5c574f; font-size: 12px; padding: 8px 22px 0; max-width: 880px; margin: 0 auto; }
+  @media (max-width: 720px) {
+    h1 { font-size: 28px; }
+    a.row { grid-template-columns: 64px 1fr 42px; gap: 10px; }
+    .cols { grid-template-columns: 1fr; }
+    .tools { flex-wrap: wrap; }
+  }
 </style>
 </head>
 <body>
-<header class="top"><div><p class="mark">Archivo</p><h1>Reportes</h1></div><p class="count" id="count">Leyendo carpeta…</p></header>
-<div class="tools"><input id="q" type="search" placeholder="Buscar por fecha o titular" autocomplete="off"></div>
+<header class="top">
+  <div><p class="mark">Archivo</p><h1>Reportes</h1></div>
+  <p class="count" id="count">Leyendo…</p>
+</header>
+<p class="hint">/ busca · ← → mueve · enter abre</p>
+<div class="tools">
+  <input id="q" type="search" placeholder="Buscar en titular y texto" autocomplete="off">
+  <div class="seg">
+    <button id="v-list" class="on" type="button">Lista</button>
+    <button id="v-week" type="button">Semana</button>
+    <button id="v-month" type="button">Mes</button>
+  </div>
+</div>
 <main class="list" id="list"></main>
 <script>
-const REPO = "Drax-0/noticias-mercado";
 const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
-const list = document.getElementById("list");
+const DIAS = ["Lun","Mar","Mié","Jue","Vie"];
+const listEl = document.getElementById("list");
 const count = document.getElementById("count");
 const q = document.getElementById("q");
-let items = [];
-function fecha(name) { const m = name.match(/(\d{4})-(\d{2})-(\d{2})/); if (!m) return name; return Number(m[3]) + " " + MESES[Number(m[2]) - 1] + " " + m[1]; }
-function titular(html, name) { const h2 = html.match(/<h2[^>]*>([\s\S]*?)<\/h2>/i); const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i); const raw = (h2 && h2[1]) || (title && title[1]) || name; return raw.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim(); }
-function render(filter) { const f = (filter || "").toLowerCase(); const rows = items.filter(it => (it.date + " " + it.title).toLowerCase().includes(f)); count.textContent = rows.length + (rows.length === 1 ? " nota" : " notas"); if (!rows.length) { list.innerHTML = '<p class="empty">Nada con ese texto.</p>'; return; } list.innerHTML = rows.map(it => '<a class="row" href="reportes/' + it.file + '"><span class="day">' + it.date + '</span><span><span class="ttl">' + it.title + '</span><span class="sub">' + it.file + '</span></span></a>').join(""); }
-q.addEventListener("input", () => render(q.value));
-document.addEventListener("keydown", (e) => { if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); } });
-fetch("https://api.github.com/repos/" + REPO + "/contents/reportes?ref=main", { headers: { "Accept": "application/vnd.github+json" } }).then(r => { if (!r.ok) throw new Error("No pude leer la carpeta reportes (" + r.status + ")"); return r.json(); }).then(async files => { files = files.filter(f => /\.html$/i.test(f.name)).sort((a, b) => b.name.localeCompare(a.name)); items = []; for (const file of files) { let title = file.name; try { title = titular(await (await fetch(file.download_url)).text(), file.name); } catch (e) {} items.push({ file: file.name, date: fecha(file.name), title: title }); } render(""); }).catch(err => { count.textContent = "Sin lista"; list.innerHTML = '<p class="err">' + err.message + '. La carpeta tiene que estar en el repo público.</p>'; });
+let items = [], view = "list", cursor = 0, filter = "";
+function scoreColor(n) {
+  const colors = {
+    1: "#3dd68c",
+    2: "#52cc78",
+    3: "#78c45e",
+    4: "#a8be48",
+    5: "#d4a017",
+    6: "#e0941c",
+    7: "#e88424",
+    8: "#e06030",
+    9: "#e84a48",
+    10: "#f02d3a"
+  };
+  return colors[Number(n)] || "#8d867c";
+}
+function badge(n) { return '<span class="score" style="background:' + scoreColor(n) + '"><b>' + (n || "–") + '</b><small>/10</small></span>'; }
+function avg(list) {
+  const nums = list.map(it => Number(it.score)).filter(n => n);
+  if (!nums.length) return null;
+  return Math.round(nums.reduce((a, b) => a + b, 0) / nums.length);
+}
+function setView(name) {
+  view = name;
+  ["list", "week", "month"].forEach(id => document.getElementById("v-" + id).classList.toggle("on", id === name));
+  render();
+}
+function fecha(iso) { const [y,m,d] = iso.split("-"); return Number(d) + " " + MESES[Number(m)-1]; }
+function mesLabel(iso) { const [y,m] = iso.split("-"); return MESES[Number(m)-1] + " " + y; }
+function monday(iso) { const dt = new Date(iso + "T12:00:00"); const day = (dt.getDay() + 6) % 7; dt.setDate(dt.getDate() - day); return dt.toISOString().slice(0,10); }
+function addDays(iso, n) { const dt = new Date(iso + "T12:00:00"); dt.setDate(dt.getDate() + n); return dt.toISOString().slice(0,10); }
+function rows() {
+  const f = filter.toLowerCase();
+  return items.filter(it => (it.date + " " + it.title + " " + (it.text || "")).toLowerCase().includes(f));
+}
+function render() {
+  const data = rows();
+  count.textContent = data.length + (data.length === 1 ? " nota" : " notas");
+  if (!data.length) { listEl.innerHTML = '<p class="empty">Nada con ese texto.</p>'; return; }
+  if (view === "list") {
+    if (cursor >= data.length) cursor = 0;
+    listEl.innerHTML = data.map((it, i) => {
+      return '<a class="row' + (i === cursor ? " on" : "") + '" href="reportes/' + it.file + '"><span class="day">' + fecha(it.date) + '</span><span><span class="ttl">' + it.title + '</span><span class="sub">' + (it.why || it.file) + '</span></span>' + badge(it.score) + '</a>';
+    }).join("");
+    return;
+  }
+  if (view === "week") {
+    const weeks = {};
+    data.forEach(it => { const k = monday(it.date); (weeks[k] = weeks[k] || []).push(it); });
+    listEl.innerHTML = '<div class="week">' + Object.keys(weeks).sort().reverse().map(k => {
+      const group = weeks[k];
+      const by = Object.fromEntries(group.map(it => [it.date, it]));
+      const cells = DIAS.map((name, i) => {
+        const iso = addDays(k, i);
+        const it = by[iso];
+        if (!it) return '<div class="cell muted"><b>' + name + '</b><span>—</span></div>';
+        return '<a class="cell" href="reportes/' + it.file + '"><b>' + name + ' ' + fecha(it.date) + '</b><span>' + it.title + '</span></a>';
+      }).join("");
+      return '<section class="wk"><div class="head"><h2>Semana del ' + fecha(k) + '</h2>' + badge(avg(group)) + '</div><div class="cols">' + cells + '</div></section>';
+    }).join("") + '</div>';
+    return;
+  }
+  const months = {};
+  data.forEach(it => { const k = it.date.slice(0, 7); (months[k] = months[k] || []).push(it); });
+  listEl.innerHTML = '<div class="week">' + Object.keys(months).sort().reverse().map(k => {
+    const group = months[k];
+    const cells = group.map(it => '<a class="cell" href="reportes/' + it.file + '"><b>' + fecha(it.date) + '</b><span>' + it.title + '</span></a>').join("");
+    return '<section class="wk"><div class="head"><h2>' + mesLabel(k + "-01") + '</h2>' + badge(avg(group)) + '</div><div class="cols">' + cells + '</div></section>';
+  }).join("") + '</div>';
+}
+document.getElementById("v-list").onclick = () => setView("list");
+document.getElementById("v-week").onclick = () => setView("week");
+document.getElementById("v-month").onclick = () => setView("month");
+q.addEventListener("input", () => { filter = q.value; cursor = 0; render(); });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); return; }
+  if (document.activeElement === q) return;
+  const data = rows();
+  if (e.key === "ArrowRight") { cursor = Math.min(data.length - 1, cursor + 1); render(); }
+  if (e.key === "ArrowLeft") { cursor = Math.max(0, cursor - 1); render(); }
+  if (e.key === "Enter" && data[cursor]) location.href = "reportes/" + data[cursor].file;
+});
+fetch("reportes/manifest.json").then(r => r.json()).then(data => { items = data.sort((a,b) => b.date.localeCompare(a.date)); render(); });
 </script>
 </body>
 </html>

@@ -1,1 +1,299 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Reporte Diario de Mercado · 7 oct 2026</title><style>body{margin:0;background:#0e1116;color:#e6edf3;font-family:Segoe UI,Helvetica,Arial,sans-serif;line-height:1.5}.wrap{max-width:980px;margin:0 auto;padding:28px 18px}.kicker{color:#d4a017;letter-spacing:.08em;text-transform:uppercase;font-size:12px;font-weight:700}.muted{color:#8b97a6}.lead,.card,table,.scen{background:#161b22;border:1px solid #2a3340}.lead{border-left:4px solid #d4a017;padding:16px}.card,.scen{padding:16px;margin:12px 0}table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid #2a3340}th{color:#8b97a6;font-size:11px;text-transform:uppercase;text-align:left}.up{color:#3dd68c}.dn{color:#f07178}.lbl{color:#8b97a6;font-size:11px;text-transform:uppercase}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.base{border-top:3px solid #3dd68c}.inv{border-top:3px solid #f07178}@media(max-width:720px){.grid{display:block}}</style></head><body><div class="wrap"><p class="kicker">Reporte Diario de Mercado · 7 oct 2026</p><h1>Sesión del miércoles: yields y crudo reactivan el descuento de múltiplos</h1><p class="muted">Primera corrida. Corte 08:00 ART / 07:00 ET. No es consejo de inversión.</p><section class="lead"><h2>El 10 años vuelve a 5,32% y el Brent supera USD 101</h2><p>El S&amp;P 500 cerró el martes en 7.818,93 (+0,58%) y el Nasdaq Composite en 27.599,79 (+0,45%). Futuros: NQ ~31.325 (−0,50%) y ES ~7.858 (−0,21%). El 10 años sube unos 6 pb hacia 5,32%. El 30 años toca 5,70%. Subasta de USD 39.000 millones y actas del FOMC a las 14:00 ET.</p></section><table><tr><th>Activo</th><th>Precio</th><th>Var.</th><th>Soporte</th><th>Resistencia</th></tr><tr><td>NQ</td><td>31.325</td><td class="dn">−0,50%</td><td>31.050</td><td>31.550</td></tr><tr><td>ES</td><td>7.858</td><td class="dn">−0,21%</td><td>7.800</td><td>7.900</td></tr><tr><td>XAU/USD</td><td>4.140</td><td class="dn">−1,1%</td><td>4.080</td><td>4.200</td></tr><tr><td>WTI</td><td>89,90</td><td class="up">+0,5%</td><td>87,50</td><td>92,00</td></tr><tr><td>BTC</td><td>84.100</td><td class="dn">−1,6%</td><td>82.000</td><td>87.000</td></tr></table><article class="card"><p class="lbl">Evento</p><p>Actas del FOMC y subasta del 10 años. FedWatch cerca de 78–80% de pausa en octubre.</p><p class="lbl">Sentimiento</p><p>[RIESGO ACTIVADO/BEARISH] para duración y múltiplos.</p><p class="lbl">Mecanismo de transmisión</p><p>Mayor tasa real comprime el valor presente de flujos largos. Un tail de subasta superior a 1,5–2 pb empuja al NQ bajo 31.050.</p></article><article class="card"><p class="lbl">Evento</p><p>Brent de vuelta sobre 100. WTI 89,8–90,1. El G7 libera 100 millones de barriles.</p><p class="lbl">Sentimiento</p><p>[RIESGO ACTIVADO/BEARISH] para el canal de inflación de oferta.</p><p class="lbl">Mecanismo de transmisión</p><p>El barril más caro eleva el breakeven y empuja la parte larga. WTI sobre 92 reabre la suba de diciembre.</p></article><article class="card"><p class="lbl">Evento</p><p>Récord del cash con amplitud estrecha. Déficit comercial de agosto USD 105.600 millones.</p><p class="lbl">Sentimiento</p><p>Mix: [RIESGO DESACTIVADO/BEARISH] en el cash de ayer; [RIESGO ACTIVADO/BEARISH] hoy en duración.</p><p class="lbl">Mecanismo de transmisión</p><p>La concentración en IA deja al índice dependiente de pocos nombres. BTC pierde 87.000.</p></article><div class="grid"><div class="scen base"><h3>Base · 60%</h3><p>ES 7.800–7.890. NQ 31.050–31.480. WTI 88,20–91,50. Oro 4.080–4.120.</p></div><div class="scen inv"><h3>Invalidación · 25%</h3><p>Actas hawkish o WTI sobre 92 con tail mayor a 2 pb. ES bajo 7.750 y NQ bajo 30.900.</p></div></div><p class="muted">Primera corrida del 7 oct. No es consejo de inversión.</p></div></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reporte Diario de Mercado · 7 oct 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 48px; }
+  .mast {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-end;
+    border-bottom: 1px solid #2a3340;
+    padding-bottom: 16px;
+    margin-bottom: 22px;
+  }
+  .kicker {
+    color: #d4a017;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; line-height: 1.45; min-width: 180px; }
+  .hero {
+    background: #161b22;
+    border: 1px solid #2a3340;
+    border-left: 4px solid #d4a017;
+    padding: 20px 20px 16px;
+    margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 14px 0 6px; }
+  figure img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #2a3340;
+    display: block;
+    background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid #2a3340; text-align: right; font-variant-numeric: tabular-nums; }
+  th { color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+  td:first-child, th:first-child { text-align: left; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label {
+    color: #d4a017;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 8px 0 12px;
+  }
+  .card {
+    background: #161b22;
+    border: 1px solid #2a3340;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .algo {
+    border: 1px dashed #2a3340;
+    padding: 16px;
+    margin-top: 8px;
+    background: #12161c;
+  }
+  footer {
+    margin-top: 28px;
+    border-top: 1px solid #2a3340;
+    padding-top: 14px;
+    color: #8b97a6;
+    font-size: 12px;
+  }
+  ul { margin: 6px 0 12px; padding-left: 18px; }
+  li { margin-bottom: 4px; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 22px; }
+    th, td { padding: 8px 6px; font-size: 13px; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span style="display:inline-flex;align-items:baseline;gap:2px;background:#e06030;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">8<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">El 10 años vuelve a 5,32% y el Brent cruza 101, con el récord de cash abierto.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −0,50%</span></a><a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −0,21%</span></a><a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −1,1%</span></a><a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,5%</span></a><a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −1,6%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 7 oct 2026</p>
+      <h1>Sesión del miércoles: yields y crudo reactivan el descuento de múltiplos</h1>
+    </div>
+    <div class="meta">
+      Corte: 08:00 ART / 07:00 ET<br>
+      Régimen: preapertura cash US<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>El 10 años vuelve a 5,32% y el Brent supera USD 101: el récord de Wall Street abre con prima de descuento</h2>
+    <p>El S&P 500 cerró el martes en máximo histórico (7.818,93, +0,58%) y el Nasdaq Composite en 27.599,79 (+0,45%). En la preapertura del miércoles los futuros ceden: Nasdaq-100 cerca de 31.325 (−0,50%) y S&P 500 en 7.858 (−0,21%). El catalizador inmediato es la reapertura de la curva: el Treasury a 10 años sube unos 6 pb hacia 5,32% —zona de máximos desde abril de 2002— y el 30 años toca 5,70%, el nivel más alto desde mayo de 2002, con subasta de USD 39.000 millones y actas del FOMC de septiembre a las 14:00 ET.</p>
+    <p class="muted">El crudo recompone la prima geopolítica (WTI ~89,90, Brent ~101,7) tras ataques hutíes en Arabia Saudita y tensión en el estrecho de Ormuz, parcialmente amortiguada por el plan del G7 de liberar 100 millones de barriles. Oro y bitcoin ceden con el dólar: XAU ~4.140 (−1,1%) y BTC ~84.100 (−1,6%).</p>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1400&q=80" alt="Pantallas de cotizaciones en el parqué">
+      <figcaption>Wall Street abre el miércoles bajo el máximo del martes: el cash todavía no confirma el descuento de futuros.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th>Precio aprox.</th>
+        <th>Var. sesión / 24h</th>
+        <th>Soporte</th>
+        <th>Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ (Nasdaq-100 fut.)</td>
+        <td>31.325</td>
+        <td class="dn">−0,50%</td>
+        <td>31.050</td>
+        <td>31.550</td>
+      </tr>
+      <tr>
+        <td>ES (S&P 500 fut.)</td>
+        <td>7.858</td>
+        <td class="dn">−0,21%</td>
+        <td>7.800</td>
+        <td>7.900</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td>4.140</td>
+        <td class="dn">−1,1%</td>
+        <td>4.080</td>
+        <td>4.200</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td>89,90</td>
+        <td class="up">+0,5%</td>
+        <td>87,50</td>
+        <td>92,00</td>
+      </tr>
+      <tr>
+        <td>BTC/USD</td>
+        <td>84.100</td>
+        <td class="dn">−1,6%</td>
+        <td>82.000</td>
+        <td>87.000</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-14px;margin-bottom:22px;font-size:12px;">Referencias de preapertura ~06:40–07:00 ET. WTI +0,4% a +0,7% según print; Brent +1,1% a +1,4% en 101,7–102,0. Oro COMEX ~4.114 a 4.140 (−1,0% a −1,2%). Niveles de soporte/resistencia son zonas de libro, no órdenes.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bear">Bear · riesgo activado</span>
+    <h3>Actas del FOMC y subasta del 10 años reabren la curva</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg/1280px-Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg" alt="Edificio de la Reserva Federal en Washington">
+      <figcaption>Actas de la reunión de septiembre, 14:00 ET. El mercado descuenta ~78–80% de pausa en octubre y una suba residual en diciembre.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El 10 años retoma +6 pb hacia 5,32–5,40% y el 30 años marca 5,70%, máximo desde 2002. Hoy se licitan USD 39.000 millones del bono a 10 años y a las 14:00 ET salen las actas del FOMC de septiembre, cuando el comité subió la tasa. FedWatch asigna cerca de 78–80% a una pausa en la reunión del 27–28 de octubre; una suba en diciembre sigue en precio.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO ACTIVADO/BEARISH] para duración y múltiplos de crecimiento. El equity de beta alta (NQ) descuenta más que el ES.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Mayor tasa real comprime el valor presente de flujos largos. El bid de Treasuries se retira antes de la subasta; si el tail supera 1,5–2 pb, el NQ tiende a perder 31.050 y el oro pierde el ancla de 4.080. Un tono de actas compatible con pausa de octubre recorta la prima, pero no borra el nivel absoluto de 5,3%.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · riesgo activado</span>
+    <h3>Prima de Ormuz: Brent de vuelta sobre USD 100</h3>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1400&q=80" alt="Barriles de crudo">
+      <figcaption>WTI cerca de 90 y Brent sobre 101 tras ataques en Arabia Saudita y tensión en Ormuz. El oleoducto este-oeste saudí mueve ~5,8 mb/d.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Brent recupera 101,2–101,8 (+1,0% a +1,4%) y WTI opera 89,8–90,1 (+0,4% a +0,7%) después de ataques de fuerzas hutíes sobre objetivos saudíes y de un escalamiento en el tránsito de Ormuz. El colchón es el plan del G7 de liberar 100 millones de barriles en cuatro meses y el flujo de 5,8 mb/d por el oleoducto este-oeste. El spread Brent–WTI sigue por encima de USD 10; el gasoil se mantiene tenso. Inventarios EIA a las 10:30 ET.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO ACTIVADO/BEARISH] para el canal de inflación de oferta. Alcista relativo para el complejo energético y para el dólar.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Un barril más caro eleva el breakeven de inflación y empuja la parte larga de la curva, lo que a su vez golpea oro y cripto vía DXY (EUR/USD 1,119, USD/JPY 158,3). Si el WTI cierra sobre 92, el mercado reabre la probabilidad de suba de diciembre. Si EIA muestra build y Ormuz no corta flujo físico, el WTI vuelve a testear 87,50.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix · riesgo parcial</span>
+    <h3>Récord del cash con amplitud estrecha y déficit comercial de USD 105.600 millones</h3>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1400&q=80" alt="Barras de oro">
+      <figcaption>El oro cede hacia 4.140 pese a tenencias ETF en máximo de cuatro años (3.145 t). El real yield manda sobre el bid de refugio.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El martes el S&P sumó su primer cierre sobre 7.800 y el 28.º máximo del año; el Nasdaq, el 24.º. La amplitud se concentró en el complejo de IA (Nvidia cerca de USD 6 billones de capitalización; semiconductores lideraron). En paralelo, el déficit comercial de agosto saltó 13,7% a USD 105.600 millones, por encima de los USD 102.100 millones esperados, con importaciones récord de USD 420.800 millones. Asia cedió en la sesión siguiente (Nikkei ~70.000, −0,5% a −0,9%; KOSPI −1,4%).</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO DESACTIVADO/BEARISH] en el cash de ayer, pero [RIESGO ACTIVADO/BEARISH] en la preapertura de hoy para el factor duración. Lectura neta: mix. El residual alcista de earnings de IA no se invalida mientras el ES sostenga 7.800.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La concentración deja al índice dependiente de un puñado de nombres. Un shock de tasa real no necesita un deterioro de beneficios para comprimir el NQ: basta con que el descuento suba. El déficit más ancho sostiene al dólar y resta bid externo al Treasury largo, retroalimentando el nivel de 5,3%. BTC, correlacionado con liquidez neta y con el dólar, pierde 87.000 y opera bajo 84.100.</p>
+  </article>
+
+  <p class="section-label">Volatilidad y liquidez</p>
+  <div class="card">
+    <p>La liquidez del libro de futuros está sesgada a la oferta en la apertura europea-americana. El movimiento de 6 pb en el 10 años en una sola mañana es el proxy de vol realizada relevante: más informativo que un VIX todavía anclado por el récord del cash. El DXY firma cerca de 102,1 (+0,25% en algunos prints) y el euro pierde 1,12, lo que encarece el hedge de activos en dólares para el real money europeo.</p>
+    <ul>
+      <li>Curva: 10 años 5,32–5,40%; 30 años 5,70%; 2 años cerca de 4,80% tras el alivio del martes. Bear steepening de sesión.</li>
+      <li>Crudo: backwardation de Brent intacta; el descuento WTI > USD 10 indica tightness fuera de EE.UU. y oferta doméstica relativamente holgada.</li>
+      <li>Oro: ETF en 3.145 t (+69 t en seis semanas) contra un 10 años que subió ~56 pb a 5,31%. Divergencia de flujo vs. precio: el papel cede, el inventario no.</li>
+      <li>Cripto: BTC rechazado bajo 87.000, liquidez más fina en el rango 82.000–84.000. Sin catalizador idiosincrático; es un short de beta al dólar.</li>
+      <li>Calendario de liquidez: EIA 10:30 ET, subasta 13:00 ET, actas 14:00 ET, crédito al consumo de agosto 15:00 ET. Earnings after-close: APLD, LEVI.</li>
+    </ul>
+  </div>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · 60%</h3>
+      <p>Rango con sesgo de descuento hasta las actas. El ES oscila 7.800–7.890 y el NQ 31.050–31.480. WTI se mantiene en 88,20–91,50; el oro defiende 4.080–4.120 sin recuperar 4.200. BTC lateral 82.500–85.500.</p>
+      <p>Objetivos de sesión: ES 7.820 (cierre de hueco parcial) si la subasta sale sin tail; NQ 31.200 como imán. El cash no invalida el máximo del martes salvo cierre bajo 7.780.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Invalidación · 25%</h3>
+      <p>Catalizador: actas con sesgo de más subas y/o WTI sobre 92 con incidente físico en Ormuz, más tail de subasta > 2 pb.</p>
+      <p>Zona de reversión: ES bajo 7.750 en cierre de 30 minutos, NQ bajo 30.900, oro bajo 4.050. Ahí el régimen pasa de “compra de dips de IA” a reducción de gross. El 15% residual es un squeeze alcista si las actas confirman pausa de octubre y el Brent pierde 99: objetivo ES 7.920 / NQ 31.700.</p>
+    </div>
+  </div>
+
+  <p class="section-label">Nota técnica para algoritmos</p>
+  <div class="algo">
+    <p>Régimen: momentum de equity de baja amplitud contra mean-reversion de tasas reales. Ineficiencia explotable en la ventana 12:30–14:30 ET: el libro de NQ tiende a sobre-reaccionar al print de la subasta y a revertir 30–40% del impulso en los 15 minutos previos a las actas si el tail es menor a 1 pb.</p>
+    <p>Señales operativas, no órdenes: (1) spread NQ/ES en z-score de 5 días por debajo de −1,2 favorece long ES / short NQ hasta que el 10 años pierda 5,25%; (2) oro vs. DXY: beta realizada de 20 días negativa y ETF inflows positivos — fade de extensiones bajo 4.080 con stop 4.040, objetivo 4.180; (3) WTI solo en ruptura con volumen sobre 92,00 o pérdida de 87,50; dentro del rango, el edge es de mean-reversion de 0,8–1,2 dólares. Filtro de régimen: si el 30 años cierra sobre 5,75%, desactivar longs de duración y de cripto.</p>
+  </div>
+
+  <footer>
+    <p>Fuentes: cierres del 6 oct 2026 y preapertura del 7 oct 2026 según Reuters, Investrade Morning Preview, Yahoo Finance, Morningstar/Dow Jones, TipRanks, Saxo Market Quick Take, Financial Times commodities y Business Insider futures. Precios redondeados al corte de las 08:00 ART. Niveles técnicos estimados por el desk, no son niveles de exchange.</p>
+    <p>Disclaimer: material informativo de mercado. No es oferta, recomendación ni consejo de inversión. Los futuros pueden diferir del cash. El operador es responsable de su propio riesgo.</p>
+  </footer>
+</div>
+<script src="volver.js"></script>
+<script src="extra.js?v=13"></script>
+</body>
+</html>

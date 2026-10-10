@@ -5,58 +5,244 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reporte Diario de Mercado · 9 oct 2026</title>
 <style>
-  body { margin: 0; background: #0e1116; color: #e6edf3; font-family: Segoe UI, Helvetica, Arial, sans-serif; line-height: 1.5; }
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
   .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
-  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; }
-  h1 { margin: 0; font-size: 28px; }
-  h2 { font-size: 24px; }
-  .meta, .muted, figcaption, footer { color: #8b97a6; font-size: 12px; }
-  .lead, .card, table, .scen, .note { background: #161b22; border: 1px solid #2a3340; }
-  .lead { border-left: 4px solid #d4a017; padding: 18px; }
-  .card, .scen, .note { padding: 16px; margin: 12px 0; border-radius: 6px; }
-  table { width: 100%; border-collapse: collapse; }
-  th, td { padding: 10px; border-bottom: 1px solid #2a3340; text-align: left; }
-  th { color: #8b97a6; font-size: 11px; text-transform: uppercase; }
-  .num { text-align: right; font-variant-numeric: tabular-nums; }
-  .up { color: #3dd68c; } .dn { color: #f07178; }
-  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; }
-  .tag { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
-  .bull { color: #3dd68c; } .bear { color: #f07178; } .mix { color: #7aa2f7; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .base { border-top: 3px solid #3dd68c; } .inv { border-top: 3px solid #f07178; }
-  .note { border-style: dashed; }
-  img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px; border: 1px solid #2a3340; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
   a { color: #d4a017; }
-  @media (max-width: 720px) { .grid { display: block; } h1 { font-size: 22px; } }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
 </style>
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
 <body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span style="display:inline-flex;align-items:baseline;gap:2px;background:#e0941c;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">6<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Alivio táctico por el aplazamiento sobre Irán. El Nasdaq solo recorta el −1,25%.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,8%</span></a><a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,4%</span></a><a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +1,5%</span></a><a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −1,1%</span></a><a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −0,5%</span></a>
+</nav>
+
 <div class="wrap">
-  <p class="kicker">Reporte Diario de Mercado · 9 oct 2026</p>
-  <h1>Sesión de cash EE.UU. · viernes</h1>
-  <p class="meta">Corte ~08:00 ART / 07:00 ET · cash aún cerrado · no es consejo de inversión</p>
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 9 oct 2026</p>
+      <h1>Sesión de cash EE.UU. · viernes</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Cash aún cerrado</strong> · futuros y spot<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
   <section class="lead">
     <h2>El crudo cede tras el aplazamiento de Trump y el Nasdaq intenta recortar el −1,25% de ayer</h2>
-    <p>Alivio táctico, no régimen nuevo. Brent ~USD 103 (−1,2%) y WTI ~90,45 (−1,1% vs. 91,13 del jueves) después de que Trump descartara un ataque a Irán antes de las elecciones de noviembre. El 10 años consolida en 5,22–5,25%, debajo del pico de 5,36% del miércoles. Futuros NQ ~+0,8% y ES ~+0,4%. Cash del jueves: Dow +0,10% a 51.232, S&amp;P 500 −0,47% a 7.765, Nasdaq Composite −1,25% a 27.193 por ingresos de OpenAI bajo la cifra circulada.</p>
-    <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg/1280px-No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg" alt="Piso de la NYSE"><figcaption>Piso de la NYSE. El cash abre a las 09:30 ET.</figcaption></figure>
+    <p>El complejo de riesgo abre el viernes con un sesgo de alivio táctico, no de régimen nuevo. Brent retrocede cerca de 1,2% hacia USD 103 y el WTI opera en torno a 90,45 (−1,1% vs. el cierre de jueves en 91,13) después de que el presidente Trump descartara un ataque a Irán antes de las elecciones de medio término de noviembre y hablara de conversaciones “productivas”. El 10 años de EE.UU. consolida cerca de 5,22–5,25%, por debajo del pico de 5,36% del miércoles. Los futuros del Nasdaq 100 suben ~0,8% y los del S&P 500 ~0,3–0,4%, tras un cash mixto: Dow +0,10% a 51.232, S&P 500 −0,47% a 7.765 y Nasdaq Composite −1,25% a 27.193, lastrado por un informe de ingresos de OpenAI por debajo de las cifras que circulaban.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg/1280px-No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg" alt="Piso de la Bolsa de Nueva York">
+      <figcaption>Piso de la NYSE. El cash abre a las 09:30 ET; el recorte de futuros aún no está confirmado en el libro de cash.</figcaption>
+    </figure>
   </section>
+
+  <p class="section-label">Tabla de apertura</p>
   <table>
-    <tr><th>Activo</th><th class="num">Precio</th><th class="num">Var.</th><th class="num">Soporte</th><th class="num">Resistencia</th></tr>
-    <tr><td>NQ</td><td class="num">31.090</td><td class="num up">+0,8%</td><td class="num">30.550</td><td class="num">31.360</td></tr>
-    <tr><td>ES</td><td class="num">7.847</td><td class="num up">+0,4%</td><td class="num">7.730</td><td class="num">7.898</td></tr>
-    <tr><td>XAU/USD</td><td class="num">4.195</td><td class="num up">+1,5%</td><td class="num">4.139</td><td class="num">4.234</td></tr>
-    <tr><td>Crudo WTI</td><td class="num">90,45</td><td class="num dn">−1,1%</td><td class="num">89,48</td><td class="num">91,90</td></tr>
-    <tr><td>BTC</td><td class="num">82.380</td><td class="num dn">−0,5%</td><td class="num">80.770</td><td class="num">83.270</td></tr>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">31.090</td>
+        <td class="num up">+0,8%</td>
+        <td class="num">30.550</td>
+        <td class="num">31.360</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.847</td>
+        <td class="num up">+0,4%</td>
+        <td class="num">7.730</td>
+        <td class="num">7.898</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">4.195</td>
+        <td class="num up">+1,5%</td>
+        <td class="num">4.139</td>
+        <td class="num">4.234</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">90,45</td>
+        <td class="num dn">−1,1%</td>
+        <td class="num">89,48</td>
+        <td class="num">91,90</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">82.380</td>
+        <td class="num dn">−0,5%</td>
+        <td class="num">80.770</td>
+        <td class="num">83.270</td>
+      </tr>
+    </tbody>
   </table>
-  <article class="card"><span class="tag bull">Bull · riesgo desactivado</span><h3>Aplazamiento sobre Irán y retroceso del crudo</h3><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Hockley_County_Levelland_Texas_crude_oil_pump_facilities_2025_%281%29.jpg/1280px-Hockley_County_Levelland_Texas_crude_oil_pump_facilities_2025_%281%29.jpg" alt="Crudo"><figcaption>Bombeo de crudo en Texas. WTI hacia 90,45.</figcaption></figure><p class="lbl">Evento</p><p>Trump indicó que EE.UU. no atacará Irán antes de noviembre. Brent ~103 (−1,2%), WTI ~90,45.</p><p class="lbl">Sentimiento</p><p>[RIESGO DESACTIVADO/BULLISH] para equity; bearish para energía en el intradía.</p><p class="lbl">Mecanismo de transmisión</p><p>Menor prima de Hormuz alivia el 10 años y reabre el bid en NQ/ES. Canal inverso: XLE y Delta.</p></article>
-  <article class="card"><span class="tag mix">Mix</span><h3>OpenAI por debajo de la cifra circulada</h3><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nasdaq_MarketSite_%2851494550508%29.jpg/1280px-Nasdaq_MarketSite_%2851494550508%29.jpg" alt="Nasdaq"><figcaption>Nasdaq MarketSite. El Composite cerró −1,25%.</figcaption></figure><p class="lbl">Evento</p><p>El Financial Times ubicó el run-rate de OpenAI unos USD 20.000 millones debajo de lo señalado. SOX −3,4%. Futuros NQ +0,8%.</p><p class="lbl">Sentimiento</p><p>[RIESGO ACTIVADO/BEARISH] en el factor AI de ayer. Neto: mixto.</p><p class="lbl">Mecanismo de transmisión</p><p>OpenAI no cotiza. El múltiplo se corrige en semis y en el NDX.</p></article>
-  <article class="card"><span class="tag bear">Bear · riesgo activado</span><h3>El 10 años sigue sobre 5,20%</h3><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg/1280px-Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg" alt="Fed"><figcaption>Eccles Building. El mercado sigue cerca de 80% de hike en diciembre.</figcaption></figure><p class="lbl">Evento</p><p>10 años 5,22–5,25%. Michigan 10:00 ET, consenso 47,6 vs 48,1. Claims 197.000.</p><p class="lbl">Sentimiento</p><p>[RIESGO ACTIVADO/BEARISH] para duración y para rallies de múltiplo sin baja de yields.</p><p class="lbl">Mecanismo de transmisión</p><p>Michigan bajo 46 reabre 5,32–5,36% y corta el bid de NQ.</p></article>
-  <div class="grid">
-    <div class="scen base"><h3>Base · 58%</h3><p>Crudo bajo 91,20 y Michigan 46,5–49,0. Objetivos: NQ 31.250–31.360; ES 7.880–7.898; XAU 4.180–4.230.</p></div>
-    <div class="scen inv"><h3>Invalidación · 27%</h3><p>Hormuz o Michigan bajo 46. Zona: ES pierde 7.730 y NQ pierde 30.550. WTI sobre 91,90 abre 92,70.</p></div>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros y spot al corte. Niveles redondeados. Cash del jueves: NDX 30.726 (−1,39%), SPX 7.765 (−0,47%). VIX 15,21 (−1,3%).</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bull">Bull · riesgo desactivado</span>
+    <h3>Aplazamiento sobre Irán y retroceso del crudo</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Hockley_County_Levelland_Texas_crude_oil_pump_facilities_2025_%281%29.jpg/1280px-Hockley_County_Levelland_Texas_crude_oil_pump_facilities_2025_%281%29.jpg" alt="Instalaciones de bombeo de crudo">
+      <figcaption>Bombeo de crudo en Texas. El WTI cede hacia 90,45 tras el pico de oferta geopolítica del jueves.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Trump indicó que EE.UU. no atacará Irán antes de las elecciones de noviembre y describió avances en las conversaciones. Brent ~103 (−1,2%) y WTI ~90,45 (−1,1% a −1,2%), revirtiendo parte del rally del jueves (WTI +3,2% a 91,13; Brent +3,6% a 103,84 en el cierre previo).</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO DESACTIVADO/BULLISH] para equity de duración corta y múltiplos; [bearish] para el complejo energético en el intradía.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Menor prima de disrupción en Hormuz comprime el breakeven de inflación implícito y alivia el 10 años (5,22–5,25% vs. 5,36% del miércoles). Eso reabre el bid en NQ/ES y en Asia (Hang Seng +1,2% a +1,8%). El canal inverso es XLE y aerolíneas: Delta reporta antes de la campana con el fuel cost todavía elevado respecto del mes pasado.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix</span>
+    <h3>OpenAI por debajo de la cifra circulada; el Nasdaq intenta el gap</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nasdaq_MarketSite_%2851494550508%29.jpg/1280px-Nasdaq_MarketSite_%2851494550508%29.jpg" alt="Nasdaq MarketSite">
+      <figcaption>Nasdaq MarketSite. El Composite cerró −1,25%, la mayor caída desde mediados de agosto.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Un reporte situó el run-rate de ingresos de OpenAI cerca de USD 50.000 millones a septiembre, por debajo de las cifras que el mercado había internalizado. Semis y AI lideraron la venta: Nasdaq Composite 27.193 (−1,25%), NDX 30.726 (−1,39%). Shenzhen −2,1% en la sesión asiática por el mismo vector de capex. Los futuros NQ recuperan ~0,8% en el overnight.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO ACTIVADO/BEARISH] en el factor AI de ayer; el overnight es un recorte, no un cierre del tema. Lectura neta: mixto, con sesgo táctico alcista solo si el NQ sostiene 30.870–31.000 en la apertura de cash.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El múltiplo de semiconductores es el residual de duración más sensible cuando el 10 años está anclado sobre 5%. Una decepción de monetización en el ancla privada de capex (OpenAI) comprime el SOX y arrastra al NDX más que al Dow. El rebote de futuros es flujo de mean-reversion contra el −1,4% del cash, condicionado a que el crudo no vuelva sobre 91,90.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · riesgo activado</span>
+    <h3>El 10 años sigue sobre 5,20% y Michigan es el único print de cash</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg/1280px-Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg" alt="Edificio de la Reserva Federal">
+      <figcaption>Eccles Building. El mercado sigue descontando ~80% de probabilidad de un alza de la Fed en diciembre.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El 10 años opera ~5,22–5,25%. Las minutas de septiembre mostraron apoyo unánime al último hike y mayoría a favor de otro aumento antes de fin de año. Jobless claims de la semana al 3 de octubre: 197.000 vs. 200.000 esperados. Hoy, 10:00 ET, sentimiento preliminar de Michigan (consenso 47,6 vs. 48,1 previo). Canadá publica empleo a las 08:30 ET (consenso +7 mil, desempleo 6,5%). Collins (Fed) habla a las 16:00 ET. CPI de septiembre queda para el miércoles 14.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO ACTIVADO/BEARISH] para duración y para cualquier rally de múltiplo que no venga acompañado de más caída de yields. El oro sube igual (+1,3% a +1,5%, spot ~4.188–4.208) por el retroceso puntual del dólar y del yield, no por un giro de política.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Con fed funds ya en 3,75–4,00% y el mercado en ~80% de hike en diciembre, un Michigan por debajo de 46 o un salto de expectativas de inflación de 1 año reabre 5,32–5,36% en el 10 años y corta el bid de NQ. Un print en línea deja el canal de transmisión en el crudo: cada dólar menos en WTI es el alivio real de hoy.</p>
+  </article>
+
+  <p class="section-label">Volatilidad y liquidez</p>
+  <div class="card">
+    <p>VIX de cierre 15,21 (−1,3% en el día; rango de sesión 15,17–15,34). La vol implícita de equity no está pagando la cola de Hormuz: el índice sigue ~14 puntos por debajo del máximo de 52 semanas (35,30) y apenas sobre el piso de 13,38. Eso es compresión, no ausencia de gap risk. Realized de índices en la semana fue baja en el Dow y alta en NDX (−1,4% en un día).</p>
+    <p>Liquidez: viernes, Corea cerrada por Hangul, Taiwán en feriado nacional. El libro de Asia estuvo partido. Earnings: Delta antes de la campana abre la temporada de forma no oficial; los grandes bancos llegan el martes. Spreads de futuros de índices normales en el overnight; el riesgo de hueco está en el crudo, no en el ES. DXY ~102,16 plano. USD/JPY 158,1–158,3, sin señal de stress de funding. BTC 82.380 (−0,5%) y ETH ~2.492 (−2,7%): el cripto no confirma el rebote de futuros de equity.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/1280px-Gold_bullion_bars.jpg" alt="Barras de oro">
+      <figcaption>Oro al contado cerca de 4.195 (+1,5%). Soporte 4.139; resistencia 4.198–4.234.</figcaption>
+    </figure>
   </div>
-  <div class="note"><p><strong>Régimen:</strong> mean-reversion de índice con cola geopolítica en energía. VIX 15,21. BTC no es beta del NQ bajo 83.270.</p></div>
-  <footer><p>Fuentes: cierres del 8 oct y futuros del 9 oct. No es consejo de inversión.</p></footer>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · 58%</h3>
+      <p>El crudo se mantiene bajo 91,20, Michigan imprime 46,5–49,0 y el 10 años no recupera 5,30%. El rebote de futuros se sostiene en cash.</p>
+      <p>Objetivos: NQ 31.250–31.360; ES 7.880–7.898; XAU 4.180–4.230 mientras 4.139 aguante; WTI 89,50–90,80. BTC solo acompaña si rompe 83.270.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Invalidación · 27%</h3>
+      <p>Catalizador: headline de tránsito en Hormuz, desmentido de las conversaciones, o Michigan bajo 46 con expectativas de inflación al alza. Zona de reversión: ES pierde 7.730 (mínimo del jueves en cash) y NQ pierde 30.550. WTI de vuelta sobre 91,90 abre 92,70. Oro, en ese escenario, deja de ser bid de yield y pasa a bid de cola: por encima de 4.234 el squeeze se extiende; por debajo de 4.126 el alivio de tasas se agota.</p>
+    </div>
+  </div>
+  <p class="muted">Residual ~15%: rango estrecho, ES 7.780–7.850, sin aceptación de cash ni en el high ni en el low del jueves. Delta mueve el sector, no el índice.</p>
+
+  <p class="section-label">Nota técnica para algoritmos</p>
+  <div class="note">
+    <p><strong>Régimen:</strong> mean-reversion de índice con cola geopolítica en energía. No es trend-following de equity. El NDX está a ~1,4% del máximo de semana (31.361 en cash del NDX de referencia de sesión) y el ES a ~0,6% del high reciente. VIX sub-16 desaconseja vender gamma corta de overnight sin hedge de crudo.</p>
+    <p><strong>Ineficiencias explotables:</strong> (1) gap de NQ vs. cash del jueves — fade del primer impulso si el volumen de apertura no sostiene 31.200 y el WTI no pierde 90,00; (2) desacople XLE/ES — energía rezagada con equity bid es el par del día mientras Brent siga bajo 104; (3) oro vs. 10 años — la beta de XAU al yield está invertida en la sesión (oro +1,5% con yield solo −10 bp): si el 10 años rebota a 5,30% sin headline, el long de oro es el leg débil; (4) BTC no participa (−0,5% vs. NQ +0,8%): el residual de risk-on cripto está apagado bajo 83.270, no usarlo como beta del NQ.</p>
+  </div>
+
+  <footer>
+    <p>Fuentes: cierres de cash del 8 oct 2026 (Dow 51.232, S&P 500 7.765, Nasdaq Composite 27.193, NDX 30.726, VIX 15,21), futuros y commodities al corte del 9 oct (NordFX Market Pulse, TipRanks, Yahoo Finance, IC Markets, ATFX, FT, Report.az, Barron’s). Calendario: Michigan 10:00 ET, Canadá empleo 08:30 ET, Collins 16:00 ET; CPI 14 oct. Niveles de soporte y resistencia son zonas técnicas de referencia, no órdenes.</p>
+    <p>Disclaimer: material de trabajo interno, descriptivo y cuantitativo. No es oferta, solicitud ni consejo de inversión. Los precios son aproximados y pueden haber cambiado desde el corte. El operador es responsable de la ejecución y del riesgo.</p>
+  </footer>
 </div>
+<script src="volver.js"></script>
+<script src="extra.js?v=13"></script>
 </body>
 </html>

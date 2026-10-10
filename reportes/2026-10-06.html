@@ -1,1 +1,262 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Reporte Diario de Mercado · 6 oct 2026</title><style>body{margin:0;background:#0e1116;color:#e6edf3;font-family:Segoe UI,Helvetica,Arial,sans-serif;line-height:1.5}.wrap{max-width:980px;margin:0 auto;padding:28px 18px}.kicker{color:#d4a017;letter-spacing:.08em;text-transform:uppercase;font-size:12px;font-weight:700}.muted{color:#8b97a6}.lead,.card,table,.scen{background:#161b22;border:1px solid #2a3340}.lead{border-left:4px solid #d4a017;padding:16px}.card,.scen{padding:16px;margin:12px 0}table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid #2a3340}th{color:#8b97a6;font-size:11px;text-transform:uppercase;text-align:left}.up{color:#3dd68c}.dn{color:#f07178}.lbl{color:#8b97a6;font-size:11px;text-transform:uppercase}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.base{border-top:3px solid #3dd68c}.inv{border-top:3px solid #f07178}@media(max-width:720px){.grid{display:block}}</style></head><body><div class="wrap"><p class="kicker">Reporte Diario de Mercado · 6 oct 2026</p><h1>Sesión del martes: futuros al alza con crudo en retroceso</h1><p class="muted">Primera corrida. Corte 07:05 ET / 08:05 ART. No es consejo de inversión.</p><section class="lead"><h2>El Nasdaq defiende el récord mientras el WTI pierde los 88 dólares</h2><p>Futuros en verde tras el cierre récord del Nasdaq Composite. El alivio viene del crudo, no de las tasas: el 10 años sigue en 5,31%. WTI cede cerca de 2% hacia 87,6 por más tráfico en Ormuz y liberación de reservas del G7. Oro sobre 4.160. Bitcoin cerca de 86.100.</p></section><table><tr><th>Activo</th><th>Precio</th><th>Var.</th><th>Soporte</th><th>Resistencia</th></tr><tr><td>NQ</td><td>31.443,50</td><td class="up">+0,40%</td><td>31.100 / 30.980</td><td>31.550 / 31.720</td></tr><tr><td>ES</td><td>7.846</td><td class="up">+0,25%</td><td>7.780 / 7.720</td><td>7.890 / 7.940</td></tr><tr><td>XAU/USD</td><td>4.165</td><td class="up">+0,5%</td><td>4.120 / 4.080</td><td>4.210 / 4.250</td></tr><tr><td>WTI</td><td>87,60</td><td class="dn">−2,0%</td><td>86,20 / 84,80</td><td>89,50 / 91,00</td></tr><tr><td>BTC</td><td>86.100</td><td class="up">+0,6%</td><td>84.970 / 83.800</td><td>87.000 / 87.400</td></tr></table><article class="card"><p class="lbl">Evento</p><p>Nasdaq Composite en récord, +1,05% a 27.477. S&amp;P cash 7.773.</p><p class="lbl">Sentimiento</p><p>[RIESGO DESACTIVADO/BULLISH] en beta de crecimiento. CME cerca de 78% de pausa este mes.</p><p class="lbl">Mecanismo de transmisión</p><p>Menos prima de hike comprime el descuento de flujos de IA y compensa el 10 años en 5,31%.</p></article><article class="card"><p class="lbl">Evento</p><p>WTI ~87,6 y Brent bajo 99–100. Más embarques por Ormuz y stockpile del G7.</p><p class="lbl">Sentimiento</p><p>[RIESGO DESACTIVADO/BEARISH] en crudo de corto plazo.</p><p class="lbl">Mecanismo de transmisión</p><p>Menor impulso inflacionario afloja breakevens. Pérdida de 89,5 abre 86,2; sobre 91 se reactiva el riesgo.</p></article><article class="card"><p class="lbl">Evento</p><p>10 años en 5,31% y 30 años en 5,63% tras un pico de 5,70%. Mañana minutas del FOMC.</p><p class="lbl">Sentimiento</p><p>[RIESGO ACTIVADO/BEARISH] en duración soberana.</p><p class="lbl">Mecanismo de transmisión</p><p>El term premium mantiene el costo de capital alto. DXY en 102 limita BTC bajo 87.000.</p></article><div class="grid"><div class="scen base"><h3>Base · 62%</h3><p>WTI bajo 89,5 y 10 años sin recuperar 5,40. ES 7.890–7.940. NQ 31.550–31.720.</p></div><div class="scen inv"><h3>Invalidación · 28%</h3><p>Crudo recupera 91 y el 10 años atraviesa 5,45. Reversión bajo ES 7.760 y NQ 30.980.</p></div></div><p class="muted">Primera corrida del 6 oct. No es consejo de inversión.</p></div></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reporte Diario de Mercado · 6 oct 2026</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --line: #2a3340;
+    --text: #e6edf3;
+    --muted: #8b97a6;
+    --gold: #d4a017;
+    --bull: #3dd68c;
+    --bear: #f07178;
+    --neutral: #7aa2f7;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0e1116; color: #e6edf3; }
+  body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 22px 18px 48px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker {
+    color: #d4a017; letter-spacing: 0.12em; text-transform: uppercase;
+    font-size: 12px; font-weight: 700; margin: 0 0 6px;
+  }
+  h1 { font-size: 28px; line-height: 1.15; margin: 0; font-weight: 700; letter-spacing: -0.02em; }
+  .meta { text-align: right; color: #8b97a6; font-size: 12px; line-height: 1.45; min-width: 210px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 14px; margin-bottom: 22px;
+  }
+  h2 { font-size: 26px; line-height: 1.2; margin: 0 0 10px; letter-spacing: -0.02em; }
+  h3 { font-size: 15px; margin: 0 0 8px; letter-spacing: 0.04em; text-transform: uppercase; color: #d4a017; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 4px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; border: 1px solid #2a3340; margin: 8px 0 22px; }
+  th {
+    text-align: left; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: #8b97a6; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340;
+  }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-variant-numeric: tabular-nums; font-size: 14px; }
+  tr:last-child td { border-bottom: 0; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b97a6; margin: 6px 0 10px; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 4px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag {
+    display: inline-block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    font-weight: 700; padding: 3px 8px; border-radius: 2px; margin-bottom: 8px;
+  }
+  .tag.bull { color: #0e1116; background: #3dd68c; }
+  .tag.bear { color: #0e1116; background: #f07178; }
+  .tag.mix { color: #0e1116; background: #7aa2f7; }
+  .lbl { display: block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8b97a6; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 4px; padding: 16px; }
+  .scen.base { border-top: 4px solid #3dd68c; }
+  .scen.inv { border-top: 4px solid #f07178; }
+  .scen h3 { color: #e6edf3; text-transform: none; letter-spacing: 0; font-size: 16px; }
+  .algo {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 4px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  footer p { margin: 0 0 8px; }
+  @media (max-width: 700px) {
+    h1 { font-size: 22px; }
+    h2 { font-size: 22px; }
+    .mast { flex-direction: column; align-items: flex-start; }
+    .meta { text-align: left; }
+    .grid { grid-template-columns: 1fr; }
+    td, th { padding: 8px 6px; font-size: 12px; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span style="display:inline-flex;align-items:baseline;gap:2px;background:#d4a017;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">5<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Alivio de crudo y récord defendido, sin cambio de régimen.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,40%</span></a><a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,25%</span></a><a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,5%</span></a><a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −2,0%</span></a><a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,6%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 6 oct 2026</p>
+      <h1>Sesión del martes: futuros al alza con crudo en retroceso</h1>
+    </div>
+    <div class="meta">
+      Corte 07:05 ET / 08:05 ART<br>
+      Cash US aún cerrado · futuros y spot<br>
+      <strong>No es consejo de inversión</strong>
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>El Nasdaq defiende el récord mientras el WTI pierde los 88 dólares</h2>
+    <p>Los futuros de índices estadounidenses abren la sesión europea/pre-cash en verde después de que el Nasdaq Composite cerrara el lunes en máximo histórico. El alivio viene del crudo, no de las tasas: el 10 años sigue en 5,31%, zona de 2002, pero el WTI cede cerca de 2% hacia 87,6 dólares por mayor tráfico de tanqueros en Ormuz y una liberación de reservas del G7. El oro se sostiene sobre 4.160 y bitcoin cotiza en torno a 86.100, sin romper el techo de septiembre cerca de 87.400.</p>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=70" alt="Pantallas de cotización en una mesa de mercados">
+      <figcaption>Mesa de cotización. El bid de futuros se concentra en Nasdaq 100 tras el cierre récord del Composite.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th>Precio aprox.</th>
+        <th>Var. sesión / 24h</th>
+        <th>Soporte</th>
+        <th>Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ (Nasdaq 100)</td>
+        <td>31.443,50</td>
+        <td class="up">+0,40%</td>
+        <td>31.100 / 30.980</td>
+        <td>31.550 / 31.720</td>
+      </tr>
+      <tr>
+        <td>ES (S&P 500)</td>
+        <td>7.846,00</td>
+        <td class="up">+0,25%</td>
+        <td>7.780 / 7.720</td>
+        <td>7.890 / 7.940</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td>4.165</td>
+        <td class="up">+0,5%</td>
+        <td>4.120 / 4.080</td>
+        <td>4.210 / 4.250</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td>87,60</td>
+        <td class="dn">−2,0%</td>
+        <td>86,20 / 84,80</td>
+        <td>89,50 / 91,00</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td>86.100</td>
+        <td class="up">+0,6% 24h</td>
+        <td>84.970 / 83.800</td>
+        <td>87.000 / 87.400</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-14px;font-size:12px;">Referencias de futuros ~06:30–07:05 ET. Brent cerca de 98,4. DXY ~102,0. UST 10 años 5,31%; 30 años 5,63% tras tocar 5,70%.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bull">Bull</span>
+    <span class="lbl">Evento</span>
+    <p>El Nasdaq Composite cerró el lunes en récord (+1,05%, 27.477) con Nvidia de nuevo en máximo de cierre. En premarket, NQ +0,40% a 31.443,5 y ES +0,25% a 7.846. El S&P cash (7.773, +0,66%) quedó a menos de 1% de su máximo de agosto. Nvidia precotiza cerca de 5,8 billones de dólares.</p>
+    <span class="lbl">Sentimiento</span>
+    <p>[RIESGO DESACTIVADO/BULLISH] en beta de crecimiento. El mercado trata el payroll débil de la semana pasada como techo a nuevas alzas de la Fed en octubre (CME: ~78% de probabilidad de pausa este mes).</p>
+    <span class="lbl">Mecanismo de transmisión</span>
+    <p>Menos prima de hike inmediato comprime el descuento de flujos de caja largos de semiconductores. El múlti de IA absorbe un 10 años en 5,31% mientras el crecimiento nominal de beneficios —LSEG ve EPS del S&P arriba de 30% interanual en el trimestre, concentrado en el complejo de IA— compensa la duración. Transmisión: NQ lidera, ES sigue con beta menor, small caps rezagadas por el costo de capital.</p>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=70" alt="Gráficos de mercado en alza sobre pantallas">
+      <figcaption>Riesgo de crecimiento. El bid se concentra en megacaps de IA, no en el ancho del mercado.</figcaption>
+    </figure>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear</span>
+    <span class="lbl">Evento</span>
+    <p>El WTI cae cerca de 2% a 87,6 dólares y el Brent vuelve bajo 99–100 (98,4–98,6 según el corte). El catalizador es más oferta efectiva: más embarques por el estrecho de Ormuz y una liberación de existencias de emergencia del G7. Persiste el riesgo de cola: ataques de hutíes respaldados por Irán sobre blancos saudíes.</p>
+    <span class="lbl">Sentimiento</span>
+    <p>[RIESGO DESACTIVADO/BEARISH] en crudo de corto plazo. Para equities y duración real es un shock de oferta negativo que se desactiva, no un shock de demanda.</p>
+    <span class="lbl">Mecanismo de transmisión</span>
+    <p>Menos impulso inflacionario de energía baja la prima de términos de intercambio y afloja el ancla de expectativas de breakevens. El canal hacia índices es vía márgenes de transporte y de consumo, no vía beta petrolera. Niveles: pérdida de 89,5 deja el camino a 86,2; una reversión sobre 91 reactivaría el riesgo de inflación y castigaría múltiplos.</p>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=70" alt="Bomba de extracción de crudo">
+      <figcaption>Oferta física. El retroceso del WTI depende de que el flujo por Ormuz se mantenga.</figcaption>
+    </figure>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix</span>
+    <span class="lbl">Evento</span>
+    <p>La curva sigue en máximos de dos décadas. El 10 años cerró en 5,31% y el 30 años, tras un pico de 5,70%, cede a 5,63%. El 2 años está cerca de 4,81–4,83%. Hoy entra la balanza comercial de agosto y comentarios de la Fed; mañana, a las 14:00 ET, las minutas del FOMC de septiembre (suba de 25 pb, fondos en 3,75–4,00%). El JGB a 10 años superó 3%, y el euro sigue bajo presión cerca de 1,12–1,124.</p>
+    <span class="lbl">Sentimiento</span>
+    <p>[RIESGO ACTIVADO/BEARISH] en duración soberana. Mixto para riesgo: el corto de la curva se alivió con el empleo; el largo no.</p>
+    <span class="lbl">Mecanismo de transmisión</span>
+    <p>El término premium y la oferta de bonos (EE.UU., Europa, Japón) mantienen el costo de capital alto aunque el mercado descuente pausa en octubre y hike en diciembre. Oro en 4.165 funciona como diversificador de reservas, no como cobertura limpia de tasas reales. DXY en 102 (máximo de ~18 meses) limita el beta de BTC bajo 87.000. Zona de vigilancia: 10 años sobre 5,40–5,45 reabre el descuento de múltiplos.</p>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=70" alt="Barras de oro">
+      <figcaption>Oro frente a tasas reales. El metal aguanta sobre 4.120 pese al dólar en 102.</figcaption>
+    </figure>
+  </article>
+
+  <p class="section-label">Volatilidad y liquidez</p>
+  <article class="card">
+    <p>Régimen de volatilidad realizada comprimida en índices (futuros avanzan 20–100 puntos con rangos ordenados) y realizada elevada, pero en descenso, en crudo (−2% en la sesión asiática/europea). La liquidez de libro en NQ/ES es de pre-cash: profundidad fina hasta las 09:30 ET; el spread implícito se ensancha en los cruces de 07:00 y 08:30 ET. BTC opera en un rango de ~2.000 dólares bajo 87.400, con el dólar como techo. El oro muestra elasticidad baja a la caída del crudo: no hay huida a refugio, hay bid de reserva. Posicionamiento CFTC reciente (corte 1 oct): cortos especulativos abultados en UST 5 y 10 años (cerca de 996 mil y 901 mil contratos netos cortos), combustible para un squeeze de bonos si las minutas suavizan el sesgo.</p>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=1200&q=70" alt="Representación física de bitcoin">
+      <figcaption>Bitcoin en 86.100. El techo relevante sigue en 87.000–87.400, no en el flujo de equities.</figcaption>
+    </figure>
+  </article>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · 62%</h3>
+      <p>Continuación ordenada si el WTI se mantiene bajo 89,5 y el 10 años no recupera 5,40. Objetivos de cash/futuros: ES 7.890–7.940 (test del máximo de agosto en el índice cash) y NQ 31.550–31.720. Oro lateral 4.140–4.210. BTC intenta 87.000 sin cierre diario por encima. Catalizador intradía: balanza comercial sin sorpresa y speakers de la Fed no hawkish.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Invalidación · 28%</h3>
+      <p>Reversión si el crudo recupera 91 (disrupción en Ormuz o titulares hutíes) y el 10 años atraviesa 5,45 antes de las minutas. Zona de reversión: ES bajo 7.760 y NQ bajo 30.980, con extensión a 7.720 / 30.750. El oro rompería 4.210 solo si el movimiento es de aversión, no de dólar. Probabilidad residual ~10% de squeeze fuerte de bonos si el 30 años pierde 5,55.</p>
+    </div>
+  </div>
+
+  <p class="section-label">Nota técnica para algoritmos</p>
+  <div class="algo">
+    <p><strong>Régimen.</strong> Trend-following moderado en NQ/ES en marcos de 15–60 min mientras el precio respete la VWAP de la sesión europea y el crudo no recupere la media de 4 horas. Mean-reversion intradía en WTI entre 86,2 y 89,5. BTC en rango; evitar breakout hasta cierre sobre 87.000.</p>
+    <p><strong>Ineficiencias explotables.</strong> (1) Divergencia equity-duración: el beta de NQ ignora el 10 años en 5,31%; un z-score de residual NQ vs UST 10a superior a 1,5 en 30 min favorece fade del tramo, no persecución. (2) Desacople crudo-equities: el impulso bajista del WTI se absorbe en 20–40 min; vender fuerza de ES en los primeros 15 min posteriores a un print de crudo > 1 desviación suele revertir si Ormuz no confirma. (3) Cortos CFTC extremos en UST: sesgo a cubrir rallies del futuro de notas si el 2 años pierde 4,78. Filtro de sesión: no incrementar tamaño antes de las 09:30 ET; liquidez de apertura concentra el 30–40% del rango del día.</p>
+  </div>
+
+  <footer>
+    <p>Fuentes: Reuters, Investopedia, Dow Jones/Morningstar, Markets Insider, IC Markets, TalkMarkets, ATFX, Blocksignal/CoinDesk, CME FedWatch, LSEG (consensos de beneficios). Precios de futuros y spot aproximados al corte de las 07:05 ET del 6 oct 2026; no son ejecutables.</p>
+    <p>Disclaimer: material informativo de contexto de mercado. No constituye recomendación, oferta ni asesoramiento de inversión. Los escenarios son probabilísticos y pueden invalidarse con un solo titular de oferta energética o de política monetaria.</p>
+  </footer>
+</div>
+<script src="volver.js"></script>
+<script src="extra.js?v=13"></script>
+</body>
+</html>
