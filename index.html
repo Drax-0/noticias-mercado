@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>Reportes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,9 +48,15 @@
   .hint { color: #5c574f; font-size: 12px; padding: 8px 22px 0; max-width: 880px; margin: 0 auto; }
   @media (max-width: 720px) {
     h1 { font-size: 28px; }
-    a.row { grid-template-columns: 64px 1fr 42px; gap: 10px; }
+    .top { padding-top: 24px; align-items: flex-start; }
+    a.row { grid-template-columns: 58px 1fr 64px; gap: 10px; padding: 14px 0; }
+    .ttl { font-size: 16px; }
+    .score { min-width: 58px; height: 36px; padding: 0 6px; }
+    .score b { font-size: 20px; }
     .cols { grid-template-columns: 1fr; }
     .tools { flex-wrap: wrap; }
+    .seg { width: 100%; }
+    .seg button { flex: 1; }
   }
 </style>
 </head>

@@ -1,4 +1,7 @@
 (() => {
+  const css = document.createElement("style");
+  css.textContent = "@media (max-width:860px){body{padding-top:0 !important;}#scorebar{position:sticky !important;top:0;z-index:50;display:flex !important;flex-wrap:wrap;gap:8px 12px;grid-template-columns:none !important;padding:10px 14px !important;font-size:15px !important;}#scorebar>a{order:1;font-size:13px !important;}#scorebar>div{order:2;flex:1 1 180px;justify-content:flex-start !important;min-width:0;}#scorebar>div>span:last-child{font-size:14px;}#scorebar>span:last-child{display:none;}nav[aria-label=TradingView]{position:sticky !important;top:48px;right:auto !important;width:100% !important;z-index:40;flex-direction:row !important;flex-wrap:nowrap;gap:8px;overflow-x:auto;padding:8px 12px;background:#0e1116;border-bottom:1px solid #2a3340;}nav[aria-label=TradingView]>p{display:none;}nav[aria-label=TradingView] a{flex:0 0 132px;width:132px;} .wrap{padding:18px 14px 80px;} .mast{flex-direction:column;align-items:flex-start;gap:8px;} .meta{text-align:left;min-width:0;} h1{font-size:22px;} h2{font-size:20px;} .lead{padding:14px 14px 4px;} table{display:block;overflow-x:auto;} #pager-dia{left:50% !important;transform:translateX(-50%);bottom:12px;}}";
+  document.head.appendChild(css);
   const m = location.pathname.match(/(20\d{2}-\d{2}-\d{2})/);
   if (!m) return;
   const date = m[1];
