@@ -1,7 +1,32 @@
 (() => {
   const css = document.createElement("style");
-  css.textContent = "@media (max-width:860px){body{padding-top:0 !important;}#scorebar{position:sticky !important;top:0;z-index:50;display:flex !important;flex-wrap:wrap;gap:8px 12px;grid-template-columns:none !important;padding:10px 14px !important;font-size:15px !important;}#scorebar>a{order:1;font-size:13px !important;}#scorebar>div{order:2;flex:1 1 180px;justify-content:flex-start !important;min-width:0;}#scorebar>div>span:last-child{font-size:14px;}#scorebar>span:last-child{display:none;}nav[aria-label=TradingView]{position:sticky !important;top:48px;right:auto !important;width:100% !important;z-index:40;flex-direction:row !important;flex-wrap:nowrap;gap:8px;overflow-x:auto;padding:8px 12px;background:#0e1116;border-bottom:1px solid #2a3340;}nav[aria-label=TradingView]>p{display:none;}nav[aria-label=TradingView] a{flex:0 0 132px;width:132px;} .wrap{padding:18px 14px 80px;} .mast{flex-direction:column;align-items:flex-start;gap:8px;} .meta{text-align:left;min-width:0;} h1{font-size:22px;} h2{font-size:20px;} .lead{padding:14px 14px 4px;} table{display:block;overflow-x:auto;} #pager-dia{left:50% !important;transform:translateX(-50%);bottom:12px;}}";
+  css.textContent = "@media (max-width:860px){body{padding-top:0 !important;}#scorebar{position:sticky !important;top:0;z-index:50;display:flex !important;flex-wrap:wrap;align-items:center;gap:8px 12px;grid-template-columns:none !important;padding:10px 14px !important;font-size:15px !important;}#scorebar>a{order:1;font-size:13px !important;}#scorebar>div{order:2;flex:1 1 140px;justify-content:flex-start !important;min-width:0;}#scorebar>div>span:last-child{font-size:14px;}#scorebar>span:last-child{display:none;}#tv-toggle{order:3;margin-left:auto;background:#1c232d;color:#e6edf3;border:1px solid #314050;border-radius:8px;padding:7px 10px;font:12px Segoe UI,Helvetica,Arial,sans-serif;letter-spacing:.04em;}#tv-drawer{position:sticky;top:48px;z-index:40;background:#0e1116;border-bottom:1px solid #2a3340;max-height:0;overflow:hidden;opacity:0;transform:translateY(-6px);transition:max-height .32s ease,opacity .22s ease,transform .32s ease;}#tv-drawer.open{max-height:190px;opacity:1;transform:none;}nav[aria-label=TradingView]{position:static !important;right:auto !important;top:auto !important;width:100% !important;flex-direction:row !important;flex-wrap:nowrap;gap:8px;overflow-x:auto;padding:10px 12px 0;background:transparent;border:0;}nav[aria-label=TradingView]>p{display:none;}nav[aria-label=TradingView] a{flex:0 0 132px;width:132px;}#tv-collapse{display:grid;place-items:center;width:100%;height:28px;background:transparent;border:0;color:#8b97a6;font-size:16px;} .wrap{padding:18px 14px 80px;} .mast{flex-direction:column;align-items:flex-start;gap:8px;} .meta{text-align:left;min-width:0;} h1{font-size:22px;} h2{font-size:20px;} .lead{padding:14px 14px 4px;} table{display:block;overflow-x:auto;} #pager-dia{left:50% !important;transform:translateX(-50%);bottom:12px;}}";
   document.head.appendChild(css);
+  const nav = document.querySelector('nav[aria-label="TradingView"]');
+  if (nav && window.matchMedia("(max-width:860px)").matches) {
+    const drawer = document.createElement("div");
+    drawer.id = "tv-drawer";
+    nav.parentNode.insertBefore(drawer, nav);
+    drawer.appendChild(nav);
+    const close = document.createElement("button");
+    close.id = "tv-collapse";
+    close.type = "button";
+    close.setAttribute("aria-label", "Cerrar gráficos");
+    close.textContent = "↑";
+    drawer.appendChild(close);
+    const toggle = document.createElement("button");
+    toggle.id = "tv-toggle";
+    toggle.type = "button";
+    toggle.textContent = "Gráficos";
+    const bar = document.getElementById("scorebar");
+    if (bar) bar.appendChild(toggle);
+    function setOpen(on) {
+      drawer.classList.toggle("open", on);
+      toggle.textContent = on ? "Cerrar" : "Gráficos";
+    }
+    toggle.onclick = () => setOpen(!drawer.classList.contains("open"));
+    close.onclick = () => setOpen(false);
+  }
   const m = location.pathname.match(/(20\d{2}-\d{2}-\d{2})/);
   if (!m) return;
   const date = m[1];
