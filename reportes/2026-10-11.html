@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reporte Diario de Mercado · 11 oct 2026</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+:root { --bg:#0e1116; --panel:#161b22; --line:#2a3340; --text:#e6edf3; --muted:#8b97a6; --accent:#d4a017; --bull:#3dd68c; --bear:#f07178; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:15.5px;line-height:1.55;padding-top:68px}
+.bar{position:fixed;top:0;left:0;right:0;height:60px;background:#0e1116;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 18px;z-index:100;max-width:100%}
+.bar a{color:var(--accent);text-decoration:none;font-weight:600;font-size:14px}
+.score{display:flex;align-items:baseline;gap:6px;font-size:18px;font-weight:700}
+.score small{font-size:12px;color:var(--muted);font-weight:500}
+.phrase{font-size:13px;color:var(--muted);margin-left:10px}
+.wrap{max-width:980px;margin:0 auto;padding:22px 18px 40px}
+header{display:grid;grid-template-columns:1fr 340px;gap:22px;align-items:start;margin-bottom:28px}
+h1{font-size:28px;line-height:1.15;margin:0 0 8px;font-weight:700}
+.kicker{color:var(--accent);font-size:13px;letter-spacing:.4px;text-transform:uppercase;margin-bottom:6px}
+.meta{color:var(--muted);font-size:13px}
+img.photo{width:100%;max-height:320px;object-fit:cover;border-radius:4px;border:1px solid var(--line);display:block}
+.table-wrap{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:22px 0}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#1c232c;font-weight:600;font-size:13px;color:var(--muted)}
+td:first-child{font-weight:600}
+.chg.pos{color:var(--bull)}
+.chg.neg{color:var(--bear)}
+section{margin:32px 0}
+h2{font-size:18px;margin:0 0 12px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.event{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px;margin:16px 0;display:grid;grid-template-columns:1fr 280px;gap:16px}
+.sent{display:inline-block;padding:2px 8px;border-radius:3px;font-size:12px;font-weight:600;margin-right:8px}
+.sent.bull{background:rgba(61,214,140,.15);color:var(--bull)}
+.sent.bear{background:rgba(240,113,120,.15);color:var(--bear)}
+.sent.neutral{background:rgba(139,151,166,.15);color:var(--muted)}
+.scen{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.scen div{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px}
+.tv-nav{position:fixed;right:16px;top:88px;width:148px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px;z-index:90;font-size:12px}
+.tv-nav h3{margin:0 0 8px;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--accent)}
+.tv-card{background:#1c232c;border:1px solid var(--line);border-radius:4px;padding:6px 8px;margin-bottom:6px}
+.tv-card a{color:var(--text);text-decoration:none;display:block}
+.tv-card .tkr{font-weight:700;font-size:13px}
+.tv-card .nm{color:var(--muted);font-size:10px}
+.tv-card .chg{font-size:11px;margin-top:2px}
+@media(max-width:900px){header,.event,.scen{grid-template-columns:1fr} .tv-nav{display:none}}
+</style>
+</head>
+<body>
+<div class="bar">
+<a href="../index.html">← Reportes</a>
+<div style="display:flex;align-items:center">
+<span class="score" data-score="4">4<small>/10</small></span>
+<span class="phrase">Pausa dominical tras cierre semanal positivo; yields altos y geopolítica contenida</span>
+</div>
+</div>
+<div class="wrap">
+<header>
+<div>
+<div class="kicker">Reporte Diario de Mercado · 11 oct 2026</div>
+<h1>Futuros estables en el fin de semana; yields en 5,25% y petróleo cerca de 92 USD</h1>
+<p class="meta">Domingo 11 de octubre de 2026 · Datos de cierre del viernes y cotizaciones diferidas · Importancia 4/10</p>
+</div>
+<img class="photo" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80" alt="Piso de trading y pantallas de mercado">
+</header>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Activo</th><th>Precio</th><th>Variación</th></tr></thead>
+<tbody>
+<tr><td>NQ</td><td>31.109</td><td class="chg pos">+0,45%</td></tr>
+<tr><td>ES</td><td>7.860</td><td class="chg pos">+0,56%</td></tr>
+<tr><td>XAU/USD</td><td>4.216</td><td class="chg pos">+1,4%</td></tr>
+<tr><td>Crudo WTI</td><td>91,85</td><td class="chg pos">+0,4%</td></tr>
+<tr><td>BTC</td><td>82.951</td><td class="chg pos">+0,2%</td></tr>
+</tbody>
+</table>
+</div>
+<section>
+<h2>Tres eventos relevantes</h2>
+<div class="event">
+<div>
+<span class="sent neutral">Neutral</span>
+<strong>Yields de largo plazo se mantienen cerca de máximos de 24 años.</strong>
+<p>El bono a 10 años cerró alrededor de 5,24–5,27%. El mercado ya descontaba una probabilidad baja de suba en la reunión de octubre del Fed (cerca del 18%) y una más alta para diciembre (alrededor de 70%). El mecanismo es el term premium y la expectativa de inflación persistente, que limitan el margen para que los índices amplíen ganancias de forma sostenida. El movimiento de los futuros a la mañana del viernes ya reflejaba esta cautela.</p>
+</div>
+<img class="photo" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80" alt="Pantallas de datos financieros">
+</div>
+<div class="event">
+<div>
+<span class="sent bull">Positivo leve</span>
+<strong>Petróleo se estabiliza cerca de 92 USD tras volatilidad geopolítica.</strong>
+<p>WTI cotizó en torno a 91,85 y Brent cerca de 104. La semana combinó interrupciones residuales del huracán Isaias en el Golfo y tensiones en Hormuz, pero las declaraciones de que no habría ataques antes de las elecciones intermedias redujeron el premio de riesgo. El mecanismo es oferta: flujos de crudo de Medio Oriente se recuperaron parcialmente y el mercado absorbió el shock sin escalada mayor. El precio sigue por encima de promedios móviles de mediano plazo.</p>
+</div>
+<img class="photo" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Barriles de petróleo">
+</div>
+<div class="event">
+<div>
+<span class="sent neutral">Mixto</span>
+<strong>Sector tecnológico y AI cierran la semana con recuperación parcial.</strong>
+<p>Tras dudas sobre cifras de ingresos de OpenAI (reportes de ~50 mil millones anualizados versus expectativas previas más altas), las acciones de IA se recuperaron el viernes. El S&P y Nasdaq terminaron en positivo. El mecanismo es revaluación de expectativas de crecimiento: el mercado ya descontaba un escenario de monetización más lenta, y los datos no cambiaron de forma material el consenso de earnings del trimestre. La atención se traslada a los resultados de los grandes bancos la próxima semana.</p>
+</div>
+<img class="photo" src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=800&q=80" alt="Bitcoin y activos digitales">
+</div>
+</section>
+<section>
+<h2>Volatilidad</h2>
+<p>El VIX cerró cerca de 14,84, con una baja de alrededor de 3,7% en la sesión del viernes. El rango intradía de los futuros de índices fue acotado. La volatilidad implícita en opciones de índices se mantiene en niveles bajos relativos a los últimos meses, consistente con un mercado que espera continuidad del rango más que un quiebre inmediato. En commodities, la volatilidad del petróleo sigue elevada por el componente geopolítico, pero sin nuevas escaladas el fin de semana.</p>
+</section>
+<section>
+<h2>Dos escenarios para el inicio de semana</h2>
+<div class="scen">
+<div>
+<strong>Base (probabilidad ~60%)</strong>
+<p>Los futuros abren el lunes dentro del rango de la semana previa. Yields se mantienen por encima de 5,2% y el petróleo entre 90 y 94. Los índices consolidan cerca de los máximos recientes mientras se esperan los earnings bancarios y datos de vivienda. Movimiento de precios contenido, sin ruptura clara de niveles técnicos.</p>
+</div>
+<div>
+<strong>Alternativo (probabilidad ~40%)</strong>
+<p>Datos o comentarios sobre inflación o geopolítica empujan yields por encima de 5,4% o el petróleo hacia 95+. En ese caso el Nasdaq enfrenta presión relativa y el oro puede ampliar la recuperación desde los mínimos de la semana. El mercado ya descontó parte de estos riesgos, por lo que la reacción sería de magnitud moderada.</p>
+</div>
+</div>
+</section>
+<section>
+<h2>Nota técnica</h2>
+<p>NQ se encuentra en la zona de 31.100, por encima de la media de 50 días y cerca del extremo superior del rango reciente. ES en 7.860 mantiene estructura alcista de corto plazo. Oro en 4.216 recuperó desde el mínimo semanal de ~4.108 y enfrenta resistencia en 4.250. WTI por encima de 91 con soporte en 89–90. BTC lateral entre 80.000 y 85.000. No hay señales extremas de sobrecompra en los índices principales según RSI diario.</p>
+<p style="color:var(--muted);font-size:13px;margin-top:24px">Fuentes: cotizaciones diferidas de futuros CME, COMEX, NYMEX y spot; resúmenes de cierre del 9–10 de octubre. No constituye recomendación de inversión.</p>
+</section>
+</div>
+<nav id="tv-static" class="tv-nav">
+<h3>Tradingview: Gráficos</h3>
+<div class="tv-card"><a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1%21" target="_blank"><div class="tkr">NQ</div><div class="nm">Nasdaq 100</div><div class="chg pos">+0,45%</div></a></div>
+<div class="tv-card"><a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1%21" target="_blank"><div class="tkr">ES</div><div class="nm">S&P 500</div><div class="chg pos">+0,56%</div></a></div>
+<div class="tv-card"><a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank"><div class="tkr">ORO</div><div class="nm">Oro</div><div class="chg pos">+1,4%</div></a></div>
+<div class="tv-card"><a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank"><div class="tkr">WTI</div><div class="nm">Crudo</div><div class="chg pos">+0,4%</div></a></div>
+<div class="tv-card"><a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank"><div class="tkr">BTC</div><div class="nm">Bitcoin</div><div class="chg pos">+0,2%</div></a></div>
+</nav>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
