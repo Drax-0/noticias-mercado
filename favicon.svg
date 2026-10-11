@@ -1,21 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" fill="#000000"/>
-  <!-- línea vertical larga -->
-  <rect x="4" y="4" width="2.5" height="24" fill="#d4a017"/>
-  <!-- M outline limpia -->
+  <!-- línea vertical -->
+  <rect x="3" y="4" width="2.2" height="24" fill="#d4a017"/>
+  <!-- M más ancha -->
   <path fill="#d4a017" d="
-    M11 5
+    M8 5
     V27
-    H14
-    V16
-    L16 21
-    L18 16
+    H11.5
+    V17
+    L16 23
+    L20.5 17
     V27
-    H21
+    H24
     V5
-    H18
-    L16 11
-    L14 5
+    H20.5
+    L16 12
+    L11.5 5
     Z
   "/>
 </svg>
