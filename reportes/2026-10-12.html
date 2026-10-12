@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 12 oct 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="4" style="display:inline-flex;align-items:baseline;gap:2px;background:#a8be48;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">4<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Futuros contenidos; crudo sobre 100 por geopolítica, earnings bancarios y CPI a la vista</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,05%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,12%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,1%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,8%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,6%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 12 oct 2026</p>
+      <h1>Sesión de lunes · mercados de bonos cerrados</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Columbus Day</strong> · futuros abiertos, cash de bonos cerrado<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros de índices casi planos; el petróleo cede tras el pico por ataques en Riad y declaraciones sobre suministro ruso</h2>
+    <p>El movimiento de los futuros a la mañana es contenido. Los del S&P 500 avanzan cerca de 0,12% y los del Nasdaq 100 quedan planos o levemente negativos. El Brent se mantiene por encima de 100 USD por barril tras un pico temporal por ataques hutíes al aeropuerto de Riad el fin de semana, pero el WTI retrocede hacia 91 USD. El oro cotiza cerca de 4.200 y bitcoin alrededor de 83.500. El mercado de bonos cash de EE.UU. está cerrado por el feriado; los yields electrónicos se mantienen cerca de 5,22-5,24%. La atención se dirige a los resultados de los grandes bancos a partir del martes y al CPI del miércoles.</p>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80" alt="Piso de trading y pantallas de mercado">
+      <figcaption>Pantallas de mercado. Futuros abiertos en un día de feriado parcial en EE.UU.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio</th>
+        <th class="num">Variación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">31.090</td>
+        <td class="num dn">-0,05%</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.870</td>
+        <td class="num up">+0,12%</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">4.198</td>
+        <td class="num up">+0,1%</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">91,4</td>
+        <td class="num dn">-0,8%</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">83.500</td>
+        <td class="num up">+0,6%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag mix">Mixto</span>
+    <h3>Ataques hutíes en Riad empujan el petróleo, pero declaraciones de Trump sobre diésel ruso y alto el fuego energético lo contienen</h3>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Barriles de petróleo">
+      <figcaption>Crudo. Brent se mantiene sobre 100 USD tras el pico inicial del fin de semana.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Ataques hutíes al aeropuerto internacional de Riad el fin de semana dejaron víctimas y empujaron el Brent temporalmente sobre 105 USD. Posteriormente, declaraciones de Trump sobre un acuerdo de alto el fuego energético entre Rusia y Ucrania y el suministro de cientos de miles de toneladas de diésel ruso al mercado global llevaron al petróleo a ceder. El Brent opera cerca de 103-104 USD y el WTI alrededor de 91 USD.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[Mixto] para riesgo. El nivel absoluto del petróleo por encima de 100 mantiene presión inflacionaria, pero la ausencia de escalada inmediata alivia el premio de riesgo.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El mercado ya descontaba tensiones residuales en Medio Oriente. El alivio por mayor oferta potencial de diésel reduce el bid de corto plazo en el crudo. Si el WTI pierde 90 de forma clara, el alivio se extiende a los índices; una vuelta sobre 93 reabre el canal de inflación hacia yields y múltiplos.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bull">Positivo</span>
+    <h3>Temporada de resultados arranca el martes con grandes bancos; expectativas de crecimiento de ganancias elevadas</h3>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80" alt="Pantallas de datos financieros">
+      <figcaption>Datos de mercado. Los bancos lideran el inicio de la temporada de resultados.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>JPMorgan, Goldman Sachs, Citigroup y Wells Fargo reportan a partir del martes. Según datos de LSEG, las ganancias del S&P 500 se esperan con un crecimiento del 30,6% interanual en el tercer trimestre. El mercado ya descontaba un trimestre sólido en márgenes de interés e investment banking.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[Positivo] táctico para equity. Un beat amplio en bancos puede sostener el bid de índices cerca de máximos recientes.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Los resultados de bancos son el primer test del crecimiento de earnings. Si confirman el consenso, el mercado puede extender el rango alcista de corto plazo. Una decepción en guidance o en calidad de crédito reabre presión sobre el sector financiero y, por arrastre, sobre el S&P.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Neutral</span>
+    <h3>Yields se mantienen cerca de máximos multianuales; CPI del miércoles define el camino del Fed</h3>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80" alt="Edificio de la Reserva Federal">
+      <figcaption>Eccles Building. El mercado sigue descontando baja probabilidad de suba en octubre y más alta para diciembre.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El bono a 10 años opera en la zona de 5,22-5,24% en el mercado electrónico. El cash está cerrado por Columbus Day. El CPI de septiembre se publica el miércoles. Las probabilidades de suba de tasas en octubre son bajas (cerca del 17%) y más altas para diciembre (alrededor del 86%).</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[Neutral] para equity de corto plazo. El nivel absoluto de yields limita la expansión de múltiplos.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Un CPI por encima de lo esperado puede empujar yields sobre 5,30% y comprimir el upside de NQ/ES. Un dato en línea o más suave permite consolidación cerca de los máximos. El mercado ya descontaba persistencia inflacionaria; la reacción depende de la desviación respecto del consenso.</p>
+  </article>
+
+  <p class="section-label">Volatilidad y liquidez</p>
+  <div class="card">
+    <p>El VIX se mantiene cerca de 15, con compresión relativa. El rango de los futuros de índices es acotado en la apertura. La volatilidad del petróleo permanece elevada por el componente geopolítico, aunque sin nuevas escaladas el fin de semana. Liquidez reducida por el feriado parcial en EE.UU.; Asia y Europa operan con normalidad. El dólar se mantiene cerca de máximos de 17 meses (DXY ~102,2). No hay señales de stress de funding. Bitcoin acompaña con un avance moderado, sin liderar el movimiento de riesgo.</p>
+  </div>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · ~65%</h3>
+      <p>Los futuros se mantienen en rango durante el día. El petróleo cotiza entre 90 y 94 en WTI y el Brent sobre 100 sin nuevos picos. Yields electrónicos no superan 5,30%. Los índices consolidan cerca de los niveles de cierre de viernes mientras se esperan los resultados bancarios. Movimiento de precios contenido.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Alternativo · ~35%</h3>
+      <p>Nuevas escaladas en Medio Oriente o un CPI anticipado más alto empujan el petróleo sobre 94 o yields sobre 5,35%. En ese caso el Nasdaq enfrenta presión relativa y el oro puede ampliar su bid de cobertura. La reacción sería de magnitud moderada porque parte del riesgo ya está descontada.</p>
+    </div>
+  </div>
+
+  <p class="section-label">Nota técnica</p>
+  <div class="note">
+    <p>NQ se encuentra cerca de 31.090, por encima de la media de 50 días y dentro del rango reciente. ES en 7.870 mantiene estructura alcista de corto plazo. Oro cerca de 4.200 enfrenta resistencia en 4.250 y soporte en 4.140. WTI sobre 91 con soporte en 89-90. BTC lateral entre 82.000 y 85.000. No hay señales extremas de sobrecompra en los índices principales según RSI diario. El feriado reduce el volumen esperado en la sesión cash.</p>
+  </div>
+
+  <footer>
+    <p>Fuentes: cotizaciones diferidas de futuros CME, COMEX, NYMEX y spot; resúmenes de Reuters, Bloomberg y MarketWatch del 11-12 de octubre. No constituye recomendación de inversión.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
