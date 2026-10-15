@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 15 oct 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="7" style="display:inline-flex;align-items:baseline;gap:2px;background:#d4922a;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">7<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Venta de tech y AI se extiende tras CPI caliente. NQ -1,1%, Asia cae fuerte.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -1,12%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,24%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +1,30%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,17%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,40%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 15 oct 2026</p>
+      <h1>Sesión de jueves · extensión de la venta en tech</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Preapertura</strong> · futuros y spot<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Los futuros del Nasdaq caen más de 1% mientras la venta de AI continúa tras el CPI de 3,7%</h2>
+    <p>Los futuros del Nasdaq 100 operan cerca de 29.830 (−1,12%) y los del S&P 500 en 7.752 (−0,24%) en la mañana del jueves. La venta se concentra en el complejo de inteligencia artificial y semiconductores después del IPC de septiembre de 3,7% interanual (por encima del 3,6% esperado). El WTI se sitúa cerca de 94,90 (−0,17%) y el oro recupera a alrededor de 4.156 (+1,30%). Bitcoin opera cerca de 81.400 (−0,40%). El rendimiento del 10 años de EE.UU. cede levemente hacia 5,10% en un movimiento de aversión al riesgo. Hoy se publican PPI, ventas minoristas y pedidos de desempleo.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg/1280px-No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg" alt="Piso de la Bolsa de Nueva York">
+      <figcaption>Piso de la NYSE. Los futuros del Nasdaq anticipan otra sesión de presión en tech después del dato de inflación de ayer.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">29.830</td>
+        <td class="num dn">−1,12%</td>
+        <td class="num">29.550</td>
+        <td class="num">30.200</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.752</td>
+        <td class="num dn">−0,24%</td>
+        <td class="num">7.700</td>
+        <td class="num">7.820</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">4.156</td>
+        <td class="num up">+1,30%</td>
+        <td class="num">4.100</td>
+        <td class="num">4.200</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">94,90</td>
+        <td class="num dn">−0,17%</td>
+        <td class="num">93,50</td>
+        <td class="num">96,00</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">81.400</td>
+        <td class="num dn">−0,40%</td>
+        <td class="num">80.000</td>
+        <td class="num">83.000</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros y spot en la mañana. Niveles redondeados. Cash del miércoles: S&P 500 ~7.719 (−1,11%), Nasdaq Composite ~26.693 (−1,88%). VIX ~17,4.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bear">Bear · tech / AI</span>
+    <h3>La venta de AI y semiconductores se profundiza; CoreWeave y chips asiáticos lideran las bajas</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nasdaq_MarketSite_%2851494550508%29.jpg/1280px-Nasdaq_MarketSite_%2851494550508%29.jpg" alt="Nasdaq MarketSite">
+      <figcaption>Nasdaq MarketSite. El complejo de inteligencia artificial y chips opera bajo presión por segunda sesión consecutiva.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Después del IPC de septiembre en 3,7% interanual, los futuros del Nasdaq caen más de 1%. En Asia, el Kospi surcoreano retrocede cerca del 7% con SK Hynix y Samsung entre las peores. CoreWeave continúa bajo presión por preocupaciones sobre su deuda para infraestructura de data centers. Resultados sólidos de Anthropic y TSMC no detienen la venta.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH] El mercado reduce exposición a nombres de alto crecimiento y alto apalancamiento. La combinación de inflación más firme y dudas sobre el financiamiento de la expansión de AI pesa sobre NQ.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Un CPI más caliente eleva la probabilidad de suba de tasas de la Fed este mes. Eso aumenta el costo de financiamiento para empresas que invierten fuertemente en infraestructura de AI. La venta se transmite de Asia a los futuros de EE.UU. y concentra la baja en NQ respecto de ES. Si los futuros del Nasdaq pierden 29.550, se amplía el movimiento; una recuperación por encima de 30.200 requiere alivio en tasas o en el dato de PPI de hoy.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix · oferta / datos</span>
+    <h3>Crudo cede levemente mientras el mercado espera PPI y ventas minoristas</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Hockley_County_Levelland_Texas_crude_oil_pump_facilities_2025_%281%29.jpg/1280px-Hockley_County_Levelland_Texas_crude_oil_pump_facilities_2025_%281%29.jpg" alt="Instalaciones de bombeo de crudo">
+      <figcaption>Bombeo de crudo en Texas. El WTI opera cerca de 94,90 tras el dato de inflación de ayer.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El WTI se mantiene cerca de 94,90 (−0,17%) y Brent alrededor de 104. Persisten riesgos en el estrecho de Hormuz, pero hay señales de cierta recuperación de oferta en la región. Hoy se publican el PPI de septiembre (consenso ~0,5% mensual), ventas minoristas y pedidos iniciales de desempleo a las 08:30 ET.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[MIXTO] El crudo no acelera adicionalmente. Los datos de hoy pueden confirmar o modular la lectura del CPI de ayer sobre las expectativas de tasas.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Un PPI más alto refuerza el sesgo de tasas altas y limita el alivio en el 10 años. Un dato más suave permite que los rendimientos cedan y da soporte relativo a ES. El canal del petróleo sigue siendo el componente energético de la inflación. Si el WTI pierde 93,50 de forma sostenida, se reduce la presión sobre breakevens; por encima de 96 reabre el riesgo de headline más caliente en próximos datos.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bull">Bull · refugio</span>
+    <h3>El oro rebota más de 1% y los bonos reciben flujo de aversión al riesgo</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/1280px-Gold_bullion_bars.jpg" alt="Barras de oro">
+      <figcaption>Barras de oro. El metal recupera terreno mientras los inversores reducen riesgo en equity de alto crecimiento.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El oro cotiza alrededor de 4.156 (+1,30%) después de un cierre más débil el miércoles. El rendimiento del 10 años de EE.UU. cede hacia la zona de 5,10% en un movimiento de flight-to-quality. Bitcoin opera cerca de 81.400, sin acompañar el rebote del oro.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BULLISH] para el oro como hedge táctico. La aversión al riesgo en tech favorece al metal y a los Treasuries de forma relativa.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La venta en equity de crecimiento y el leve retroceso en rendimientos reales apoyan al oro. El dólar más débil en la mañana también contribuye. El soporte de 4.100 se mantiene relevante; una ruptura por debajo reabre la zona de 4.050-4.080. Si el PPI de hoy es más caliente y los rendimientos rebotan, el oro puede ceder parte del avance de la mañana.</p>
+  </article>
+
+  <p class="section-label">Volatilidad</p>
+  <p>El VIX opera cerca de 17,4, por encima del cierre de ayer (~16,9). La volatilidad implícita de corto plazo sube con la extensión de la venta en tech. No es un régimen de pánico extremo, pero el movimiento de los futuros a la mañana es más amplio que en sesiones previas. Un dato de PPI fuera de consenso o un deterioro adicional en Asia puede empujar el VIX hacia 18-19 en la apertura de cash.</p>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · PPI en línea o ligeramente suave</h3>
+      <p>PPI cerca de 0,5% mensual. El 10 años se estabiliza o cede levemente. ES opera en rango o recupera parte de la baja; NQ permanece bajo presión relativa. WTI sin aceleración. Probabilidad ~50%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Inverso · PPI más caliente o venta de AI se profundiza</h3>
+      <p>PPI por encima de lo esperado o continuidad de la venta en chips. El 10 años rebota. NQ lidera una baja adicional hacia o por debajo de 29.550. Oro cede parte del rebote. Probabilidad ~35%.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <p class="lbl">Nota técnica</p>
+    <p>Soportes de NQ en 29.550 y de ES en 7.700. Resistencias inmediatas en 30.200 y 7.820 respectivamente. El WTI tiene soporte en 93,50 y resistencia en 96. El oro opera entre 4.100 y 4.200. Los niveles son aproximados y pueden desplazarse con los datos de las 08:30 ET.</p>
+  </div>
+
+  <footer>
+    <p>Reporte matutino · 15 oct 2026 · Corte ~08:00 ART. Datos de futuros, spot y noticias públicas. No constituye recomendación de inversión.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
