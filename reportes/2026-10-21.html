@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 21 oct 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="4" style="display:inline-flex;align-items:baseline;gap:2px;background:#a8be48;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">4<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Futuros de índices en verde leve por AI; crudo elevado por ataques en Hormuz y oro blando.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,47%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,18%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −0,20%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +2,09%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,30%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 21 oct 2026</p>
+      <h1>Sesión mixta · futuros de índices en verde leve</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Mercados abiertos</strong> · futuros y spot<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros de índices suben con el rally de AI en Asia y Europa; el crudo se mantiene elevado cerca de 100 por ataques en Hormuz</h2>
+    <p>Los futuros del Nasdaq 100 operaron cerca de 29.814 (+0,47%) y los del S&P 500 en 7.769 (+0,18%) a primera hora de la mañana, impulsados por el avance de acciones de inteligencia artificial en Asia (Kospi +3,3%) y Europa. El WTI subió a aproximadamente 99,86 (+2,09%) y Brent cerca de 110,70, con el mercado descontando riesgo de oferta por ataques a buques en el estrecho de Hormuz. El oro spot se mantuvo blando cerca de 4.120 (−0,2%), en su cuarta sesión consecutiva de caídas, mientras el 10 años de EE.UU. se estabilizó en torno a 5,11–5,12%. Bitcoin se mantuvo sobre 83.000 (+0,3%). El mercado ya descontaba una alta probabilidad de que la Fed mantenga las tasas en la reunión de la próxima semana, con expectativas de suba en diciembre.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg/1280px-No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg" alt="Piso de la Bolsa de Nueva York">
+      <figcaption>Piso de la NYSE. Los futuros de índices muestran un sesgo levemente positivo a la apertura, con el cash del día anterior mixto (S&P +0,28%, Nasdaq plano).</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">29.814</td>
+        <td class="num up">+0,47%</td>
+        <td class="num">29.500</td>
+        <td class="num">30.100</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.769</td>
+        <td class="num up">+0,18%</td>
+        <td class="num">7.700</td>
+        <td class="num">7.820</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">4.120</td>
+        <td class="num dn">−0,20%</td>
+        <td class="num">4.060</td>
+        <td class="num">4.195</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">99,86</td>
+        <td class="num up">+2,09%</td>
+        <td class="num">97,50</td>
+        <td class="num">102,00</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">83.100</td>
+        <td class="num up">+0,30%</td>
+        <td class="num">81.500</td>
+        <td class="num">84.500</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros a la mañana y cierres previos. Niveles redondeados. Cash del 20 oct: S&P 500 ~7.713 (+0,28%), Nasdaq Composite ~26.425 (−0,02%), Dow ~52.496 (+1,02%). VIX ~17,3.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bull">Bull · riesgo moderado</span>
+    <h3>Rally de AI en Asia y Europa sostiene los futuros de índices</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nasdaq_MarketSite_%2851494550508%29.jpg/1280px-Nasdaq_MarketSite_%2851494550508%29.jpg" alt="Nasdaq MarketSite">
+      <figcaption>Nasdaq MarketSite. Las acciones de inteligencia artificial lideraron el avance en Asia (Kospi +3,3%) y apoyaron los futuros de NQ.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Los futuros del Nasdaq 100 subieron cerca de 0,47% y los del S&P 500 un 0,18% después de un cierre mixto el martes. El avance se vinculó al rally de acciones de IA en Asia y Europa, con resultados de SpaceX y Super Micro Computer aportando confianza. El Dow del día anterior había subido 1,02% por rotación a salud y valor.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO MODERADO/BULLISH] táctico en beta de crecimiento. El mercado ya descontaba el soporte de narrativa de IA, pero con yields altos y crudo elevado el upside es limitado.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El flujo positivo de AI en Asia se transmite a los futuros de NQ/ES por la mañana. El 10 años anclado cerca de 5,11% limita el múltiplo. Si el crudo se mantiene sobre 100, la presión de inflación puede contener el avance de índices de alto múltiplo. Soporte NQ 29.500; resistencia 30.100.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · riesgo de oferta</span>
+    <h3>Crudo WTI cerca de 100 y Brent sobre 110 por ataques en Hormuz</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Hockley_County_Levelland_Texas_crude_oil_pump_facilities_2025_%281%29.jpg/1280px-Hockley_County_Levelland_Texas_crude_oil_pump_facilities_2025_%281%29.jpg" alt="Instalaciones de bombeo de crudo">
+      <figcaption>Bombeo de crudo en Texas. El WTI avanza cerca de 2% a ~99,86 con el mercado descontando riesgo de disrupción en Hormuz.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El WTI subió a aproximadamente 99,86 (+2,09%) y Brent cerca de 110,70. El movimiento se atribuye a ataques a buques en el estrecho de Hormuz y datos de inventarios de productos más bajos. El flujo físico no está cortado de forma material, pero la prima geopolítica se mantiene.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO DE OFERTA/BEARISH] para la inflación y el múltiplo de equity. Neutral a ligeramente bullish para el complejo energético en el margen.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El crudo elevado sostiene los breakevens de inflación y mantiene al 10 años sobre 5,10%, lo que comprime el bid en oro y en crecimiento. Si el WTI pierde 97,50 el alivio se extiende a índices; sobre 102 reabre el riesgo de política más restrictiva. El canal de transmisión principal es el yield, no el equity de energía puro.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix</span>
+    <h3>Oro blando por cuarta sesión; yields altos y crudo dominante</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/1280px-Gold_bullion_bars.jpg" alt="Barras de oro">
+      <figcaption>Barras de oro. El spot se mantiene cerca de 4.120 (−0,2%) con el 10 años en 5,11% y el crudo elevado.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El oro spot/futuros operó cerca de 4.120 (−0,2%), en su cuarta sesión consecutiva de caídas. El 10 años se estabilizó cerca de 5,11–5,12%. El mercado asigna alta probabilidad de hold de la Fed la próxima semana y de suba en diciembre.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[MIXTO] para metales preciosos. El crudo elevado y los yields restrictivos dominan el bid de cobertura. No es un giro de política; es presión de tasas reales.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Con el crudo sobre 100 y el 10 años anclado, el oro actúa como leg débil del complejo de inflación. Si el WTI cede y el yield no recupera 5,20%, el oro puede estabilizarse sobre 4.060. Resistencia 4.195. Bitcoin acompaña levemente (+0,3%) pero no lidera el risk-on.</p>
+  </article>
+
+  <p class="section-label">Volatilidad y liquidez</p>
+  <div class="card">
+    <p>VIX de cierre previo ~17,3. La vol implícita de equity no está pagando cola extrema de Hormuz. Realized de la semana fue moderada. Liquidez de la mañana: Asia abrió con Nikkei +0,85% y Kospi fuerte en chips. Spreads de futuros normales. DXY cerca de 101,7. USD/JPY ~158,1. No hay stress de funding. BTC y ETH estables cerca de 83.000 y 2.450; el cripto no amplifica el bid de índices de forma material.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg/1280px-Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg" alt="Edificio de la Reserva Federal">
+      <figcaption>Eccles Building. El mercado descuenta hold en la reunión de la próxima semana y probabilidad elevada de suba en diciembre; el 10 años anclado sobre 5,10%.</figcaption>
+    </figure>
+  </div>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · 58%</h3>
+      <p>El crudo se mantiene 97,50–101,50, el 10 años no recupera 5,20% y no hay escalada material en Hormuz. Los futuros de índices sostienen el verde leve de la mañana con el soporte de AI.</p>
+      <p>Objetivos: NQ 29.700–30.000; ES 7.750–7.800; XAU 4.080–4.160 mientras 4.060 aguante; WTI 98,00–101,00. BTC acompaña solo si rompe 84.500.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Invalidación · 25%</h3>
+      <p>Catalizador: escalada en Hormuz que lleve el WTI sobre 102, o yield del 10 años sobre 5,20% con DXY al alza. Zona de reversión: ES pierde 7.700 y NQ pierde 29.500. WTI sobre 102 reabre el bid de inflación. Oro, en ese escenario, puede actuar como hedge de cola (sobre 4.195) o perder el ancla si el yield domina.</p>
+    </div>
+  </div>
+  <p class="muted">Residual ~17%: rango estrecho, sin aceptación de nuevos highs. El movimiento de Europa y el dato de inventarios de crudo de la mañana pueden definir el tono de la apertura de cash.</p>
+
+  <p class="section-label">Nota técnica para algoritmos</p>
+  <div class="note">
+    <p><strong>Régimen:</strong> mean-reversion de índice con soporte de AI, pero con cola residual en energía. No es trend-following puro. NQ a ~0,5% del nivel reciente; ES similar. VIX ~17 desaconseja vender gamma corta de overnight sin hedge de crudo o yield.</p>
+    <p><strong>Ineficiencias explotables:</strong> (1) desacople XAU vs. yield — oro −0,2% con 10 años estable: si el yield rebota a 5,20% sin headline, fade del long de oro; (2) BTC no lidera (+0,3% vs. NQ +0,47%): no usarlo como beta del NQ bajo 84.500; (3) WTI sobre 99 es el ancla del día; un break de 97,50 o 102 es el trigger de régimen, no el índice; (4) gap de la mañana — fade del primer impulso si el volumen no sostiene 29.800 y el WTI no pierde 99,00.</p>
+  </div>
+
+  <footer>
+    <p>Fuentes: futuros a la mañana del 21 oct 2026 (NQ ~29.814, ES ~7.769, WTI ~99,86, oro ~4.120, BTC ~83.100). Referencias de Markets Insider, Morningstar, FXStreet, Report.az. Niveles de soporte/resistencia son zonas técnicas de referencia, no órdenes.</p>
+    <p>No es consejo de inversión. Los escenarios son probabilísticos y pueden invalidarse con un solo headline de Hormuz o de yields.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
