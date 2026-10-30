@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 30 oct 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="7" style="display:inline-flex;align-items:baseline;gap:2px;background:#c87a28;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">7<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Futuros del Nasdaq caen cerca del 2% por resultados de Amazon e Intel. Crudo sigue elevado.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -2,2%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -1,0%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,8%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +1,8%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -3,3%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 30 oct 2026</p>
+      <h1>Sesión de viernes · resultados de Amazon e Intel</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Preapertura</strong> · futuros y spot<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros del Nasdaq caen cerca del 2% por resultados de Amazon e Intel; crudo sigue elevado</h2>
+    <p>Los futuros del Nasdaq 100 operan cerca de 28.922 (−2,2%) y los del S&P 500 en 7.678 (−1,0%) en la mañana del viernes. Amazon cae alrededor del 7% en premarket tras resultados que muestran alto gasto en infraestructura de IA y flujo de caja libre negativo. Intel retrocede cerca del 25% por guía débil. El WTI se mantiene cerca de 104 (+1,8%) y el oro alrededor de 3.990 (−0,8%). Bitcoin cotiza cerca de 77.500 (−3,3%). El rendimiento del 10 años de EE.UU. se sitúa cerca de 4,94%.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg/1280px-No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg" alt="Piso de la Bolsa de Nueva York">
+      <figcaption>Piso de la NYSE. Los futuros anticipan una apertura débil liderada por tecnología tras resultados de Amazon e Intel.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">28.922</td>
+        <td class="num dn">−2,2%</td>
+        <td class="num">28.600</td>
+        <td class="num">29.400</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.678</td>
+        <td class="num dn">−1,0%</td>
+        <td class="num">7.620</td>
+        <td class="num">7.760</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">3.990</td>
+        <td class="num dn">−0,8%</td>
+        <td class="num">3.950</td>
+        <td class="num">4.050</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">104,00</td>
+        <td class="num up">+1,8%</td>
+        <td class="num">102,00</td>
+        <td class="num">106,00</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">77.500</td>
+        <td class="num dn">−3,3%</td>
+        <td class="num">76.000</td>
+        <td class="num">79.500</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros y spot en la mañana. Niveles redondeados. Cash del jueves: S&P 500 ~7.720 (−0,30%), Nasdaq Composite ~26.185 (−1,38%). VIX ~17,2.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bear">Bear · resultados</span>
+    <h3>Amazon e Intel arrastran a los futuros de tecnología</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nasdaq_MarketSite_%2851494550508%29.jpg/1280px-Nasdaq_MarketSite_%2851494550508%29.jpg" alt="Nasdaq MarketSite">
+      <figcaption>Nasdaq MarketSite. Amazon cae cerca del 7% y Intel cerca del 25% en premarket por gasto en IA y guía débil.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Amazon reportó resultados del tercer trimestre con ventas y guía de gasto de capital que generaron preocupación por el ritmo de inversión en infraestructura de inteligencia artificial. El flujo de caja libre de los últimos doce meses fue negativo. Intel publicó guía para el cuarto trimestre por debajo de las estimaciones. Ambos movimientos se reflejan en el retroceso de los futuros del Nasdaq.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN CRECIMIENTO] El mercado cuestiona si el gasto elevado en IA genera retorno suficiente en el corto plazo. La reacción es más fuerte en nombres de alto beta tecnológico.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La caída de Amazon e Intel reduce el peso del sector tecnología en NQ y arrastra a ES. Un cierre por debajo de los soportes de NQ en 28.600 puede extender la baja hacia el cash. Si el movimiento se estabiliza, el rango se define entre 28.600 y 29.400.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · oferta</span>
+    <h3>El crudo se mantiene por encima de 103-104 por tensiones de suministro</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Hockley_County_Levelland_Texas_crude_oil_pump_facilities_2025_%281%29.jpg/1280px-Hockley_County_Levelland_Texas_crude_oil_pump_facilities_2025_%281%29.jpg" alt="Instalaciones de bombeo de crudo">
+      <figcaption>Bombeo de crudo. El WTI opera cerca de 104 con riesgos de oferta persistentes.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El WTI cotiza alrededor de 104 (+1,8%). Las tensiones en el Medio Oriente y riesgos sobre infraestructura de suministro mantienen al crudo elevado. Brent se ubica por encima de 112-113.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO DE OFERTA / BEARISH] para inflación y para activos sensibles a tasas. El crudo alto sostiene las expectativas de inflación.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El petróleo elevado alimenta el componente energético de la inflación y limita el margen de la Fed. Eso mantiene presión sobre el 10 años cerca de 4,94%. Si el WTI pierde 102 el alivio llega a tasas y a equity; por encima de 106 reabre presión sobre NQ/ES.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix</span>
+    <h3>Oro contenido y bitcoin a la baja; Fed en pausa</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/1280px-Gold_bullion_bars.jpg" alt="Barras de oro">
+      <figcaption>Barras de oro. El metal cotiza cerca de 3.990 con tasas reales restrictivas y datos recientes de inflación firmes.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El oro opera alrededor de 3.990 (−0,8%). Bitcoin retrocede cerca del 3% a 77.500. La Fed mantuvo las tasas en 3,75%-4,00% el miércoles. El PCE de septiembre fue más firme de lo deseado.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[MIXTO] El oro no lidera como cobertura mientras las tasas reales se mantienen elevadas. Bitcoin sigue el retroceso de activos de riesgo.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El oro responde principalmente a las tasas reales. Un retroceso adicional del 10 años por debajo de 4,90% puede devolver al oro hacia 4.050. Bitcoin opera en correlación con el beta tecnológico en el margen. El soporte de 76.000 es el nivel a vigilar si el riesgo se intensifica.</p>
+  </article>
+
+  <p class="section-label">Volatilidad</p>
+  <p>El VIX cerró cerca de 17,2 el jueves. Con los futuros del Nasdaq en baja de más del 2%, la volatilidad implícita de corto plazo tiende a subir. No hay un régimen de pánico extremo, pero el movimiento de los futuros a la mañana es más amplio de lo habitual. Un cierre débil de cash puede llevar al VIX hacia 19-20.</p>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · estabilización tras la apertura</h3>
+      <p>NQ recupera parte de la baja y se mantiene por encima de 28.600. ES opera en rango negativo moderado. WTI sin aceleración adicional por encima de 105. Probabilidad ~45%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Inverso · extensión de la baja tecnológica</h3>
+      <p>NQ pierde 28.600 y arrastra a ES por debajo de 7.620. El crudo se mantiene alto. Oro y bitcoin ceden más. Probabilidad ~35%.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <p class="lbl">Nota técnica</p>
+    <p>Soportes de NQ en 28.600 y de ES en 7.620. Resistencias inmediatas en 29.400 y 7.760 respectivamente. El WTI tiene soporte en 102 y resistencia en 106. El oro opera entre 3.950 y 4.050. Los niveles son aproximados y pueden desplazarse con la apertura de cash.</p>
+  </div>
+
+  <footer>
+    <p>Reporte matutino · 30 oct 2026 · Corte ~08:00 ART. Datos de futuros, spot y noticias públicas. No constituye recomendación de inversión.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
