@@ -1,1 +1,241 @@
-PLACEHOLDER_HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 5 nov 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="4" style="display:inline-flex;align-items:baseline;gap:2px;background:#a8be48;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">4<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Consolidación post-midterms; BTC recupera con inflows ETF. NQ cede por chips. Oro sigue fuerte, petróleo rebota leve.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,6%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,1%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +1,5%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,6%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +2,8%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 5 nov 2026</p>
+      <h1>Sesión de jueves · consolidación tras midterms</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Preapertura</strong> · futuros y spot<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros mixtos tras rally de midterms; BTC supera 80.000 con inflows de ETF y liquidaciones de cortos</h2>
+    <p>Los futuros del Nasdaq 100 operan cerca de 28.350 (−0,6%) y los del S&P 500 en 7.700 (+0,1%) después del fuerte avance del miércoles (Dow +3,03%, S&P +1,58%). El mercado digiere la barrida demócrata y la presión en chips. El oro cotiza alrededor de 4.120 (+1,5%) con dólar más débil. El WTI se ubica cerca de 88,50 (+0,6%) tras la caída de más del 8% del día anterior. Bitcoin opera cerca de 80.400 (+2,8% en 24h), recuperando desde mínimos cercanos a 75.600, impulsado por inflows netos de spot ETF de unos USD 75 millones el 4 de noviembre y liquidaciones de posiciones cortas. El rendimiento del 10 años de EE.UU. se sitúa cerca de 4,89%.</p>
+    <figure>
+      <img src="https://brusselsmorning.com/wp-content/uploads/2048px-Gaming-Wall-Street_BTS_Prodigium-266-1536x1003.webp" alt="Piso de la Bolsa de Nueva York">
+      <figcaption>Piso de la NYSE. Los futuros consolidan tras el rally post-midterms del miércoles; NQ cede por debilidad en semiconductores.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">28.350</td>
+        <td class="num dn">−0,6%</td>
+        <td class="num">28.100</td>
+        <td class="num">28.600</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.700</td>
+        <td class="num up">+0,1%</td>
+        <td class="num">7.620</td>
+        <td class="num">7.760</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">4.120</td>
+        <td class="num up">+1,5%</td>
+        <td class="num">4.050</td>
+        <td class="num">4.180</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">88,50</td>
+        <td class="num up">+0,6%</td>
+        <td class="num">86,80</td>
+        <td class="num">90,50</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">80.400</td>
+        <td class="num up">+2,8%</td>
+        <td class="num">79.000</td>
+        <td class="num">81.500</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros y spot en la mañana. Niveles redondeados. El movimiento de BTC está ligado principalmente a la resolución de midterms, inflows de ETF spot y liquidaciones de cortos, no solo a beta de tech. Cash del miércoles: S&P 500 ~7.689 (+1,58%), Nasdaq Composite ~25.737 (+1,44%).</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bull">Bull · cripto</span>
+    <h3>BTC recupera por encima de 80.000; inflows de ETF de USD 75 millones y liquidaciones de cortos</h3>
+    <figure>
+      <img src="https://assets.dailyforex.com/files/stockphotos1/currencies/btcusd/1200x675-bitcoin-1308.webp" alt="Monedas de Bitcoin">
+      <figcaption>Bitcoin. El precio supera 80.000 tras tocar ~75.600 durante los resultados de midterms; inflows netos de ETF spot de unos USD 75 millones el 4 de noviembre.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Bitcoin cotiza cerca de 80.400 (+2,8% en 24h) después de haber caído a unos 75.600 durante la confirmación de la barrida demócrata. Los spot Bitcoin ETFs registraron inflows netos de aproximadamente USD 74,6 millones el 4 de noviembre (Fidelity lideró con ~USD 237 millones, BlackRock IBIT tuvo outflows). Liquidaciones de cortos superaron los USD 300 millones en 24h según datos de mercado. No hay nuevo incidente de seguridad material en las últimas 12-18 horas.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BULLISH táctico] para BTC. El mercado ya descontaba la claridad política. Los inflows de ETF y las liquidaciones de cortos sostienen el rebote. Persiste residual de cautela por el hack previo de Binance, pero el driver principal hoy es el risk-on post-midterms y los flujos institucionales.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La resolución de midterms reduce incertidumbre y favorece risk-on. Los inflows de ETF spot transmiten demanda institucional directa a BTC. Las liquidaciones de cortos amplifican el movimiento alcista. Si BTC sostiene 80.000 y los inflows continúan, el sesgo es de extensión hacia 81.500; una reversión de flujos o reaceleración de retiros residuales reabre presión hacia 79.000.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear residual · cripto</span>
+    <h3>Binance: residual del hack de USD 6,3 mil millones; outflows estabilizados pero confianza residual baja</h3>
+    <figure>
+      <img src="https://www.reuters.com/resizer/v2/J4UVQ5OUGJM5NAMCHW76M2VVYI.jpg?auth=7467b16644af72ad7be62ae6d275e6e96e7e8001e85bdcc8afa9bf2996adcc69&height=1005&width=1920&quality=80&smart=true" alt="Logo de Binance y monedas">
+      <figcaption>Binance. El exchange cubrió la mayor parte de las pérdidas del hack del 29 de octubre (USD 6,3 mil millones); outflows netos de ~USD 4,7 mil millones reportados, con recuperación en curso.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El hack del 29 de octubre en Binance (atribuido a TraderTraitor / Corea del Norte) drenó unos USD 6,34 mil millones de wallets calientes. El exchange anunció cobertura total, repuso ~98% de activos afectados y reabrió retiros en fases. Outflows netos alcanzaron unos USD 4,7 mil millones. A la mañana del 5 de noviembre no hay nuevo incidente mayor; los outflows se estabilizaron según reportes previos. El movimiento de BTC hoy no está impulsado principalmente por este evento, sino por midterms y ETF.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[CAUTELOSO residual] para el complejo cripto. La cobertura anunciada y la estabilización limitan el contagio, pero el incidente genera dudas sobre custodia en exchanges centralizados. No mueve BTC más de 2% de forma clara en las últimas horas; el driver dominante es el risk-on post-electoral.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El residual de retiros y la reducción de exposición institucional transmiten presión de venta residual a BTC. La promesa de cobertura y la recuperación de flujos de ETF compensan. Si los outflows se mantienen contenidos, el impacto residual se diluye; una reaceleración de retiros o nuevo incidente reabre el canal de riesgo hacia 78.000-79.000.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix · equity / macro</span>
+    <h3>Nasdaq cede por debilidad en chips; mercado digiere midterms y caída del petróleo</h3>
+    <figure>
+      <img src="https://cdn.zonebourse.com/static/resize/0/0//images/reuters/2026-11/2026-11-05T105403Z_1_LYNXNPEMA4107_RTROPTP_4_USA-STOCKS.JPG" alt="Operador en el piso de trading">
+      <figcaption>Operador en piso. Los futuros de NQ ceden ~0,6% por presión en semiconductores después del rally post-midterms; el petróleo rebotó levemente tras la caída fuerte del miércoles.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Tras el rally del miércoles (Dow +3,03%, S&P +1,58%, Nasdaq +1,44%), los futuros de NQ operan a la baja (~−0,6%) por debilidad en chips y nombres relacionados con data centers. El WTI rebotó levemente a ~88,50 tras caer más del 8% el día anterior por expectativas de menor riesgo geopolítico. El oro extendió ganancias hacia 4.120. No hay nuevos shocks regulatorios mayores en las últimas horas.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[NEUTRAL A MIXTO] Los mercados consolidan la claridad política. La debilidad en NQ es sectorial (chips). La caída previa del petróleo es positiva para inflación. El oro se beneficia del dólar más suave y yields contenidos.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La digestión del resultado electoral reduce volatilidad de corto plazo. La presión en chips se transmite a NQ vía peso del sector. La caída del petróleo alivia expectativas de inflación y apoya risk assets y oro. Si NQ sostiene 28.100 y el petróleo no reacelera, el sesgo es de consolidación; una extensión de la debilidad en semis reabre el rango bajo.</p>
+  </article>
+
+  <p class="section-label">Volatilidad</p>
+  <p>El movimiento de los futuros a la mañana mostró consolidación tras el amplio rango de la noche anterior. La volatilidad implícita de corto plazo se redujo respecto al pico de midterms (VIX de la sesión previa cerca de 16,6). BTC exhibe rango de ~75.600 a 81.200 en 48h, impulsado por liquidaciones de cortos y inflows de ETF, no por un nuevo incidente cripto. El oro mantiene sesgo alcista. El WTI prueba soporte tras la caída fuerte. No hay liquidaciones extremas adicionales reportadas en las últimas 12 horas más allá de las de BTC.</p>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · consolidación selectiva</h3>
+      <p>Futuros sostienen el nivel post-rally. NQ se mantiene por encima de 28.100 y ES por encima de 7.650. BTC consolida entre 79.500-81.200 con inflows de ETF sostenidos. Oro sostiene 4.080-4.160. Probabilidad estimada: 60%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Inverso · reaceleración de presión sectorial</h3>
+      <p>Extensión de la debilidad en chips o reaparición de fricción residual empuja NQ por debajo de 28.100 y BTC hacia 78.500. Oro pierde 4.050. Probabilidad estimada: 25%.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <p class="lbl">Nota técnica</p>
+    <p>Los niveles de soporte y resistencia son aproximados a partir del rango overnight y del cierre previo. El movimiento de BTC está explícitamente ligado a la resolución de midterms, inflows de spot ETF (~USD 75 millones) y liquidaciones de cortos, además de la beta residual de equity; no está impulsado por un nuevo incidente de seguridad en las últimas 12-18 horas. El residual del hack de Binance permanece como factor de cautela de fondo. Los futuros de equity muestran consolidación; la sesión regular dependerá de si el mercado sostiene la claridad política o reintroduce presión sectorial en semis.</p>
+  </div>
+
+  <footer>
+    <p>Reporte Diario de Mercado · 5 nov 2026. Corte aproximado 08:00 ART. No constituye consejo de inversión. Fuentes públicas de precios y noticias.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
