@@ -1,1 +1,241 @@
-PLACEHOLDER_HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 6 nov 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="7" style="display:inline-flex;align-items:baseline;gap:2px;background:#c49a3a;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">7<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Selloff de IA del jueves se modera en futuros; dato de empleo hoy. BTC estable tras presión de Binance.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +1,1%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,4%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,3%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,6%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#8b97a6;font-size:14px;">→ -0,2%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 6 nov 2026</p>
+      <h1>Sesión de viernes · dato de empleo y recuperación parcial tras el selloff de IA</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Preapertura</strong> · futuros y spot<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros del Nasdaq recuperan terreno tras el fuerte selloff de inteligencia artificial del jueves; el mercado espera el dato de empleo de octubre</h2>
+    <p>Los futuros del Nasdaq 100 operan cerca de 26.980 (+1,1%) y los del S&P 500 alrededor de 7.385 (+0,4%) en la mañana del viernes. El movimiento de los futuros a la mañana muestra una recuperación parcial después de la caída del jueves, cuando el S&P 500 cerró cerca de 7.354 (−4,4%) y el Nasdaq Composite en 24.315 (−5,5%). El WTI cotiza cerca de 90,10 (−0,6%). El oro se ubica alrededor de 4.075 (−0,3%). Bitcoin opera cerca de 75.750 (−0,2%), con el movimiento ligado tanto al beta de tecnología como a la presión residual del incidente de seguridad en Binance. El rendimiento del 10 años de EE.UU. se sitúa cerca de 4,84%. El principal catalizador del día es el dato de empleo no agrícola de octubre a las 08:30 ET.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg/1280px-No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg" alt="Piso de la Bolsa de Nueva York">
+      <figcaption>Piso de la NYSE. Los futuros anticipan una apertura con recuperación parcial tras la fuerte caída del jueves en acciones de inteligencia artificial.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">26.980</td>
+        <td class="num up">+1,1%</td>
+        <td class="num">26.600</td>
+        <td class="num">27.300</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.385</td>
+        <td class="num up">+0,4%</td>
+        <td class="num">7.320</td>
+        <td class="num">7.440</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">4.075</td>
+        <td class="num dn">−0,3%</td>
+        <td class="num">4.040</td>
+        <td class="num">4.110</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">90,10</td>
+        <td class="num dn">−0,6%</td>
+        <td class="num">88,50</td>
+        <td class="num">92,00</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">75.750</td>
+        <td class="num">−0,2%</td>
+        <td class="num">74.800</td>
+        <td class="num">77.200</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros y spot en la mañana. Niveles redondeados. El movimiento de BTC está ligado principalmente al evento de seguridad residual en Binance (robo de ~6.300 millones de dólares) y a la correlación con el selloff de tecnología, no solo a beta de equity. Cash del jueves: S&P 500 ~7.354 (−4,36%), Nasdaq Composite ~24.315 (−5,52%). VIX elevado cerca de 27.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bear">Bear · sectorial</span>
+    <h3>Selloff de inteligencia artificial y chips se modera en futuros tras la caída del jueves</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nasdaq_MarketSite_%2851494550508%29.jpg/1280px-Nasdaq_MarketSite_%2851494550508%29.jpg" alt="Nasdaq MarketSite">
+      <figcaption>Nasdaq MarketSite. Acciones de semiconductores y proyectos de centros de datos registraron fuertes bajas el jueves por preocupaciones de regulación tras las elecciones de mitad de mandato.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El jueves el mercado registró una fuerte venta en acciones de inteligencia artificial y semiconductores. El Nasdaq Composite cayó 5,5% y el S&P 500 4,4%. Nvidia, AMD y otras empresas del sector perdieron entre 9% y 17%. La preocupación principal es un posible aumento de supervisión sobre centros de datos y gasto en infraestructura de IA tras el resultado de las elecciones de mitad de mandato.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN TECNOLOGÍA] La caída del jueves fue la más fuerte en meses. Los futuros de la mañana muestran recuperación parcial, pero el mercado sigue sensible a noticias de regulación o de gasto de capital en IA.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La presión se transmite principalmente a NQ. Un dato de empleo más débil de lo esperado puede aliviar las tasas y ayudar a la recuperación. Un dato fuerte puede renovar la venta si se interpreta como más restricción monetaria.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix · macro</span>
+    <h3>El mercado espera el dato de empleo de octubre a las 08:30 ET</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Bureau_of_Labor_Statistics_building.jpg/1280px-Bureau_of_Labor_Statistics_building.jpg" alt="Edificio del Bureau of Labor Statistics">
+      <figcaption>Edificio del Bureau of Labor Statistics. El dato de nóminas no agrícolas de octubre es el principal catalizador del día.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Hoy a las 08:30 ET el Bureau of Labor Statistics publica el informe de empleo de octubre. El consenso espera una creación de alrededor de 65.000 empleos no agrícolas. El dato llega después de un mes de volatilidad elevada por resultados corporativos y elecciones.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[MIXTO] Un número cercano al consenso puede ser neutral. Una sorpresa fuerte al alza puede presionar las tasas y limitar la recuperación de futuros. Una sorpresa a la baja puede apoyar a los activos de riesgo.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El resultado afecta principalmente a los rendimientos de los bonos y, por esa vía, a NQ y ES. Un dato débil reduce la probabilidad de más alzas de la Fed y favorece a tecnología. Un dato fuerte puede renovar la presión sobre los futuros de Nasdaq.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · cripto</span>
+    <h3>BTC se mantiene contenido cerca de 75.750 por el impacto residual del hack de Binance y el selloff de tecnología</h3>
+    <figure>
+      <img src="https://ichef.bbci.co.uk/news/1024/branded_news/3a7f/live/ad865b20-d64f-11f1-a701-fddedf244c16.jpg" alt="Logo de Binance y monedas">
+      <figcaption>Bitcoin opera cerca de 75.750. El movimiento sigue influido por el robo de aproximadamente 6.300 millones de dólares en Binance y por la correlación con la caída de acciones de tecnología.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El hack de Binance de aproximadamente 6.300 millones de dólares de fines de octubre sigue pesando. El FBI atribuyó el ataque a un grupo norcoreano. Binance cubrió alrededor del 95% de las pérdidas y reabrió retiros, pero los clientes retiraron varios miles de millones de dólares netos. El jueves BTC cayó cerca del 5% en paralelo con el selloff de acciones de IA. Un incidente menor en Mercado Bitcoin (alrededor de 40-50 millones de dólares) no es el driver principal.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN CRIPTO] La confianza en exchanges mayores permanece deteriorada. El movimiento de BTC combina el evento específico de seguridad con la correlación al beta de tecnología.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Las salidas de fondos y la cautela institucional mantienen a BTC por debajo de los niveles previos al incidente. Una recuperación sostenida de NQ puede ayudar, pero el precio sigue sensible a cualquier noticia adicional de seguridad o de flujos de ETF.</p>
+  </article>
+
+  <p class="section-label">Volatilidad</p>
+  <p>El VIX cerró el jueves cerca de 27 después de un salto superior al 60% en la sesión. Los futuros de Nasdaq muestran recuperación en la mañana, pero el rango intradiario sigue amplio. El movimiento de BTC está ligado tanto al evento de seguridad en Binance como al selloff de tecnología, no únicamente a la beta de equity. El crudo mantiene volatilidad por tensiones en Medio Oriente y ataques a tanqueros, aunque los niveles actuales son más bajos que hace una semana.</p>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · recuperación parcial</h3>
+      <p>El dato de empleo sale cercano al consenso o levemente débil. Los futuros consolidan la recuperación de la mañana. NQ mantiene el soporte de 26.600 y cierra la semana por encima de 27.000. BTC se estabiliza cerca de 76.000. Probabilidad aproximada: 55%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Adverso · renovación de la venta</h3>
+      <p>El dato de empleo supera ampliamente las expectativas o aparece una noticia negativa adicional sobre regulación de IA o seguridad cripto. NQ pierde 26.600 y el S&P 500 prueba los mínimos del jueves. BTC se acerca a 74.000. Probabilidad aproximada: 30%.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <p class="lbl">Nota técnica</p>
+    <p>Los futuros del Nasdaq 100 recuperan parte de la caída del jueves pero permanecen por debajo de los máximos recientes. El soporte inmediato se ubica cerca de 26.600; una pérdida de ese nivel reabre el camino hacia los mínimos de la semana. En BTC el rango 74.800-77.200 concentra el volumen reciente. El crudo mantiene el soporte de 88,50 después de las caídas de la semana. Los niveles son aproximados y se basan en referencias de la mañana.</p>
+  </div>
+
+  <footer>
+    <p>Reporte Diario de Mercado · 6 nov 2026. Corte ~08:00 ART. No es consejo de inversión. Precios aproximados de futuros y spot.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
