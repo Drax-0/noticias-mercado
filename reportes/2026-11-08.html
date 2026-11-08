@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 8 nov 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="6" style="display:inline-flex;align-items:baseline;gap:2px;background:#b88a40;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">6<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span>Mercados contenidos tras hack de Binance y baja del crudo; BTC bajo presión específica</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1%21" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq 100</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +1,25%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1%21" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,26%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">XAU/USD</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,94%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,34%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,18%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 8 nov 2026</p>
+      <h1>Sesión de domingo · mercados cash cerrados</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Cierre de viernes</strong> · futuros y spot<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros de índices estables tras cierre de viernes; BTC permanece bajo presión por el hack de Binance y salidas de ETF</h2>
+    <p>Los futuros del Nasdaq 100 cerraron el viernes cerca de 27.085 (+1,25%) y los del S&P 500 en 7.402 (+0,26%). El WTI cotiza alrededor de 90,83 (+0,34%) tras una fuerte baja semanal por expectativas de menor riesgo geopolítico. El oro opera cerca de 4.075 (−0,94%). Bitcoin se mantiene alrededor de 75.800 (−0,18% en 24 horas), todavía afectado por el incidente de seguridad en Binance de finales de octubre y por salidas netas de ETF spot. El movimiento de BTC no se explica solo por la beta tecnológica.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg/1280px-No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg" alt="Piso de la Bolsa de Nueva York">
+      <figcaption>Piso de la NYSE. Los mercados cash están cerrados el domingo; los futuros reflejan el cierre del viernes con recuperación parcial en índices.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">27.085</td>
+        <td class="num up">+1,25%</td>
+        <td class="num">26.600</td>
+        <td class="num">27.500</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.402</td>
+        <td class="num up">+0,26%</td>
+        <td class="num">7.350</td>
+        <td class="num">7.480</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">4.075</td>
+        <td class="num dn">−0,94%</td>
+        <td class="num">4.030</td>
+        <td class="num">4.120</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">90,83</td>
+        <td class="num up">+0,34%</td>
+        <td class="num">89,00</td>
+        <td class="num">93,00</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">75.800</td>
+        <td class="num dn">−0,18%</td>
+        <td class="num">74.500</td>
+        <td class="num">77.500</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted">Referencias de futuros y spot al cierre del viernes 6 de noviembre y cotizaciones de BTC del domingo. Niveles redondeados. El movimiento de BTC sigue ligado al evento de seguridad en Binance y a salidas de ETF, no únicamente a la beta de tecnología.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bear">Bear · seguridad</span>
+    <h3>Hack de Binance de 6.300 millones mantiene presión sobre BTC y salidas de ETF</h3>
+    <figure>
+      <img src="https://d3i6fh83elv35t.cloudfront.net/static/2026/10/2026-10-30T080059Z_1128493862_RC2JDOAQP62K_RTRMADP_3_FINTECH-CRYPTO-BINANCE-HACK-1-1024x682.jpg" alt="Logo de Binance sobre fondo de código">
+      <figcaption>Logo de Binance. El incidente de finales de octubre implicó el robo de aproximadamente 6.300 millones de dólares en activos digitales.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El 29 de octubre de 2026, atacantes vinculados a Corea del Norte (grupo TraderTraitor / Lazarus) extrajeron alrededor de 6.300 millones de dólares de wallets calientes de Binance en un lapso de aproximadamente 20 minutos. Binance suspendió retiros, reabrió en fases a partir del 1 de noviembre y declaró haber cubierto cerca del 95% de las pérdidas con fondos propios. Aproximadamente 2.850 millones fueron congelados o interceptados. Los ETF spot de bitcoin registraron salidas netas de alrededor de 430 millones de dólares en sesiones recientes, y las liquidaciones de posiciones apalancadas superaron los 1.000 millones de dólares en periodos de alta volatilidad.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN CRIPTO] La confianza en exchanges centralizados se deterioró. BTC se mantiene por debajo de los 77.000 y no recuperó los niveles previos al incidente. El movimiento es específico del evento de seguridad y de los flujos de ETF, más allá de la correlación habitual con acciones tecnológicas.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El robo generó ventas forzadas y salidas de ETF que reducen la demanda institucional de BTC. Las liquidaciones de largos amplifican el retroceso. Mientras no se estabilicen los flujos de ETF y la percepción de riesgo de contraparte, BTC tiene soporte en 74.500 y resistencia en 77.500. Un cierre sostenido por debajo de 74.500 puede extender la baja hacia 72.000-73.000.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bull">Bull · oferta</span>
+    <h3>El crudo cede tras el pico geopolítico; WTI cerca de 91 tras baja semanal de doble dígito</h3>
+    <figure>
+      <img src="https://www.ethox.com/wp-content/uploads/2022/06/Oil-Field_sm-434971_1080x675.jpg" alt="Bombas de extracción de petróleo al atardecer">
+      <figcaption>Instalaciones de bombeo. El WTI retrocedió desde niveles superiores a 100 por expectativas de menor riesgo de suministro en el Medio Oriente.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El WTI cerró el viernes cerca de 90,83. En la semana registró una baja de aproximadamente 13%, desde picos superiores a 100. Los resultados de las elecciones de medio término en EE.UU. y señales de diálogo sobre el conflicto en el Medio Oriente redujeron la prima de riesgo de suministro. Brent cotiza cerca de 98.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[ALIVIO DE OFERTA / BULLISH PARA EQUITY] La menor presión inflacionaria energética mejora el margen para activos de riesgo. El mercado ya descontaba parte de la de-escalación.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La baja del crudo reduce el componente energético de la inflación y alivia la presión sobre los yields de Treasuries. Eso favorece a los futuros de índices. Si el WTI pierde 89, el alivio se extiende a tasas y a NQ/ES. Por encima de 93 se reabre riesgo de presión inflacionaria.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix · tecnología</span>
+    <h3>Índices recuperan parte de la baja del jueves; Nasdaq acumula caída semanal por dudas en IA</h3>
+    <figure>
+      <img src="https://www.investopedia.com/thmb/ThvG00OiG46V5Savq7aByMUMigw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/HowtoBuyGoldBarsGettyImages-1689908174-dd1c5db2500f4b62a6620a1749beee7d.jpg" alt="Barras de oro">
+      <figcaption>Barras de oro. El metal cotiza cerca de 4.075 con tasas reales todavía restrictivas y menor presión del crudo.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El Nasdaq 100 futures cerró el viernes en +1,25% tras una caída de más del 6% el jueves. La semana acumula retroceso por preocupaciones sobre el retorno del gasto en infraestructura de inteligencia artificial y por expectativas de que la Fed mantenga o suba tasas. El oro opera cerca de 4.075. El VIX se mantiene en zona moderada.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[MIXTO] La recuperación del viernes es parcial. El mercado cuestiona el ritmo de inversión en IA mientras las tasas reales se mantienen elevadas. El oro no lidera como cobertura fuerte.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La baja del crudo ayuda a contener yields y favorece el rebote de NQ y ES. Sin embargo, las dudas sobre el gasto en IA limitan el upside. Soportes de NQ en 26.600 y de ES en 7.350. Resistencias inmediatas en 27.500 y 7.480.</p>
+  </article>
+
+  <p class="section-label">Volatilidad</p>
+  <p>El VIX cerró cerca de niveles moderados el viernes (zona 17-18). El movimiento de los futuros a la mañana del domingo es limitado porque los mercados cash están cerrados. La volatilidad de BTC permanece elevada por el evento específico de Binance y por las salidas de ETF, no solo por la correlación con tecnología. Un retorno de salidas fuertes de ETF o nuevas noticias de seguridad pueden elevar la volatilidad de corto plazo en cripto. En equity, el rango se define por los niveles del viernes.</p>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · estabilización con BTC contenido</h3>
+      <p>NQ se mantiene por encima de 26.600 y ES por encima de 7.350. WTI opera entre 89 y 93. BTC no pierde 74.500 y las salidas de ETF se moderan. Probabilidad ~50%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Inverso · extensión de presión en cripto y tecnología</h3>
+      <p>BTC pierde 74.500 por nuevas salidas de ETF o noticias de seguridad. NQ retrocede por debajo de 26.600 y arrastra a ES. El crudo rebotaría por encima de 93. Probabilidad ~30%.</p>
+    </div>
+  </div>
+
+  <p class="section-label">Nota técnica</p>
+  <div class="note">
+    <p>Soportes de NQ en 26.600 y de ES en 7.350. Resistencias inmediatas en 27.500 y 7.480. El WTI tiene soporte en 89 y resistencia en 93. El oro opera entre 4.030 y 4.120. BTC tiene soporte en 74.500 y resistencia en 77.500; el nivel 74.500 es clave si se intensifican las salidas de ETF o el riesgo de contraparte. Los niveles son aproximados y se basan en el cierre del viernes y en cotizaciones de BTC del domingo. El movimiento de BTC está ligado de forma explícita al hack de Binance y a los flujos de ETF, no únicamente a la beta de acciones tecnológicas.</p>
+  </div>
+
+  <footer>
+    <p>Reporte Diario de Mercado · 8 nov 2026. Datos aproximados de futuros y spot. No constituye consejo de inversión. Fuentes: cotizaciones de mercado, reportes de Binance, flujos de ETF y noticias de geopolítica.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
