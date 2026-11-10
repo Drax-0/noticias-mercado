@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 10 nov 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="4" style="display:inline-flex;align-items:baseline;gap:2px;background:#a8be48;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">4<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Futuros mixtos tras el rebote del lunes. Crudo cae por alivio en Irán. Mercado espera el CPI. Bitcoin no acompaña el movimiento de equity.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,0%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,2%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,8%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -2,0%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -0,5%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 10 nov 2026</p>
+      <h1>Sesión de martes · preapertura y CPI de octubre</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Preapertura</strong> · futuros y spot<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros mixtos tras el fuerte rebote del lunes; el crudo cae por declaraciones de Trump sobre Irán y el mercado espera el CPI</h2>
+    <p>Los futuros del Nasdaq 100 operan cerca de 28.012 (planos o levemente negativos) y los del S&P 500 en 7.590 (+0,2%) en la mañana del martes. El lunes el S&P 500 subió 2,35% y el Nasdaq 2,74%, el mayor avance diario desde abril, impulsado por semiconductores y la caída del petróleo. El WTI cotiza alrededor de 85,00 (−2,0%) y el Brent se acerca a 90 tras comentarios de Trump que redujeron la probabilidad de nuevos ataques a Irán. El oro se mantiene cerca de 4.100 (−0,8%). Bitcoin opera alrededor de 74.700 (−0,5%), sin acompañar el movimiento de equity. Hoy se publica el CPI de octubre a las 08:30 ET.</p>
+    <figure>
+      <img src="https://www.reuters.com/resizer/v2/4JAIV6QDDJIHJKDGQXD4GA77DY.jpg?auth=e5747245779992a11c704b06627fda3b2b4644b8f87abd454faecc8d4faebb77&height=1005&width=1920&quality=80&smart=true" alt="Operadores en el piso de la NYSE">
+      <figcaption>Piso de la NYSE. Los futuros extienden de forma contenida el rebote del lunes mientras el mercado espera el dato de inflación.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">28.012</td>
+        <td class="num dn">−0,0%</td>
+        <td class="num">27.600</td>
+        <td class="num">28.400</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.590</td>
+        <td class="num up">+0,2%</td>
+        <td class="num">7.500</td>
+        <td class="num">7.650</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">4.100</td>
+        <td class="num dn">−0,8%</td>
+        <td class="num">4.050</td>
+        <td class="num">4.150</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">85,00</td>
+        <td class="num dn">−2,0%</td>
+        <td class="num">83,50</td>
+        <td class="num">87,00</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">74.700</td>
+        <td class="num dn">−0,5%</td>
+        <td class="num">73.800</td>
+        <td class="num">75.800</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros y spot al corte. Niveles redondeados. El lunes: S&P 500 +2,35%, Nasdaq +2,74%. El movimiento de Bitcoin permanece desacoplado del rebote de equity y no responde a un incidente de seguridad o hack material en las últimas 12-18 horas. El hack de Binance de finales de octubre ya está en proceso de resolución de retiros.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bull">Bull · geopolítica</span>
+    <h3>Caída del crudo por declaraciones de Trump que reducen la probabilidad de nuevos ataques a Irán</h3>
+    <figure>
+      <img src="https://npr.brightspotcdn.com/dims4/default/807a17b/2147483647/strip/true/crop/1818x1497+0+0/resize/880x725!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fs3fs-public%2Ffield%2Fimage%2F2014%2F05%2FPumpJack.JPG" alt="Bombeo de crudo">
+      <figcaption>Bombeo de crudo. El WTI retrocede hacia 85 tras el alivio geopolítico y declaraciones de Trump.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El presidente Trump indicó que nuevos ataques a Irán son poco probables en el corto plazo y se reunió con el primer ministro de Qatar. El WTI cayó cerca de 2% hacia 85 USD y el Brent se aproximó a 90, el nivel más bajo en meses. El lunes el Brent había caído más de 5% en algunos momentos.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BULLISH EN EQUITY, BEARISH EN CRUDO] Menor prima de riesgo geopolítico reduce la presión inflacionaria por energía y favorece el apetito por riesgo en acciones.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La baja del petróleo alivia expectativas de inflación y costos de insumos, lo que sostiene el rebote de futuros de equity. Un quiebre sostenido de 83,50 en WTI puede extender el alivio, pero un rebote hacia 87 reintroduce presión.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix · macro</span>
+    <h3>Futuros de equity extienden el rebote del lunes de forma contenida; el mercado espera el CPI de octubre</h3>
+    <figure>
+      <img src="https://www.usatoday.com/gcdn/authoring/authoring-images/2024/03/26/USAT/73110349007-nyse-016.jpg?width=700&height=467&fit=crop&format=pjpg&auto=webp" alt="Pantallas de cotizaciones en bolsa">
+      <figcaption>Pantallas de mercado. El Nasdaq permanece plano mientras el S&P avanza levemente antes del dato de inflación.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El lunes el S&P 500 subió 2,35% a 7.550 y el Nasdaq 2,74%, con fuerte avance en semiconductores. El martes los futuros del Dow avanzan cerca de 0,4% y los del S&P 0,2%, mientras el Nasdaq queda plano. El CPI de octubre se publica a las 08:30 ET; el consenso espera 0,3% mensual y núcleo 0,2%.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[NEUTRAL A CAUTELOSO] El rebote refleja alivio por el petróleo y recuperación técnica, pero el dato de inflación determina si la Fed mantiene o ajusta el sesgo de tasas.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Un CPI por debajo de lo esperado puede acelerar el avance de ES y NQ hacia resistencias. Un dato más alto reabre presión sobre yields y puede frenar el rebote, especialmente en tecnología. El mercado ya descuenta alta probabilidad de ajuste de tasas en diciembre.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · cripto</span>
+    <h3>Bitcoin no acompaña el rebote de equity y opera cerca de 74.700</h3>
+    <figure>
+      <img src="https://static.vecteezy.com/system/resources/previews/006/666/340/large_2x/bitcoin-coins-gold-coin-has-a-cryptocurrency-or-exchange-symbol-cryptocurrencies-for-trading-in-business-and-technology-golden-light-is-reflected-from-the-coin-on-a-black-background-3d-rendering-free-photo.jpg" alt="Moneda de Bitcoin">
+      <figcaption>Bitcoin. El precio se mantiene desacoplado del movimiento positivo de los futuros de equity.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Bitcoin cotiza alrededor de 74.700 (−0,5% en 24h), cerca de su cierre semanal más bajo desde agosto. No participó del rebote del lunes en acciones. No se registró un incidente de seguridad, hack, suspensión de retiros o crisis material en exchanges mayores (Binance, Coinbase u otros) en las últimas 12-18 horas con impacto superior a 100 millones de dólares o movimiento claro de BTC superior al 2%. El hack de Binance de finales de octubre continúa en fase de recuperación de fondos y reanudación progresiva de retiros, sin novedades críticas en el período reciente.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH RELATIVO] El desacoplamiento respecto del beta de tecnología y equity sugiere presión residual de flujos o posicionamiento, no un driver geopolítico o macro inmediato.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La ausencia de compras de ETF o de demanda spot adicional mantiene el precio por debajo de 75.800. Un quiebre de 73.800 puede generar liquidaciones adicionales en derivados. El movimiento no está ligado únicamente al beta de tech; refleja factores específicos del mercado cripto en el corto plazo.</p>
+  </article>
+
+  <p class="section-label">Volatilidad</p>
+  <p>La volatilidad se concentró el lunes en el fuerte avance de equity y la caída del crudo. El martes el movimiento de futuros es contenido antes del CPI. Bitcoin muestra desacoplamiento respecto del rebote de acciones y no responde a un evento cripto-específico aislado (hack o crisis de exchange) en las últimas horas. El VIX había bajado en la sesión del lunes. No hay incidentes de seguridad materiales en exchanges mayores en el período de 12-18 horas.</p>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Escenario base</h3>
+      <p>El CPI sale en línea o levemente por debajo de lo esperado. Los futuros se estabilizan o avanzan moderadamente. ES sostiene 7.500-7.650. WTI permanece bajo 87. Bitcoin mantiene 73.800-75.800. Probabilidad estimada: 65%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Escenario de inversión</h3>
+      <p>CPI más alto de lo esperado reabre presión sobre yields y frena el rebote de NQ por debajo de 27.600. El crudo rebota hacia 87 o más si reaparecen tensiones. Bitcoin quiebra 73.800. Probabilidad estimada: 35%.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <p class="lbl">Nota técnica</p>
+    <p>NQ: soporte 27.600, resistencia 28.400. ES: soporte 7.500, resistencia 7.650. XAU/USD: soporte 4.050, resistencia 4.150. WTI: soporte 83,50, resistencia 87. BTC: soporte 73.800, resistencia 75.800. El movimiento de Bitcoin permanece desacoplado del beta de tecnología en las últimas horas y no responde a un incidente cripto material reciente.</p>
+  </div>
+
+  <footer>
+    <p>Reporte Diario de Mercado · 10 nov 2026. Datos aproximados de futuros y spot al corte. No es consejo de inversión.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
