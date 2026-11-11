@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 11 nov 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="5" style="display:inline-flex;align-items:baseline;gap:2px;background:#b5a848;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">5<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span>Futuros de índices recuperan con resultados de CoreWeave; BTC bajo presión residual del hack de Binance y salidas de ETF</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1%21" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq 100</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +1,50%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1%21" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,70%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">XAU/USD</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,60%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +1,00%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -1,80%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 11 nov 2026</p>
+      <h1>Sesión de miércoles · recuperación en futuros de índices</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Futuros y spot</strong> · preapertura<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros del Nasdaq suben cerca del 1,5% tras resultados de CoreWeave; BTC cotiza cerca de 73.800 con presión residual del hack de Binance</h2>
+    <p>Los futuros del Nasdaq 100 operan cerca de 28.200 (+1,50%) y los del S&P 500 cerca de 7.580 (+0,70%) en la mañana del miércoles. El avance responde principalmente a los resultados de CoreWeave, que aliviaron preocupaciones sobre el gasto en infraestructura de inteligencia artificial. El WTI cotiza alrededor de 87,00 (+1,00%) y el oro cerca de 4.056 (+0,60%). Bitcoin opera en torno a 73.800 (−1,80% en 24 horas). El movimiento de BTC está ligado de forma explícita al residual del hack de Binance de 6.300 millones de dólares de finales de octubre, a salidas continuas de ETF spot y a la reacción al dato de inflación de ayer, no únicamente a la beta de tecnología.</p>
+    <figure>
+      <img src="https://qz.com/cdn-cgi/image/width=1920,quality=85,format=auto/https://assets.qz.com/media/db0b243903680da04215104c32ed6dab.jpg" alt="Piso de la Bolsa de Nueva York">
+      <figcaption>Piso de la NYSE. Los futuros reflejan una recuperación selectiva liderada por tecnología después de la sesión negativa de ayer.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">28.200</td>
+        <td class="num up">+1,50%</td>
+        <td class="num">27.600</td>
+        <td class="num">28.500</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.580</td>
+        <td class="num up">+0,70%</td>
+        <td class="num">7.500</td>
+        <td class="num">7.650</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">4.056</td>
+        <td class="num up">+0,60%</td>
+        <td class="num">4.000</td>
+        <td class="num">4.100</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">87,00</td>
+        <td class="num up">+1,00%</td>
+        <td class="num">85,50</td>
+        <td class="num">88,50</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">73.800</td>
+        <td class="num dn">−1,80%</td>
+        <td class="num">72.500</td>
+        <td class="num">75.000</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted">Referencias de futuros y spot a la mañana del 11 de noviembre. Niveles redondeados. El movimiento de BTC está ligado de forma explícita al residual del hack de Binance, a salidas de ETF y a la reacción al CPI, no únicamente a la beta de acciones tecnológicas.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bear">Bear · cripto</span>
+    <h3>BTC cotiza cerca de 73.800 con presión residual del hack de Binance de 6.300 millones y salidas de ETF</h3>
+    <figure>
+      <img src="https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/bitcoin_binance_1920x1080.png" alt="Bitcoin y logo de Binance">
+      <figcaption>Bitcoin. El precio se mantiene bajo presión por el residual del incidente de seguridad en Binance y flujos de ETF.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Bitcoin cotiza cerca de 73.800, con una baja de aproximadamente 1,8% en 24 horas y un mínimo intradía cerca de 72.700 tras la publicación del CPI de octubre. El residual del hack de Binance del 29 de octubre, en el que se sustrajeron cerca de 6.300 millones de dólares (el mayor robo de cripto registrado), sigue afectando la percepción de riesgo de contraparte. Los ETF spot de bitcoin registraron salidas netas adicionales (alrededor de 200 millones el lunes), y las liquidaciones de posiciones apalancadas se moderaron pero permanecen presentes. Binance cubrió las pérdidas con fondos propios y restableció retiros, pero la confianza institucional no se ha recuperado por completo.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN CRIPTO] La presión es específica del mercado de activos digitales. BTC no sigue el rebote de los futuros de índices. El movimiento no se explica solo por la beta tecnológica ni por el dato de inflación de forma aislada.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Las salidas de ETF reducen la demanda institucional y el residual del hack mantiene prima de riesgo de contraparte. Mientras no se estabilicen los flujos de ETF y la confianza en exchanges mayores, BTC tiene soporte en 72.500 y resistencia en 75.000. Un cierre sostenido por debajo de 72.500 puede extender la baja hacia 70.000-71.000.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bull">Bull · tecnología</span>
+    <h3>Resultados de CoreWeave impulsan futuros del Nasdaq y alivian preocupaciones sobre gasto en IA</h3>
+    <figure>
+      <img src="https://image.cnbcfm.com/api/v1/image/108223839-1762804083127-gettyimages-2206665095-COREWEAVE_IPO.jpeg?v=1776970332&w=1920&h=1080" alt="CoreWeave en Nasdaq">
+      <figcaption>CoreWeave. La compañía elevó su guía y reportó resultados que redujeron temores sobre el ritmo de inversión en infraestructura de IA.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>CoreWeave reportó ingresos del tercer trimestre de aproximadamente 3.700 millones de dólares (avance cercano al 168%) y elevó su guía de ingresos para 2026 a 13.000-13.300 millones. La compañía indicó que espera rentabilidad ajustada en la primera mitad de 2028 y destacó prepagos y depósitos de clientes por cerca de 9.000 millones. Las acciones subieron más del 10% en premarket y contribuyeron al avance de los futuros del Nasdaq 100. El mercado interpreta el resultado como evidencia de que la demanda de capacidad de cómputo para IA se mantiene sólida a pesar de las preocupaciones previas sobre gasto excesivo y financiamiento.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BULLISH SELECTIVO EN TECNOLOGÍA] El alivio en el segmento de neocloud y proveedores de infraestructura de IA impulsa el rebote de NQ. No elimina por completo las dudas de largo plazo sobre el retorno del capital invertido, pero reduce la presión de corto plazo.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El movimiento positivo en CoreWeave y pares se transmite a los futuros de índices vía el peso del sector tecnológico. Soportes de NQ en 27.600 y de ES en 7.500. Resistencias inmediatas en 28.500 y 7.650. Si el avance se consolida por encima de 28.200 en NQ, el sesgo de corto plazo se vuelve más constructivo para equity.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix · macro</span>
+    <h3>CPI de octubre más alto de lo esperado refuerza expectativas de alza de tasas, pero futuros recuperan</h3>
+    <figure>
+      <img src="https://cdn.benzinga.com/cdn-cgi/image/width=1200,height=800,fit=crop/files/images/story/2026/11/11/Close-Up-Of-Wall-Street-Sign-With-Iconic.jpg" alt="Señal de Wall Street">
+      <figcaption>Wall Street. El dato de inflación de ayer elevó las probabilidades de un alza de la Fed en diciembre, pero los futuros operan en positivo hoy.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El CPI de octubre, publicado ayer, avanzó 0,4% mensual (por encima del 0,3% esperado) y el núcleo 0,3%. El dato reforzó las expectativas de un alza de 25 puntos básicos por parte de la Reserva Federal en diciembre (probabilidad cercana al 86-91% según herramientas de mercado). A pesar de ello, los futuros de índices operan al alza esta mañana, liderados por el sector tecnológico. El rendimiento del bono a 10 años se mantiene cerca de 4,99%. El WTI sube hacia 87 por movimientos de oferta y demanda de corto plazo.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[MIXTO] El dato de inflación es restrictivo para la política monetaria, pero el mercado prioriza el alivio específico en tecnología. Neutral a levemente positivo para equity en el margen si el rebote se sostiene; restrictivo para activos sensibles a tasas en el mediano plazo.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Mayor probabilidad de alza de tasas contiene el upside de largo plazo en índices, pero no impide el rebote táctico impulsado por resultados. El oro avanza levemente como cobertura. Si los yields superan de forma sostenida 5,05-5,10%, la presión sobre equity puede reaparecer. El crudo tiene soporte en 85,50 y resistencia en 88,50.</p>
+  </article>
+
+  <p class="section-label">Volatilidad</p>
+  <p>El movimiento de los futuros a la mañana es de recuperación selectiva, liderado por tecnología. La volatilidad de BTC permanece elevada por el evento específico residual del hack de Binance de 6.300 millones, las salidas de ETF y la reacción al CPI; no se explica solo por la beta de acciones tecnológicas. En equity, el rango se define por la consolidación del avance de CoreWeave y por la digestión del dato de inflación. Un incremento de salidas de ETF o nuevas noticias de seguridad en exchanges pueden elevar la volatilidad de corto plazo en cripto. El VIX se mantiene en zona moderada.</p>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · consolidación del rebote con BTC contenido</h3>
+      <p>NQ se mantiene por encima de 27.600 y ES por encima de 7.500. WTI opera entre 85,50 y 88,50. BTC no pierde 72.500 y las salidas de ETF se moderan. Probabilidad ~45%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Inverso · extensión de presión en cripto y reversión en tecnología</h3>
+      <p>BTC pierde 72.500 por nuevas salidas de ETF o residual del riesgo de contraparte. NQ retrocede por debajo de 27.600 si el alivio de CoreWeave no se sostiene. El crudo sube por encima de 88,50. Probabilidad ~30%.</p>
+    </div>
+  </div>
+
+  <p class="section-label">Nota técnica</p>
+  <div class="note">
+    <p>Soportes de NQ en 27.600 y de ES en 7.500. Resistencias inmediatas en 28.500 y 7.650. El WTI tiene soporte en 85,50 y resistencia en 88,50. El oro opera entre 4.000 y 4.100. BTC tiene soporte en 72.500 y resistencia en 75.000; el nivel 72.500 es clave si se intensifican las salidas de ETF o el residual del hack de Binance. Los niveles son aproximados y se basan en cotizaciones de la mañana. El movimiento de BTC está ligado de forma explícita a las liquidaciones residuales, los flujos de ETF y el incidente de Binance, no únicamente a la beta de acciones tecnológicas.</p>
+  </div>
+
+  <footer>
+    <p>Reporte matutino institucional · 11 nov 2026 · Corte ~08:00 ART. No constituye consejo de inversión.</p>
+  </footer>
+</div>
+
+<script src="extra.js?v=17"></script>
+</body>
+</html>
