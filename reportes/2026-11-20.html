@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 20 nov 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="7" style="display:inline-flex;align-items:baseline;gap:2px;background:#d4a017;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">7<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span>Venta de riesgo se extiende al viernes; futuros de Nasdaq caen ~1,5%, Asia con fuertes bajas y BTC en mínimo de cuatro meses cerca de 61.800</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −1,5%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −0,7%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −2,7%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −2,4%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −2,4%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 20 nov 2026</p>
+      <h1>Sesión de viernes · extensión de la venta de riesgo</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Futuros y spot</strong> · preapertura<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros del Nasdaq caen cerca del 1,5% y Asia registra bajas fuertes; BTC toca mínimo de cuatro meses cerca de 61.800 por salidas de ETF y liquidaciones</h2>
+    <p>Los futuros del Nasdaq 100 operan cerca de 26.200 (−1,5%) y los del S&P 500 cerca de 7.150 (−0,7%) en la mañana del viernes. El movimiento extiende la caída del jueves, cuando el S&P 500 cerró cerca de 7.176 (−2,02%) y el Nasdaq Composite cerca de 23.879 (−2,25%) después de que el debut de Anthropic no sostuviera el impulso inicial. El oro cotiza alrededor de 3.560 (−2,7%) y el WTI cerca de 81,20 (−2,4%). Bitcoin opera cerca de 61.780 (−2,4% en 24 horas), su nivel más bajo desde julio, con salidas netas de ETF spot cercanas a 582 millones de dólares el jueves y liquidaciones de futuros de cerca de 600-700 millones. El movimiento de BTC está ligado de forma explícita a las salidas de ETF y a la beta de riesgo de acciones tecnológicas, no a un incidente de seguridad nuevo en exchanges.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/New_York_Stock_Exchange_-_panoramio_%282%29.jpg" alt="Fachada de la Bolsa de Nueva York">
+      <figcaption>Fachada de la NYSE. El cash del jueves cerró con pérdidas fuertes; los futuros del viernes continúan bajo presión.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">26.200</td>
+        <td class="num dn">−1,5%</td>
+        <td class="num">25.900</td>
+        <td class="num">26.600</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.150</td>
+        <td class="num dn">−0,7%</td>
+        <td class="num">7.100</td>
+        <td class="num">7.250</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">3.560</td>
+        <td class="num dn">−2,7%</td>
+        <td class="num">3.520</td>
+        <td class="num">3.620</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">81,20</td>
+        <td class="num dn">−2,4%</td>
+        <td class="num">80,00</td>
+        <td class="num">82,50</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">61.780</td>
+        <td class="num dn">−2,4%</td>
+        <td class="num">61.000</td>
+        <td class="num">63.000</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros y spot a la mañana del 20 de noviembre. Niveles redondeados. El movimiento de BTC está ligado de forma explícita a las salidas de ETF spot de cerca de 582 millones y a liquidaciones, amplificadas por la beta de acciones tecnológicas, no a un incidente de seguridad nuevo.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bear">Bear · riesgo</span>
+    <h3>El debut de Anthropic no sostiene el impulso; venta de acciones de IA se extiende a Asia</h3>
+    <figure>
+      <img src="https://www.reuters.com/resizer/v2/Z5MHI6C3XFNXJLSCUPM22PEWIA.jpg?auth=1c892d8ec0c3dbc24879bfa2d8e17fc754de07692cc192a8f50f0dab79bb1c3a&height=1005&width=1920&quality=80&smart=true" alt="Pantalla con Anthropic en Nasdaq">
+      <figcaption>Anthropic en su debut. Las acciones abrieron con fuerza pero cerraron con ganancia reducida; el sector de IA no recuperó.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Anthropic abrió cerca de 111,50 dólares el jueves y cerró en 97,17 (+17% sobre el precio de oferta de 83), pero el impulso inicial se desvaneció. El S&P 500 y el Nasdaq Composite cerraron con pérdidas superiores al 2%. En la mañana del viernes, los futuros continúan a la baja y los mercados asiáticos registran caídas fuertes: Nikkei cerca de −4,7% y KOSPI cerca de −5,1%, lideradas por semiconductores.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN ACCIONES DE CRECIMIENTO] La falta de sostenibilidad del IPO y las preocupaciones de valoración y financiamiento en IA mantienen presión. No es un evento aislado; la venta se transmite a Asia.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El desvanecimiento del IPO reduce el bid táctico en NQ y ES. Asia amplifica el movimiento por el peso de semiconductores. Soporte inmediato en NQ cerca de 25.900; un quiebre puede extender hacia 25.500. El residual no es un incidente cripto nuevo.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · cripto</span>
+    <h3>BTC cae a mínimo de cuatro meses cerca de 61.800 con salidas de ETF de 582 millones y liquidaciones</h3>
+    <figure>
+      <img src="https://thumbs.dreamstime.com/b/graph-crypto-currency-online-btc-stock-exchange-market-chart-bitcoin-view-app-screen-laptop-pc-245478525.jpg" alt="Gráfico de trading de Bitcoin">
+      <figcaption>Pantalla de trading de Bitcoin. El precio toca mínimo desde julio con salidas de ETF y liquidaciones de posiciones largas.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Bitcoin cotiza cerca de 61.780, con una baja de cerca del 2,4% en 24 horas y un mínimo intradiario cercano a 61.300, el nivel más bajo desde julio. Los ETF spot de BTC en EE.UU. registraron salidas netas de cerca de 582 millones de dólares el jueves, con BlackRock IBIT cerca de 541 millones. Las liquidaciones de futuros de cripto alcanzaron cerca de 600-700 millones, principalmente posiciones largas. No hay incidente de seguridad nuevo en exchanges mayores en las últimas 18 horas superior a 100 millones.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN CRIPTO] Las salidas de ETF y las liquidaciones refuerzan la presión. El movimiento está ligado de forma explícita a estos flujos y a la beta de acciones tecnológicas, no solo a un driver macro genérico.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Las salidas de ETF reducen la demanda institucional y las liquidaciones amplifican la baja en un mercado con posicionamiento apalancado. Soporte en 61.000; resistencia en 63.000. Un cierre por debajo de 61.000 puede abrir espacio hacia 59.000-60.000. El movimiento no se explica solo por la beta de tech.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · tasas y dólar</span>
+    <h3>Comentarios sobre inflación y dólar firme presionan oro y activos de riesgo</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Eccles_Building_%2826088200676%29.jpg" alt="Edificio Eccles de la Reserva Federal">
+      <figcaption>Edificio Eccles. Comentarios de funcionarios sobre inflación alta mantienen expectativas de tasas restrictivas.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Funcionarios de la Fed, incluyendo comentarios de Goolsbee sobre inflación que permanece alta, y datos de actividad más blandos contribuyeron a la venta del jueves. El dólar se mantiene firme cerca de máximos recientes y el rendimiento del bono a 10 años cerca del 5%. El oro cae cerca del 2,7% a 3.560. El VIX cerró el jueves cerca de 28,4, en zona elevada.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN METALES PRECIOSOS Y ACTIVOS SENSIBLES A TASAS] La combinación de inflación persistente y dólar fuerte reduce el atractivo del oro como hedge. Los activos de riesgo sufren por el mismo canal de tasas reales.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Expectativas de política más restrictiva elevan rendimientos reales y fortalecen el dólar, presionando oro y múltiplos de crecimiento. Soporte de oro en 3.520; un quiebre puede extender hacia 3.480. El canal no es específico de cripto.</p>
+  </article>
+
+  <p class="section-label">Volatilidad y liquidez</p>
+  <div class="card">
+    <p>El VIX cerró el jueves cerca de 28,4 (+15% en la sesión), en zona elevada. La volatilidad implícita de equity descuenta movimientos diarios de cerca de 1,8%. En cripto, la volatilidad de BTC permanece alta; el movimiento de BTC está ligado de forma explícita a las salidas de ETF de cerca de 582 millones y a liquidaciones de 600-700 millones, amplificadas por la beta de acciones tecnológicas, no a un incidente de seguridad nuevo. Liquidez de Asia fue débil en semiconductores. Spreads de futuros normales. No hay stress extremo de funding en el momento del corte.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Eccles_Building_%2826088200676%29.jpg" alt="Reserva Federal">
+      <figcaption>Reserva Federal. El mercado sigue descontando sesgo hawkish residual; el 10 años cerca del 5%.</figcaption>
+    </figure>
+  </div>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · consolidación a la baja</h3>
+      <p>Los futuros de índices cierran la sesión con pérdidas moderadas. El oro se estabiliza cerca de 3.560. BTC se mantiene en 61.000-63.000. Probabilidad aproximada 55%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Alternativo · extensión de la venta</h3>
+      <p>NQ pierde 25.900 y ES pierde 7.100. BTC testea 61.000 con nuevas salidas de ETF. Oro quiebra 3.520. Probabilidad aproximada 30%.</p>
+    </div>
+  </div>
+  <p class="muted">Residual ~15%: rebote táctico si el VIX retrocede y no hay más headlines de inflación.</p>
+
+  <p class="section-label">Nota técnica para algoritmos</p>
+  <div class="note">
+    <p><strong>Régimen:</strong> continuación de venta de riesgo post-IPO de Anthropic y con tasas restrictivas. No es mean-reversion pura. NQ opera cerca de mínimos recientes; VIX en 28 desaconseja vender gamma corta sin hedge.</p>
+    <p><strong>Ineficiencias explotables:</strong> (1) desacople BTC vs. NQ — BTC en mínimo de cuatro meses con salidas de ETF específicas: no usarlo como beta pura del NQ bajo 63.000; (2) oro cae con equity: si el yield del 10 años no sube más y el dólar se estabiliza, el long de oro puede ser el leg más débil; (3) Asia de semiconductores es el amplificador de la mañana; un cierre de NQ por encima de 26.600 con volumen puede indicar agotamiento de la venta; (4) liquidaciones de cripto ya materializadas: fade de shorts adicionales si BTC sostiene 61.000.</p>
+  </div>
+
+  <footer>
+    <p>Fuentes: cierres del 19 nov 2026 (S&P 500 ~7.176, Nasdaq Composite ~23.879, VIX ~28,4), futuros y spot del 20 nov (NQ ~26.200, ES ~7.150, oro ~3.560, WTI ~81,20, BTC ~61.780). Referencias de Reuters, CoinDesk, Yahoo Finance, datos de mercado públicos. Niveles de soporte/resistencia son zonas técnicas de referencia, no órdenes.</p>
+    <p>No es consejo de inversión. Los escenarios son probabilísticos y pueden invalidarse con un solo headline de inflación o de flujos de ETF.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
