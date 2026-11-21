@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 21 nov 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="8" style="display:inline-flex;align-items:baseline;gap:2px;background:#d45a28;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">8<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Selloff en IA lleva al Nasdaq a -5,3% y al S&P/Dow a corrección; BTC cae a ~58k por salidas de ETF y liquidaciones.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -5,5%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -3,6%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -4,6%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,2%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ -6,0%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 21 nov 2026</p>
+      <h1>Sesión de sábado · recap del viernes de selloff en IA</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Mercados cerrados</strong> · recap viernes + spot cripto<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Nasdaq cerró -5,3% y el S&P entró en corrección; BTC opera cerca de 58.000 por salidas de ETF</h2>
+    <p>El viernes el Nasdaq Composite cerró en 22.618 (−5,28%) y el S&P 500 en 6.910 (−3,70%). Ambos índices, junto con el Dow (−1,93%), confirmaron corrección al superar el 10% de caída desde máximos. El VIX subió a ~35,9. El oro cayó ~4,6% a ~3.515. Bitcoin opera alrededor de 57.900 (−6% en 24 horas), con liquidaciones elevadas y salidas netas de ETF spot que superaron los 580 millones el jueves. El movimiento de BTC combina la beta de tecnología con un driver específico de flujos de ETF y residual de riesgo de contraparte.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg/1280px-No_Known_Restrictions_Trading_Floor%2C_New_York_Stock_Exchange_%28Highsmith_LOC%29_%286718386525%29.jpg" alt="Piso de la Bolsa de Nueva York">
+      <figcaption>Piso de la NYSE. El viernes el selloff en acciones de IA llevó a los índices principales a corrección.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">25.130</td>
+        <td class="num dn">−5,5%</td>
+        <td class="num">24.800</td>
+        <td class="num">25.800</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">6.935</td>
+        <td class="num dn">−3,6%</td>
+        <td class="num">6.850</td>
+        <td class="num">7.050</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">3.515</td>
+        <td class="num dn">−4,6%</td>
+        <td class="num">3.480</td>
+        <td class="num">3.580</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">83,40</td>
+        <td class="num up">+0,2%</td>
+        <td class="num">82,00</td>
+        <td class="num">85,00</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">57.900</td>
+        <td class="num dn">−6,0%</td>
+        <td class="num">55.500</td>
+        <td class="num">60.000</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias al cierre del viernes y spot actual. Niveles redondeados. El movimiento de BTC está ligado de forma explícita a salidas de ETF spot (BlackRock IBIT ~541 M el jueves) y liquidaciones, además de la beta tecnológica del selloff en IA. Residual del hack de Binance de octubre sigue en el fondo de riesgo de contraparte.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bear">Bear · tecnología</span>
+    <h3>Selloff en IA lleva al Nasdaq a su peor semana desde 2020 y al S&P a corrección</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nasdaq_MarketSite_%2851494550508%29.jpg/1280px-Nasdaq_MarketSite_%2851494550508%29.jpg" alt="Nasdaq MarketSite">
+      <figcaption>Nasdaq MarketSite. Anthropic y Nvidia lideraron las caídas; el índice tech terminó negativo en el año.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El viernes el Nasdaq cayó 5,28% y el S&P 500 3,70%. Ambos entraron en corrección (>10% desde máximos). Nvidia cayó ~14% y Anthropic, en su segundo día de cotización, perdió terreno. El VIX saltó a ~35,9. El movimiento refleja dudas sobre el retorno del gasto masivo en infraestructura de IA.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN CRECIMIENTO DE IA] El mercado descuenta que las valuaciones elevadas y el capex no se justifican todavía. La amplitud fue negativa.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La caída de chips y nombres de IA reduce el peso de NQ y arrastra a ES. Un cierre por debajo de los soportes de NQ en 24.800 puede extender la presión. La recuperación depende de que se estabilicen los flujos de riesgo en tecnología.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · cripto</span>
+    <h3>BTC cae hacia 58.000 por salidas récord de ETF y liquidaciones; residual de Binance</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" alt="Bitcoin">
+      <figcaption>Bitcoin. El precio perforó 60.000 y opera cerca de 58.000 con salidas fuertes de ETF spot.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Bitcoin opera cerca de 57.900, con baja de ~6% en 24 horas y mínimos cerca de 55.300. El jueves los ETF spot de bitcoin registraron salidas netas de ~582 millones, lideradas por BlackRock IBIT con ~541 millones (récord diario). Noviembre acumula ~3,5 mil millones en salidas. Liquidaciones de largos superaron cientos de millones. El residual del hack de Binance de ~6,3 mil millones de octubre (con movimientos recientes de fondos) mantiene presión de percepción de riesgo de contraparte, aunque no es un incidente nuevo del día.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN CRIPTO] La presión es específica del mercado de activos digitales por flujos de ETF y liquidaciones, además de la beta del selloff tecnológico. No se explica solo por la correlación con equity.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Las salidas de ETF reducen demanda institucional y las liquidaciones amplifican el retroceso. Soporte en 55.500 y resistencia en 60.000. Un cierre sostenido por debajo de 55.500 puede extender hacia 53.000-54.000. El residual de Binance limita el upside mientras no se estabilice la confianza.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · commodities</span>
+    <h3>El oro cae ~4,6% sin bid de refugio; el crudo se mantiene estable</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/1280px-Gold_bullion_bars.jpg" alt="Barras de oro">
+      <figcaption>Barras de oro. El metal cayó junto con las acciones, señal de que los inversores buscan efectivo.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El oro cerró cerca de 3.515 (−4,6%). No actuó como refugio en el selloff de acciones. El WTI se mantuvo alrededor de 83,40 (+0,2%). Los yields del 10 años bajaron ~10-14 bp hacia 4,91%.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO DE LIQUIDEZ / BEARISH PARA ORO] La falta de bid en oro junto con la caída de acciones sugiere que se está levantando efectivo, no rotando a refugios tradicionales.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La baja del oro confirma el modo de reducción de riesgo. El crudo estable limita presión inflacionaria adicional. Soporte de oro en 3.480; por debajo se acelera. El WTI entre 82 y 85 no cambia el cuadro de corto plazo para tasas.</p>
+  </article>
+
+  <p class="section-label">Volatilidad</p>
+  <p>El VIX cerró cerca de 35,9, nivel de miedo elevado después de la semana de selloff. El movimiento de los futuros el viernes fue amplio y con sesgo negativo. La volatilidad de BTC permanece alta por el driver específico de salidas de ETF spot (récord en IBIT) y liquidaciones, además de la beta tecnológica; el residual del hack de Binance de octubre aporta un componente de riesgo de contraparte que no se observa en equity. Un aumento de salidas de ETF o nuevas noticias de seguridad pueden elevar la volatilidad de corto plazo en cripto. En equity, el rango se define por los niveles del viernes y por la reacción a datos o declaraciones de la Fed la próxima semana.</p>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · estabilización con BTC contenido</h3>
+      <p>NQ se mantiene por encima de 24.800 y ES por encima de 6.850. WTI opera entre 82 y 85. BTC no pierde 55.500 y las salidas de ETF se moderan. Probabilidad ~40%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Inverso · extensión de presión en tecnología y cripto</h3>
+      <p>BTC pierde 55.500 por nuevas salidas de ETF o liquidaciones. NQ retrocede por debajo de 24.800 y arrastra a ES. El oro sigue bajo presión. Probabilidad ~35%.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <p class="section-label" style="margin-top:0;">Nota técnica</p>
+    <p>Soportes de NQ en 24.800 y de ES en 6.850. Resistencias inmediatas en 25.800 y 7.050. El WTI tiene soporte en 82 y resistencia en 85. El oro opera entre 3.480 y 3.580. BTC tiene soporte en 55.500 y resistencia en 60.000; el nivel 55.500 es clave si se intensifican las salidas de ETF. Los niveles son aproximados y se basan en cotizaciones del cierre del viernes y spot actual. El movimiento de BTC está ligado de forma explícita a las salidas de ETF, las liquidaciones y el residual del incidente de Binance, no únicamente a la beta de acciones tecnológicas.</p>
+  </div>
+
+  <footer>
+    <p>Reporte matutino institucional · 21 de noviembre de 2026 · Fuentes: cierre de mercado, datos de futuros y spot, reportes de flujos de ETF.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
