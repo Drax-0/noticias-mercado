@@ -1,1 +1,250 @@
-PLACEHOLDER_WILL_READ
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 24 nov 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="6" style="display:inline-flex;align-items:baseline;gap:2px;background:#c5a030;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">6<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span>Futuros del Nasdaq retroceden ~1% tras el rally de Jensen Huang; BTC pierde los 60.000 por salidas de ETF y residual del hack de Binance</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −1,0%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −0,4%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −0,3%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −0,3%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#f07178;font-size:14px;">↓ −2,0%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 24 nov 2026</p>
+      <h1>Sesión de martes · fade del rally de Nvidia y presión en BTC</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Futuros y spot</strong> · preapertura<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros del Nasdaq caen cerca del 1% tras el rally del lunes; BTC pierde los 60.000 por salidas de ETF y residual del hack de Binance</h2>
+    <p>Los futuros del Nasdaq 100 operan cerca de 26.550 (−1,0%) y los del S&P 500 cerca de 7.225 (−0,4%) en la mañana del martes, después de que el lunes el Nasdaq Composite subiera 6,5% y el S&P 500 4,7% por el regreso de Jensen Huang como CEO de Nvidia. El oro cotiza alrededor de 3.622 (−0,3%) y el WTI cerca de 80,00 (−0,3%). Bitcoin opera cerca de 59.950 (−2,0% en 24 horas), tras tocar 64.500 el lunes y perder el nivel de 60.000. El movimiento de BTC está ligado de forma explícita a salidas de ETF spot de cerca de 570-650 millones el lunes y al residual de confianza del hack de 6.300 millones de dólares a Binance del 29 de octubre, no solo a la beta de acciones tecnológicas.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/New_York_Stock_Exchange_-_panoramio_%282%29.jpg" alt="Fachada de la Bolsa de Nueva York">
+      <figcaption>Fachada de la NYSE. El cash del lunes cerró con ganancias fuertes lideradas por Nvidia; los futuros del martes ceden parte del avance.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">26.550</td>
+        <td class="num dn">−1,0%</td>
+        <td class="num">26.300</td>
+        <td class="num">26.900</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.225</td>
+        <td class="num dn">−0,4%</td>
+        <td class="num">7.180</td>
+        <td class="num">7.280</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">3.622</td>
+        <td class="num dn">−0,3%</td>
+        <td class="num">3.580</td>
+        <td class="num">3.660</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">80,00</td>
+        <td class="num dn">−0,3%</td>
+        <td class="num">79,20</td>
+        <td class="num">81,00</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">59.950</td>
+        <td class="num dn">−2,0%</td>
+        <td class="num">59.400</td>
+        <td class="num">61.500</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros y spot a la mañana del 24 de noviembre. Niveles redondeados. El movimiento de BTC está ligado de forma explícita a salidas de ETF de cerca de 570-650 millones y al residual del hack de Binance de 6.300 millones, no solo a la beta de tech.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bear">Bear · equity</span>
+    <h3>El rally por el regreso de Jensen Huang se desvanece; futuros del Nasdaq ceden cerca del 1%</h3>
+    <figure>
+      <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4258x2839+0+0/resize/1100/quality/50/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fd9%2F45%2F2eafdbfd4aefb6a733414c644e5d%2Fgettyimages-2280478542.jpg" alt="Jensen Huang">
+      <figcaption>Jensen Huang. Su reinstatement como CEO de Nvidia el lunes impulsó el Nasdaq +6,5%; el martes los futuros ceden parte del avance.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El lunes el board de Nvidia reinstauró a Jensen Huang como CEO, presidente y miembro del board, efectivo de inmediato. Las acciones de Nvidia subieron cerca del 31% y el Nasdaq Composite cerró +6,5%. El martes los futuros del Nasdaq operan cerca de −1,0% y las de Nvidia ceden cerca del 3-4% en premarket. Quedan abiertas investigaciones sobre asuntos personales y de seguridad nacional.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH TÁCTICO EN EQUITY DE CRECIMIENTO] El mercado toma ganancias después del movimiento extremo del lunes. Las dudas sobre el financiamiento de IA y la investigación residual limitan el follow-through.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La toma de ganancias en NQ y ES reduce el bid de semiconductores. Soporte inmediato en NQ cerca de 26.300; un quiebre puede abrir hacia 26.000. El residual no es un incidente cripto nuevo.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · cripto</span>
+    <h3>BTC pierde los 60.000 tras tocar 64.500; salidas de ETF de ~570-650 millones y residual del hack de Binance</h3>
+    <figure>
+      <img src="https://s3.tradingview.com/c/cMdmHwGZ_mid.png" alt="Gráfico de Bitcoin">
+      <figcaption>Gráfico de BTC. El precio perdió el nivel de 60.000 después del pico de 64.500 del lunes.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Bitcoin cotiza cerca de 59.950, con baja de cerca del 2% en 24 horas, después de tocar 64.500 el lunes. Los ETF spot de BTC en EE.UU. registraron salidas netas de cerca de 570-650 millones de dólares el lunes. El residual del hack del 29 de octubre a Binance, en el que se sustrajeron cerca de 6.300 millones de dólares (Binance cubrió la mayor parte con fondos propios y cerca de 3.000 millones quedaron congelados), sigue pesando en la confianza. Liquidaciones de futuros de cripto en las últimas horas superaron los 300-800 millones según reportes. No hay incidente de seguridad nuevo superior a 100 millones en las últimas 18 horas.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN CRIPTO] Las salidas de ETF y el residual de confianza del hack de Binance mantienen presión específica. El movimiento no se explica solo por la beta de acciones tecnológicas.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Las salidas de ETF reducen demanda institucional y las liquidaciones amplifican la baja en un mercado con posicionamiento apalancado residual del hack. Soporte en 59.400; resistencia en 61.500. Un cierre por debajo de 59.400 puede abrir espacio hacia 58.000-59.000. El driver es cripto-específico (ETF + residual de seguridad), no solo beta de tech.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · commodities</span>
+    <h3>El WTI se mantiene cerca de 80 con presión de oferta; oro estable en 3.622</h3>
+    <figure>
+      <img src="https://getglobalgroup.com/wp-content/uploads/2025/01/Barrel-in-the-Oil-and-Gas-Industry.png" alt="Barriles de crudo">
+      <figcaption>Barriles de petróleo. La recuperación de oferta en Oriente Medio y el reinicio de un oleoducto libio presionan el WTI.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El WTI opera cerca de 80,00 (−0,3%), después de caídas más amplias el lunes por recuperación de exportaciones en Oriente Medio y reinicio de un oleoducto en Libia. El oro se mantiene cerca de 3.622 (−0,3%), sin un bid fuerte de refugio después del rally de equity del lunes. El dólar se mantiene firme cerca de máximos recientes.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[MIXED EN COMMODITIES] El crudo siente presión de oferta; el oro no encuentra bid de refugio claro con equity todavía en niveles elevados post-rally y dólar firme.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Mayor oferta física y menor prima geopolítica reducen el precio del WTI. Soporte de WTI en 79,20; de oro en 3.580. El canal no es específico de cripto.</p>
+  </article>
+
+  <p class="section-label">Volatilidad y liquidez</p>
+  <div class="card">
+    <p>El VIX cerró el lunes cerca de 26,6 después de caer fuerte en la sesión de rally. La volatilidad implícita de equity descuenta movimientos diarios de cerca de 1,6-1,7%. En cripto, la volatilidad de BTC permanece elevada; el movimiento de BTC está ligado de forma explícita a las salidas de ETF de cerca de 570-650 millones y al residual del hack de Binance de 6.300 millones, no solo a la beta de tech. Spreads de futuros normales. No hay stress extremo de funding en el momento del corte.</p>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Eccles_Building_%2826088200676%29.jpg" alt="Reserva Federal">
+      <figcaption>Reserva Federal. El mercado sigue descontando sesgo hawkish residual; el 10 años cerca del 4,9%.</figcaption>
+    </figure>
+  </div>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · consolidación después del rally</h3>
+      <p>Los futuros de índices cierran la sesión con pérdidas moderadas o flat. El oro se estabiliza cerca de 3.620. BTC se mantiene en 59.500-61.500. Probabilidad aproximada 55%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Alternativo · extensión de la toma de ganancias</h3>
+      <p>NQ pierde 26.300 y ES pierde 7.180. BTC testea 59.400 con nuevas salidas de ETF. Oro quiebra 3.580. Probabilidad aproximada 25%.</p>
+    </div>
+  </div>
+  <p class="muted">Residual ~20%: rebote táctico si el VIX retrocede más y no hay más headlines de investigación sobre Huang o flujos de ETF.</p>
+
+  <p class="section-label">Nota técnica para algoritmos</p>
+  <div class="note">
+    <p><strong>Régimen:</strong> fade táctico después de un rally extremo de +6,5% en Nasdaq. No es mean-reversion pura de un bear market. NQ opera cerca de los máximos del lunes; VIX en ~26 desaconseja vender gamma corta sin hedge.</p>
+    <p><strong>Ineficiencias explotables:</strong> (1) desacople BTC vs. NQ — BTC en 60.000 con salidas de ETF y residual de hack de Binance: no usarlo como beta pura del NQ bajo 61.500; (2) oro lateral con equity: si el yield del 10 años no sube más y el dólar se estabiliza, el long de oro puede ser el leg más débil; (3) toma de ganancias en NQ es el driver de la mañana; un cierre de NQ por encima de 26.900 con volumen puede indicar que el fade se agotó; (4) liquidaciones de cripto ya materializadas: fade de shorts adicionales si BTC sostiene 59.400.</p>
+  </div>
+
+  <footer>
+    <p>Fuentes: cierres del 23 nov 2026 (S&P 500 ~7.237, Nasdaq Composite ~24.090 / Nasdaq 100 ~26.746, VIX ~26,6, NVDA +31%), futuros y spot del 24 nov (NQ ~26.550, ES ~7.225, oro ~3.622, WTI ~80,00, BTC ~59.950). Referencias de Reuters, CoinDesk, Bloomberg, datos de mercado públicos. Niveles de soporte/resistencia son zonas técnicas de referencia, no órdenes.</p>
+    <p>No es consejo de inversión. Los escenarios son probabilísticos y pueden invalidarse con un solo headline de investigación sobre Huang o de flujos de ETF.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
