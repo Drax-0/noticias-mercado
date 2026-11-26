@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 26 nov 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="7" style="display:inline-flex;align-items:baseline;gap:2px;background:#c98a30;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">7<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Mercados de EE.UU. cerrados por Thanksgiving. Futuros al alza tras volatilidad por PCE caliente y outflows récord en ETFs de BTC.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,45%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,46%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +0,70%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#8b97a6;font-size:14px;">→ -0,04%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +2,3%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 26 nov 2026</p>
+      <h1>Sesión de jueves · Thanksgiving, futuros al alza</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Mercados de EE.UU. cerrados</strong> · futuros y spot<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros de equity suben en feriado tras volatilidad por PCE y rebotes en BTC con outflows récord en ETFs</h2>
+    <p>Los futuros del Nasdaq 100 operan cerca de 26.218 (+0,45%) y los del S&P 500 en 7.229 (+0,46%) en la mañana del jueves, con los mercados de contado de EE.UU. cerrados por Thanksgiving. El movimiento sigue a una sesión del miércoles con fuerte volatilidad: el Nasdaq cayó hasta cerca del 4,7% intradía tras un core PCE de octubre en 3,3% (por encima del 3,2% esperado) y propuestas de aranceles, antes de recuperar parte de las pérdidas. El oro cotiza alrededor de 3.589 (+0,70%) y el WTI cerca de 83,65 (plano). Bitcoin opera alrededor de 60.800 (+2,3% en 24h) tras haber tocado cerca de 57.300 el miércoles. El principal driver de BTC en el mes son los outflows récord de los ETFs spot, que superan los USD 5.300 millones en noviembre.</p>
+    <figure>
+      <img src="https://www.thewallstreetexperience.com/wp-content/uploads/2018/08/stock-exchange-738671_1280-1024x685.jpg" alt="Piso de la Bolsa de Nueva York">
+      <figcaption>Piso de la NYSE. Los mercados de contado permanecen cerrados el jueves por Thanksgiving; los futuros reflejan un rebote moderado.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">26.218</td>
+        <td class="num up">+0,45%</td>
+        <td class="num">25.900</td>
+        <td class="num">26.500</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.229</td>
+        <td class="num up">+0,46%</td>
+        <td class="num">7.150</td>
+        <td class="num">7.280</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">3.589</td>
+        <td class="num up">+0,70%</td>
+        <td class="num">3.540</td>
+        <td class="num">3.630</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">83,65</td>
+        <td class="num">−0,04%</td>
+        <td class="num">82,80</td>
+        <td class="num">84,80</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">60.800</td>
+        <td class="num up">+2,3%</td>
+        <td class="num">58.500</td>
+        <td class="num">62.000</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros y spot en la mañana. Niveles redondeados. El miércoles el Nasdaq Composite cerró cerca de −0,6% tras un mínimo intradía cercano al −4%. VIX en torno a 28. BTC se recuperó de un mínimo cerca de 57.300. El movimiento de BTC está ligado principalmente a outflows de ETFs y liquidaciones de apalancamiento, no solo a beta de tech.</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bear">Bear · inflación</span>
+    <h3>Core PCE de octubre en 3,3% y volatilidad en equity el miércoles; futuros rebotan el jueves</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Nasdaq_MarketSite_%2851494550508%29.jpg/1280px-Nasdaq_MarketSite_%2851494550508%29.jpg" alt="Nasdaq MarketSite">
+      <figcaption>Nasdaq MarketSite. El índice tocó niveles cercanos a mercado bajista intradía el miércoles antes de recuperar.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El core PCE de octubre subió a 3,3% interanual (desde 3,1% y por encima del 3,2% esperado). El headline PCE quedó en 3,8%. El dato, junto con propuestas de aranceles de hasta 25% sobre varios países, generó una caída intradía fuerte en el Nasdaq (hasta cerca de −4,7%) y en el S&P 500. Por la tarde hubo compras de oportunidad y el índice recuperó la mayor parte de las pérdidas. El mercado ya descuenta con alta probabilidad una suba de 25 pb de la Fed en diciembre (cerca del 95-98%).</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[CAUTELOSO A BEARISH en tasas / MIXTO en equity] El rebote de los futuros el jueves es táctico en un día de feriado y liquidez reducida. No elimina la presión de inflación más firme.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Un core PCE más alto refuerza la expectativa de tasas más restrictivas. Eso presiona los múltiplos de crecimiento y explica parte de la venta en tech. El canal principal es el de tasas reales hacia la valoración de NQ y ES. En un día de mercado cerrado, el movimiento de los futuros a la mañana refleja alivio de corto plazo más que un cambio de régimen.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bear">Bear · crypto</span>
+    <h3>Outflows récord en ETFs spot de Bitcoin superan USD 5.300 millones en noviembre; BTC rebota a ~60.800</h3>
+    <figure>
+      <img src="https://cdn.proactiveinvestors.com/eyJidWNrZXQiOiJwYS1jZG4iLCJrZXkiOiJ1cGxvYWRcL05ld3NcL0ltYWdlXC8yMDI2XzExXC9iaXRjb2luLXRyYWRpbmctbWFya2V0LWRhdGEtY2hhcnRfNmIwN2FlMDc2ZTg4Ny5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6NjMwLCJmaXQiOiJjb3ZlciJ9fX0=" alt="Gráfico de Bitcoin">
+      <figcaption>Bitcoin opera cerca de 60.800 tras un mínimo cercano a 57.300 el miércoles. Los outflows de ETFs son el driver principal del mes.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Los ETFs spot de Bitcoin en EE.UU. registraron outflows netos que en noviembre superan los USD 5.390 millones, el peor mes desde su lanzamiento y por encima del récord anterior de junio. El miércoles hubo outflows adicionales (cifras preliminares cerca de USD 450 millones en un día). BTC cayó a cerca de 57.300 en la sesión del miércoles y luego recuperó por encima de 60.000, con liquidaciones de posiciones apalancadas del orden de USD 500 millones en 24 horas. No se reportó un incidente de seguridad o hack material en exchanges mayores en las últimas horas. Un proyecto de ley de Reserva Estratégica de Bitcoin avanzó en un comité de la Cámara.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[BEARISH EN FLUJOS INSTITUCIONALES / MIXTO EN PRECIO DE CORTO PLAZO] El Fear & Greed Index se ubica en zona de miedo extremo. El rebote de precio es técnico y de cobertura de cortos, no un cambio en el flujo de capital institucional.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Los outflows de ETFs reducen la demanda institucional directa y presionan el precio. Las liquidaciones de largos amplifican el movimiento a la baja. El rebote posterior ocurre cuando el precio encuentra soporte y se cubren posiciones cortas. A diferencia de días anteriores, el movimiento de BTC está más ligado a este flujo cripto-específico (ETFs y apalancamiento) que a la simple correlación con el Nasdaq. El canal de transmisión hacia equity es limitado hoy por el feriado.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix · AI y commodities</span>
+    <h3>Trade de IA se estabiliza en Asia y Europa; oro y WTI en rango</h3>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/1280px-Gold_bullion_bars.jpg" alt="Barras de oro">
+      <figcaption>Barras de oro. El metal opera cerca de 3.590 tras rebotar junto con el alivio en equity.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Acciones de tecnología y chips subieron en Asia (Nikkei, Kospi, Hang Seng) y en Europa, con el Stoxx 600 al alza. El trade de IA muestra signos de estabilización tras la venta del miércoles. El oro sube más de 0,7% a cerca de 3.590. El WTI se mantiene plano cerca de 83,65. Un proyecto de Reserva Estratégica de Bitcoin avanzó en comité.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[MIXTO] El rebote en tech es táctico y de corto plazo. El oro responde más a la cobertura de riesgo residual que a un bid de pánico puro.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>La estabilización del trade de IA reduce la presión de venta en NQ. El oro se beneficia del rebote de corto plazo y de la incertidumbre residual sobre tasas. El WTI no añade un impulso adicional de inflación en esta sesión. Si el rebote de tech se sostiene al reabrir el viernes, NQ puede consolidar por encima de 26.100; una reanudación de la venta reabre el soporte de 25.900.</p>
+  </article>
+
+  <p class="section-label">Volatilidad</p>
+  <p>El VIX operó cerca de 28 el miércoles tras haber tocado cerca de 35. La volatilidad implícita permanece elevada por la combinación de datos de inflación más firmes, aranceles y la debilidad en tech. En BTC, la volatilidad de corto plazo está ligada a los outflows de ETFs y a las liquidaciones de apalancamiento, no solo a la beta de equity. En un día de feriado la liquidez es menor y los movimientos de futuros pueden amplificarse. No hay régimen de pánico extremo, pero el nivel de incertidumbre es alto.</p>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · consolidación en feriado y rebote técnico</h3>
+      <p>Futuros mantienen el tono positivo moderado. BTC se sostiene por encima de 60.000. Oro en rango 3.540-3.630. Al reabrir el viernes el mercado opera en rango sin nueva aceleración de venta. Probabilidad ~50%.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Inverso · reanudación de presión por tasas y flujos</h3>
+      <p>Los outflows de ETFs de BTC continúan y el precio pierde 58.500. Al reabrir equity, NQ vuelve a probar soportes por debajo de 25.900 si el mercado reevalúa la probabilidad de suba de la Fed. Probabilidad ~35%.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <p class="lbl">Nota técnica</p>
+    <p>Soportes de NQ en 25.900 y de ES en 7.150. Resistencias inmediatas en 26.500 y 7.280. El oro opera entre 3.540 y 3.630. El WTI tiene soporte en 82,80 y resistencia en 84,80. BTC tiene soporte clave en 58.500 (zona de mínimo reciente) y resistencia en 62.000. Los niveles son aproximados y pueden desplazarse con la liquidez reducida del feriado y la reapertura del viernes.</p>
+  </div>
+
+  <footer>
+    <p>Reporte matutino · 26 nov 2026 · Corte ~08:00 ART. Datos de futuros, spot y noticias públicas. No constituye recomendación de inversión.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
