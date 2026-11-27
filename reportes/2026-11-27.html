@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Reporte Diario de Mercado · 27 nov 2026</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0e1116;
+    color: #e6edf3;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+  .mast {
+    display: flex; justify-content: space-between; gap: 18px; align-items: flex-end;
+    border-bottom: 1px solid #2a3340; padding-bottom: 14px; margin-bottom: 22px;
+  }
+  .kicker { color: #d4a017; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; }
+  .meta { color: #8b97a6; font-size: 12px; text-align: right; min-width: 220px; }
+  .meta strong { color: #e6edf3; font-weight: 600; }
+  .lead {
+    background: #161b22; border: 1px solid #2a3340; border-left: 4px solid #d4a017;
+    padding: 18px 18px 8px; margin-bottom: 22px;
+  }
+  h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; }
+  h3 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 12px; }
+  .muted { color: #8b97a6; }
+  figure { margin: 12px 0 14px; }
+  figure img {
+    width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px;
+    border: 1px solid #2a3340; display: block; background: #0e1116;
+  }
+  figcaption { color: #8b97a6; font-size: 12px; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; margin: 8px 0 22px; font-variant-numeric: tabular-nums; }
+  th { text-align: left; color: #8b97a6; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-bottom: 1px solid #2a3340; }
+  td { padding: 10px; border-bottom: 1px solid #2a3340; font-size: 14px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .up { color: #3dd68c; font-weight: 650; }
+  .dn { color: #f07178; font-weight: 650; }
+  .section-label { color: #d4a017; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin: 6px 0 10px; font-weight: 700; }
+  .card {
+    background: #161b22; border: 1px solid #2a3340; border-radius: 6px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }
+  .tag.bull { background: rgba(61,214,140,0.15); color: #3dd68c; }
+  .tag.bear { background: rgba(240,113,120,0.15); color: #f07178; }
+  .tag.mix { background: rgba(122,162,247,0.15); color: #7aa2f7; }
+  .lbl { color: #8b97a6; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; margin: 10px 0 2px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .scen { background: #161b22; border: 1px solid #2a3340; border-radius: 6px; padding: 16px; }
+  .scen.base { border-top: 3px solid #3dd68c; }
+  .scen.inv { border-top: 3px solid #f07178; }
+  .note {
+    border: 1px dashed #2a3340; background: #161b22; padding: 16px; border-radius: 6px; margin: 8px 0 22px;
+  }
+  footer { border-top: 1px solid #2a3340; padding-top: 14px; color: #8b97a6; font-size: 12px; }
+  a { color: #d4a017; }
+  @media (max-width: 720px) {
+    .mast, .grid { display: block; }
+    .meta { text-align: left; margin-top: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet"></head>
+<body>
+<div id="scorebar" style="position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:140px 1fr 140px;align-items:center;background:#161b22;color:#e6edf3;border-bottom:1px solid #2a3340;padding:12px 18px;font:18px Outfit,Segoe UI,Helvetica,Arial,sans-serif;">
+  <a href="../index.html" style="color:#eceae6;text-decoration:none;font-size:14px;letter-spacing:.02em;">← Reportes</a>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+    <span data-score="6" style="display:inline-flex;align-items:baseline;gap:2px;background:#d4a017;color:#121417;border-radius:4px;padding:7px 11px;font-weight:700;font-size:22px;">6<small style="font-size:13px;font-weight:500;opacity:.75;">/10</small></span>
+    <span style="max-width:640px;line-height:1.3;">Futuros del Nasdaq suben cerca del 2,8% tras el feriado; oro y WTI avanzan, BTC cerca de 61.600 con salidas récord de ETF.</span>
+  </div>
+  <span></span>
+</div>
+<style>body{padding-top:68px;}</style>
+<nav id="tv-static" aria-label="TradingView" style="position:fixed;right:16px;top:88px;z-index:30;width:148px;display:flex;flex-direction:column;gap:8px;font-family:Segoe UI,Helvetica,Arial,sans-serif;">
+  <p style="margin:0 0 2px;color:#8b97a6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Tradingview: Gráficos</p>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3ANQ1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">NQ</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Nasdaq</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +2,80%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=CME_MINI%3AES1!" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ES</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">S&P 500</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +1,90%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AGOLD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">ORO</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Oro</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +2,90%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=TVC%3AUSOIL" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">WTI</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Crudo</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +2,20%</span></a>
+  <a href="https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#1c232d;border:1px solid #314050;border-radius:10px;padding:10px 12px;color:#e6edf3;"><span style="display:block;font-size:13px;letter-spacing:.08em;">BTC</span><span style="display:block;margin-top:2px;color:#8b97a6;font-size:12px;">Bitcoin</span><span style="display:block;margin-top:8px;color:#3dd68c;font-size:14px;">↑ +1,80%</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <p class="kicker">Reporte Diario de Mercado · 27 nov 2026</p>
+      <h1>Sesión de viernes · rebote post-Thanksgiving en AI</h1>
+    </div>
+    <div class="meta">
+      Corte ~08:00 ART / 07:00 ET<br>
+      <strong>Futuros y spot</strong> · preapertura<br>
+      No es consejo de inversión
+    </div>
+  </header>
+
+  <section class="lead">
+    <h2>Futuros del Nasdaq suben cerca del 2,8% tras el feriado; oro cerca de 3.670 y BTC en 61.600 con salidas récord de ETF</h2>
+    <p>El movimiento de los futuros a la mañana es claramente alcista después del feriado de Thanksgiving. Los futuros del Nasdaq 100 operan cerca de 26.700 (+2,80%) y los del S&P 500 cerca de 7.320 (+1,90%). El WTI cotiza alrededor de 85,80 (+2,20%) y el oro cerca de 3.670 (+2,90%). Bitcoin opera en torno a 61.600 (+1,80% en 24 horas). Los ETF spot de BTC acumulan salidas netas de cerca de 5.390 millones de dólares en noviembre, récord mensual. El mercado ya estaba descontando preocupación por valuaciones de AI y una suba de tasas de la Fed en diciembre (probabilidad cercana al 99%).</p>
+    <figure>
+      <img src="https://www.reuters.com/resizer/v2/5HSZYWBYWFIYLIRBQJPHTGFOAI.jpg?auth=aa14ba547b8c6551fb3b6062ba7ad035e42ab3d10cf5d69a5bdde1d270c88097&height=1005&width=1920&quality=80&smart=true" alt="Piso de trading en la NYSE">
+      <figcaption>Piso de trading en la NYSE. Los futuros rebotan con fuerza tras el feriado de Thanksgiving y la corrección en AI de la semana.</figcaption>
+    </figure>
+  </section>
+
+  <p class="section-label">Tabla de apertura</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activo</th>
+        <th class="num">Precio aprox.</th>
+        <th class="num">Var. sesión / 24h</th>
+        <th class="num">Soporte</th>
+        <th class="num">Resistencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NQ</td>
+        <td class="num">26.700</td>
+        <td class="num up">+2,80%</td>
+        <td class="num">26.200</td>
+        <td class="num">27.100</td>
+      </tr>
+      <tr>
+        <td>ES</td>
+        <td class="num">7.320</td>
+        <td class="num up">+1,90%</td>
+        <td class="num">7.200</td>
+        <td class="num">7.400</td>
+      </tr>
+      <tr>
+        <td>XAU/USD</td>
+        <td class="num">3.670</td>
+        <td class="num up">+2,90%</td>
+        <td class="num">3.600</td>
+        <td class="num">3.720</td>
+      </tr>
+      <tr>
+        <td>Crudo WTI</td>
+        <td class="num">85,80</td>
+        <td class="num up">+2,20%</td>
+        <td class="num">84,50</td>
+        <td class="num">87,00</td>
+      </tr>
+      <tr>
+        <td>BTC</td>
+        <td class="num">61.600</td>
+        <td class="num up">+1,80%</td>
+        <td class="num">60.000</td>
+        <td class="num">63.000</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:-12px;font-size:12px;">Referencias de futuros y spot al corte. Niveles redondeados. El movimiento de BTC está ligado tanto a liquidaciones de cortos y beta de tech como a salidas récord de ETF. Sesión acortada del viernes (cierre 13:00 ET).</p>
+
+  <p class="section-label">Crónica · tres eventos</p>
+
+  <article class="card">
+    <span class="tag bull">Bull · recuperación táctica</span>
+    <h3>Futuros de índices rebotan con fuerza tras el feriado de Thanksgiving</h3>
+    <figure>
+      <img src="https://www.reuters.com/resizer/v2/5HSZYWBYWFIYLIRBQJPHTGFOAI.jpg?auth=aa14ba547b8c6551fb3b6062ba7ad035e42ab3d10cf5d69a5bdde1d270c88097&height=1005&width=1920&quality=80&smart=true" alt="Traders en el piso de la NYSE">
+      <figcaption>Traders en el piso. Los futuros del Nasdaq 100 avanzan cerca del 2,8% a la mañana tras el feriado.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Los futuros del Nasdaq 100 suben alrededor del 2,80% y los del S&P 500 cerca del 1,90% en la preapertura. La semana fue volátil con caídas en AI; el rebote se concentra en semiconductores y hyperscalers (Nvidia cerca de +4,5% en premarket). Sesión acortada por el feriado.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO DESACTIVADO/BULLISH] táctico en beta de índices. No es cambio de régimen; el mercado descuenta alza de tasas de la Fed en diciembre con alta probabilidad y la volatilidad permanece elevada.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>El oversold técnico y el short covering impulsan el movimiento de los futuros a la mañana. Si el rebote se sostiene en el cash y el volumen acompaña, el bid se extiende. Un fallo bajo los máximos de la noche reabre el riesgo de testear soportes recientes.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag bull">Bull · cobertura</span>
+    <h3>Oro sube cerca del 2,9% a 3.670; bid de cobertura con yields contenidos</h3>
+    <figure>
+      <img src="https://static.vecteezy.com/system/resources/previews/056/318/296/large_2x/a-pile-of-gold-bars-bullions-close-up-photo.jpg" alt="Barras de oro">
+      <figcaption>Barras de oro. El metal precioso recupera con fuerza en la sesión de la mañana.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>El oro opera cerca de 3.670 (+2,90%), rebotando desde niveles cercanos a 3.560. El movimiento se da en un contexto de yields elevados pero contenidos y dólar que no acelera.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[RIESGO DESACTIVADO/BULLISH] relativo para metales preciosos. Actúa como cobertura contra cola residual de volatilidad y geopolítica, no como beta pura de risk-on.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Con tasas reales restrictivas, el oro funciona como hedge. Si el 10 años vuelve a subir con fuerza sin nuevo headline, el long de oro es el leg débil. Soporte 3.600; resistencia 3.720.</p>
+  </article>
+
+  <article class="card">
+    <span class="tag mix">Mix · cripto específico</span>
+    <h3>BTC cerca de 61.600; salidas récord de ETF de 5.390 millones en noviembre y liquidaciones de cortos</h3>
+    <figure>
+      <img src="https://images.pexels.com/photos/315788/pexels-photo-315788.jpeg" alt="Moneda de Bitcoin">
+      <figcaption>Bitcoin. El precio se estabiliza cerca de 61.600 tras rebotes desde mínimos de la semana, con presión de salidas de ETF.</figcaption>
+    </figure>
+    <p class="lbl">Evento</p>
+    <p>Bitcoin opera cerca de 61.600 (+1,80% en 24h). Los ETF spot de BTC acumulan salidas netas de aproximadamente 5.390 millones de dólares en noviembre, el mayor flujo negativo mensual desde su lanzamiento. Liquidaciones de posiciones cortas en las últimas horas superan los 200-300 millones en algunos reportes. No hay incidente de seguridad o hack material en las últimas 12-18 horas. Binance restauró retiros hace semanas tras un incidente previo.</p>
+    <p class="lbl">Sentimiento</p>
+    <p>[MIX] para cripto. El movimiento está ligado a un evento cripto-específico (salidas récord de ETF y liquidaciones de cortos) además de la beta de tech. El Fear & Greed permanece en Extreme Fear.</p>
+    <p class="lbl">Mecanismo de transmisión</p>
+    <p>Las salidas de ETF limitan el bid institucional mientras el short covering y la beta de índices impulsan el precio a corto plazo. Soporte 60.000; resistencia 63.000. Si no sostiene 60.000, el riesgo de retest de mínimos de la semana permanece. Expiración de opciones de cerca de 7.000 millones hoy puede amplificar volatilidad en sesión delgada.</p>
+  </article>
+
+  <p class="section-label">Volatilidad y liquidez</p>
+  <p>La volatilidad implícita de equity permanece elevada tras la corrección de la semana. El realized de la semana fue extremo en índices y en cripto. El movimiento de BTC está impulsado por salidas récord de ETF y liquidaciones de cortos, no solo por correlación con tech. Spreads de futuros normales en la preapertura. Sesión acortada reduce liquidez. DXY contenido. No hay stress de funding visible. El crudo avanza por tensiones en Medio Oriente y retrasos de embarques, pero el surplus de oferta limita el upside.</p>
+  <figure>
+    <img src="https://www.ethox.com/wp-content/uploads/2022/06/Oil-Field_sm-434971_1080x675.jpg" alt="Campo petrolero con bombas">
+    <figcaption>Campo petrolero. El WTI sube cerca del 2,2% por tensiones geopolíticas y retrasos de oferta.</figcaption>
+  </figure>
+
+  <p class="section-label">Escenarios</p>
+  <div class="grid">
+    <div class="scen base">
+      <h3>Base · 55%</h3>
+      <p>El rebote de futuros se sostiene en el cash de sesión acortada, el VIX cede y BTC mantiene 61.000. El oro consolida sobre 3.650 y el WTI no rompe 87,00.</p>
+      <p>Objetivos: NQ 26.800–27.100; ES 7.350–7.400; XAU 3.650–3.720; WTI 85,50–86,80. BTC acompaña solo si sostiene 61.000 y no reaparece presión de ETF.</p>
+    </div>
+    <div class="scen inv">
+      <h3>Invalidación · 28%</h3>
+      <p>Catalizador: el rebote de NQ/ES se diluye antes del cierre temprano, o el 10 años sube con fuerza y el DXY acelera. Zona de reversión: ES pierde 7.200 y NQ pierde 26.200. BTC bajo 60.000 reabre el test de 58.000. WTI sobre 87,00 reabre bid de inflación.</p>
+    </div>
+  </div>
+  <p class="muted">Residual ~17%: rango estrecho de consolidación tras el gap de apertura. El volumen del cash decide si el rebote tiene aceptación en sesión delgada.</p>
+
+  <p class="section-label">Nota técnica para algoritmos</p>
+  <div class="note">
+    <p><strong>Régimen:</strong> mean-reversion post-oversold en índices y cripto, con cola residual de volatilidad y yields. No es trend-following puro. NQ a ~2,8% del cierre previo; BTC a ~10% del mínimo de ciclo reciente. VIX elevado desaconseja vender gamma corta de overnight sin hedge. Sesión acortada reduce liquidez.</p>
+    <p><strong>Ineficiencias explotables:</strong> (1) desacople BTC vs. índices — el rebote cripto es más contenido por salidas de ETF; fade del long de BTC si no sostiene 60.500 mientras NQ mantiene el gap; (2) oro +2,9% con yields aún altos: si el 10 años rebota sin headline, fade del long de oro; (3) WTI contenido es el ancla de inflación; un break de 87,00 o 84,50 es el trigger de régimen, no el índice; (4) gap de apertura — fade del primer impulso si el volumen no sostiene 26.400 y el VIX no cede.</p>
+  </div>
+
+  <footer>
+    <p>Reporte Diario de Mercado · 27 nov 2026. Datos de referencia de futuros y spot al corte de la mañana. No es consejo de inversión.</p>
+  </footer>
+</div>
+<script src="extra.js?v=17"></script>
+</body>
+</html>
